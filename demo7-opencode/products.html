@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apex Precision Automotive product catalog - comprehensive range of precision-engineered automotive components">
+    <meta name="keywords" content="automotive components, OEM supplier, Tier-1, precision parts, automotive catalog">
+    <title>Products | Apex Precision Automotive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">APEX</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="index.html#capabilities" class="nav-link">Capabilities</a></li>
+                <li><a href="index.html#applications" class="nav-link">Applications</a></li>
+                <li><a href="index.html#quality" class="nav-link">Quality</a></li>
+                <li><a href="index.html#global" class="nav-link">Global</a></li>
+                <li><a href="index.html#contact" class="nav-link nav-cta">Request Quote</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-banner">
+            <div class="page-banner-media">
+                <div class="page-banner-image">
+                    <div class="image-placeholder banner-placeholder">
+                        <span class="placeholder-label">Products Banner</span>
+                        <span class="placeholder-sublabel">1920×600px • Product Catalog</span>
+                    </div>
+                </div>
+                <div class="page-banner-overlay"></div>
+            </div>
+            <div class="page-banner-content container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Products</span>
+                </div>
+                <h1 class="page-title">Product Catalog</h1>
+                <p class="page-subtitle">Precision-engineered automotive components for global OEMs and Tier-1 suppliers</p>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="container">
+                <div class="catalog-layout">
+                    <aside class="catalog-sidebar" id="sidebar">
+                        <button class="sidebar-close" id="sidebar-close">
+                            <span></span>
+                            <span></span>
+                        </button>
+                        
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="category-list">
+                                <li class="category-item active">
+                                    <a href="#" class="category-link">
+                                        <span class="category-icon">◈</span>
+                                        <span class="category-name">All Products</span>
+                                        <span class="category-count">48</span>
+                                    </a>
+                                </li>
+                                <li class="category-item has-submenu">
+                                    <a href="#" class="category-link">
+                                        <span class="category-icon">⚙️</span>
+                                        <span class="category-name">Powertrain</span>
+                                        <span class="category-count">12</span>
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Transmission Housings</a></li>
+                                        <li><a href="#">Cylinder Blocks</a></li>
+                                        <li><a href="#">Cylinder Heads</a></li>
+                                        <li><a href="#">Oil Pans</a></li>
+                                    </ul>
+                                </li>
+                                <li class="category-item has-submenu">
+                                    <a href="#" class="category-link">
+                                        <span class="category-icon">🔧</span>
+                                        <span class="category-name">Chassis</span>
+                                        <span class="category-count">14</span>
+                                    </a>
+                                    <ul class="subcategory-list">
+                                        <li><a href="#">Control Arms</a></li>
+                                        <li><a href="#">Knuckles</a></li>
+                                        <li><a href="#">Subframes</a></li>
+                                        <li><a href="#">Strut Towers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-link">
+                                        <span class="category-icon">⚡</span>
+                                        <span class="category-name">E-Mobility</span>
+                                        <span class="category-count">10</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-link">
+                                        <span class="category-icon">🔩</span>
+                                        <span class="category-name">Body Structure</span>
+                                        <span class="category-count">8</span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-link">
+                                        <span class="category-icon">🛡️</span>
+                                        <span class="category-name">Safety Systems</span>
+                                        <span class="category-count">4</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Applications</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="application" value="passenger">
+                                        <span class="checkmark"></span>
+                                        <span>Passenger Vehicles</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="application" value="ev">
+                                        <span class="checkmark"></span>
+                                        <span>EV Platforms</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="application" value="commercial">
+                                        <span class="checkmark"></span>
+                                        <span>Commercial Vehicles</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="application" value="hybrid">
+                                        <span class="checkmark"></span>
+                                        <span>Hybrid Systems</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Material</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="material" value="aluminum">
+                                        <span class="checkmark"></span>
+                                        <span>Aluminum</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="material" value="steel">
+                                        <span class="checkmark"></span>
+                                        <span>High-Strength Steel</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="material" value="magnesium">
+                                        <span class="checkmark"></span>
+                                        <span>Magnesium</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="material" value="composite">
+                                        <span class="checkmark"></span>
+                                        <span>Composite</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Process</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="process" value="diecasting">
+                                        <span class="checkmark"></span>
+                                        <span>Die Casting</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="process" value="forging">
+                                        <span class="checkmark"></span>
+                                        <span>Forging</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="process" value="machining">
+                                        <span class="checkmark"></span>
+                                        <span>CNC Machining</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="process" value="stamping">
+                                        <span class="checkmark"></span>
+                                        <span>Stamping</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-image">
+                            <div class="image-placeholder sidebar-promotion">
+                                <span class="placeholder-label">Promotion</span>
+                                <span class="placeholder-sublabel">Download Full Catalog</span>
+                                <a href="#" class="btn btn-primary sidebar-btn">PDF Download</a>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="catalog-content">
+                        <div class="catalog-toolbar">
+                            <button class="filter-toggle" id="filter-toggle">
+                                <span class="filter-icon">☰</span>
+                                Filters
+                            </button>
+                            <div class="toolbar-info">
+                                <span class="results-count">Showing <strong>48</strong> products</span>
+                            </div>
+                            <div class="toolbar-controls">
+                                <div class="sort-control">
+                                    <label for="sort">Sort by:</label>
+                                    <select id="sort" name="sort">
+                                        <option value="featured">Featured</option>
+                                        <option value="name-asc">Name A-Z</option>
+                                        <option value="name-desc">Name Z-A</option>
+                                        <option value="newest">Newest</option>
+                                    </select>
+                                </div>
+                                <div class="view-controls">
+                                    <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                    <button class="view-btn" data-view="list" aria-label="List view">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products-grid" id="products-grid">
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Transmission Housing</span>
+                                    </div>
+                                    <span class="product-badge">New</span>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Powertrain</span>
+                                    <h3 class="product-title">Transmission Housings</h3>
+                                    <p class="product-desc">High-strength aluminum die-cast and CNC-machined transmission housings with integrated oil galleries.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">AT • DCT • CVT • EV</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Control Arm</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Chassis</span>
+                                    <h3 class="product-title">Suspension Control Arms</h3>
+                                    <p class="product-desc">Precision-forged and machined control arms with integrated ball joints and bushings.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">McPherson • Multi-link</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Motor Housing</span>
+                                    </div>
+                                    <span class="product-badge hot">Hot</span>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">E-Mobility</span>
+                                    <h3 class="product-title">Motor Housings</h3>
+                                    <p class="product-desc">Die-cast aluminum motor housings with precision-machined mounting faces and thermal management.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">PM • Induction • Axial</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Battery Enclosure</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">E-Mobility</span>
+                                    <h3 class="product-title">Battery Pack Enclosures</h3>
+                                    <p class="product-desc">High-strength, thermally managed battery enclosures for EV platforms with crash safety compliance.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">BEV • PHEV • HEV</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Differential Case</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Drivetrain</span>
+                                    <h3 class="product-title">Differential Cases</h3>
+                                    <p class="product-desc">Precision-machined differential housings and carriers for front, rear, and AWD configurations.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">AWD • 4WD • e-AWD</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Steering Column</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Steering</span>
+                                    <h3 class="product-title">Steering Columns</h3>
+                                    <p class="product-desc">Adjustable steering columns with integrated crash safety systems and electronic interfaces.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">C-EPS • P-EPS • R-EPS</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Cylinder Block</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Powertrain</span>
+                                    <h3 class="product-title">Cylinder Blocks</h3>
+                                    <p class="product-desc">High-pressure die-cast aluminum cylinder blocks with closed-deck and open-deck designs.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">Inline-4 • Inline-6 • V6</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Structural Bracket</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Body Structure</span>
+                                    <h3 class="product-title">Structural Brackets</h3>
+                                    <p class="product-desc">Multi-material brackets and subframes using aluminum, steel, and composite materials.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">Engine Bay • Floor Pan</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Knuckle</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Chassis</span>
+                                    <h3 class="product-title">Steering Knuckles</h3>
+                                    <p class="product-desc">High-strength steering knuckles with integrated hub and brake caliper mounting features.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">Disc • Drum • EV</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Fuel Tank Module</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Fuel System</span>
+                                    <h3 class="product-title">Fuel Tank Modules</h3>
+                                    <p class="product-desc">Complete fuel tank modules with integrated pumps, senders, and rollover valves.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">ICE • Hybrid • Diesel</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Oil Pan</span>
+                                    </div>
+                                    <span class="product-badge">Updated</span>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Powertrain</span>
+                                    <h3 class="product-title">Oil Pans</h3>
+                                    <p class="product-desc">Stamped and die-cast oil pans with integrated windage trays and oil cooling features.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">All Platforms</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+
+                            <article class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder product-placeholder">
+                                        <span class="placeholder-label">Product</span>
+                                        <span class="placeholder-sublabel">Subframe</span>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <span class="product-category">Chassis</span>
+                                    <h3 class="product-title">Subframes</h3>
+                                    <p class="product-desc">Engine and suspension subframes with integrated bushing mounting and powertrain brackets.</p>
+                                    <div class="product-meta">
+                                        <span class="product-applications">FWD • RWD • AWD</span>
+                                    </div>
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="pagination">
+                            <a href="#" class="page-nav prev disabled">
+                                <span class="arrow">←</span>
+                                <span>Previous</span>
+                            </a>
+                            <div class="page-numbers">
+                                <a href="#" class="page-number active">1</a>
+                                <a href="#" class="page-number">2</a>
+                                <a href="#" class="page-number">3</a>
+                                <a href="#" class="page-number">4</a>
+                                <span class="page-ellipsis">...</span>
+                                <a href="#" class="page-number">8</a>
+                            </div>
+                            <a href="#" class="page-nav next">
+                                <span>Next</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-image">
+            <div class="footer-placeholder"></div>
+        </div>
+        <div class="footer-content container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">◇</span>
+                        <span class="logo-text">APEX</span>
+                    </a>
+                    <p>Precision engineering for automotive excellence. Serving global OEMs and Tier-1 suppliers with high-quality components since 1989.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Powertrain</a></li>
+                            <li><a href="#">Chassis</a></li>
+                            <li><a href="#">E-Mobility</a></li>
+                            <li><a href="#">Body Structure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#capabilities">Capabilities</a></li>
+                            <li><a href="index.html#quality">Quality</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Catalog</a></li>
+                            <li><a href="#">Technical Docs</a></li>
+                            <li><a href="#">ISO Certificates</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Precision Automotive. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

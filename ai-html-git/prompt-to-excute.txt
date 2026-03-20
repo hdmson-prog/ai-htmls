@@ -1,0 +1,340 @@
+## **Wheel Hub Bearing Manufactory – Corporate Website Generator (Optimized Prompt)**
+
+You are a **senior front-end architect, industrial brand strategist, and high-end B2B UI/UX designer** with deep expertise in:
+
+* Automotive manufacturing
+* Precision engineering brands
+* Industrial export companies
+* Tier 1 / OEM supplier websites
+
+Your task is to generate a **production-ready front-end corporate website** for a **wheel hub bearing manufactory**.
+
+Use:
+
+* HTML, CSS, and JavaScript in separate files
+* No JavaScript frameworks
+
+This is a **corporate B2B website**, NOT:
+
+* an e-commerce store
+* a startup landing page
+* a marketing funnel
+
+---
+
+# **NON-NEGOTIABLE QUALITY BAR**
+
+The design must feel:
+
+* Engineered, not decorated
+* Authoritative, not promotional
+* Precise, not expressive
+* Industrial premium, not luxury lifestyle
+
+Comparable to:
+
+* Tier 1 automotive suppliers
+* German industrial brands
+* OEM manufacturing websites
+
+Strictly avoid:
+
+* Template layouts
+* Startup SaaS UI
+* Bright colors
+* Over-designed visuals
+* Marketing-heavy sections
+* Gimmicks or trend-based design
+
+If it feels like a **generic template or marketing page, it has failed**.
+
+---
+
+# **BRAND CONTEXT (FIXED)**
+
+**Industry:** Wheel Hub Bearing Manufacturing
+**Business Type:** B2B / OEM / Aftermarket Supplier
+
+### Primary Objectives:
+
+* Establish engineering credibility
+* Showcase manufacturing capability
+* Attract global distributors & wholesalers
+* Support OEM & private label partnerships
+
+### Target Audience:
+
+* Auto parts importers & distributors
+* Automotive wholesalers
+* OEM buyers
+* eCommerce auto parts sellers
+* Procurement teams
+
+---
+
+# **BRAND PERSONALITY (STRICT)**
+
+* Technical
+* Reliable
+* Precise
+* Structured
+* Industrial
+* Confident (without exaggeration)
+
+Avoid completely:
+
+* Emotional storytelling
+* Lifestyle branding
+* Sales hype
+* Buzzwords
+* Playful tone
+
+---
+
+# **VISUAL DESIGN SYSTEM (MANDATORY)**
+
+## Color Language
+
+* Deep industrial blue / steel gray
+* Graphite / dark charcoal
+* Clean white / cool gray backgrounds
+* Subtle metallic accents (steel / chrome tone)
+* Very restrained highlight color (e.g. muted blue)
+
+NO:
+
+* Bright colors
+* Gradients overload
+* Decorative palettes
+
+---
+
+## Typography
+
+* Headings: strong, modern sans-serif (industrial feel)
+* Body: clean, highly readable sans-serif
+* Clear hierarchy, strong spacing
+* No decorative fonts
+
+---
+
+## Layout Philosophy
+
+* Grid-based, structured
+* Engineering-oriented layout
+* Strong alignment and spacing
+* Functional over decorative
+* Clear information hierarchy
+
+---
+
+# **REQUIRED SITE STRUCTURE**
+
+Generate a **single cohesive corporate website** with the following sections:
+
+---
+
+## **Top Bar**
+
+* Left: short corporate message (e.g. “Precision Wheel Hub Bearing Manufacturer”)
+* Right: social icons
+
+---
+
+## **Header**
+
+* Logo (left)
+* Navigation menu with dropdown
+* “Request Quote” button
+* Search icon → click triggers slide-down search bar
+* Language switcher (dropdown)
+
+---
+
+## **Hero Section**
+
+* Strong, technical headline (NOT marketing-heavy)
+* Subheadline explaining product scope & manufacturing strength
+* Single CTA: “Request a Quote”
+* Background: industrial texture / factory / product macro
+
+---
+
+## **About / Company Overview**
+
+* Years of experience
+* Factory scale
+* Positioning (OEM / Aftermarket)
+* Short, precise content
+
+---
+
+## **Manufacturing & Engineering**
+
+* Production workflow (step-based)
+* Forging → Machining → Assembly → Testing
+* Emphasis on:
+
+  * Precision
+  * Automation
+  * Quality control
+
+---
+
+## **Product Range**
+
+Grid layout (2 rows × 4 columns)
+
+Include categories like:
+
+* Wheel Hub Bearing (Gen 1 / 2 / 3)
+* Wheel Hub Units
+* Repair Kits
+* ABS Bearings
+* Custom/OEM Solutions
+
+Each item:
+
+* Image
+* Name
+* Short label
+
+---
+
+## **Quality Control & Testing**
+
+* Testing equipment
+* Standards (ISO, IATF if applicable)
+* Durability and performance focus
+
+---
+
+## **Corporate Capabilities**
+
+* OEM / ODM support
+* Private labeling
+* Inventory & supply chain
+* Global logistics
+* Technical support
+
+---
+
+## **Global Market**
+
+* Export regions
+* Distributor network
+* International reach
+
+---
+
+## **Applications**
+
+* Passenger vehicles
+* Commercial vehicles
+* Aftermarket replacement
+
+---
+
+## **Corporate Call-to-Action**
+
+* Calm, professional
+* “Start a Long-Term Partnership” / “Request Technical Consultation”
+* No urgency language
+
+---
+
+## **News / Insights Section**
+
+* Industry updates
+* Product knowledge
+* Corporate updates
+
+---
+
+## **Footer**
+
+* Contact details
+* Address
+* Certifications
+* Quick links
+* Legal
+
+---
+
+# **MOTION & INTERACTION RULES (STRICT)**
+
+Allowed:
+
+* Subtle fade-in
+* Small vertical motion (8–16px)
+* Soft hover effects
+
+Forbidden:
+
+* Bounce / elastic animations
+* Heavy parallax
+* Fast transitions
+* Attention-grabbing effects
+
+Motion must feel:
+
+* Controlled
+* Minimal
+* Engineering-grade
+
+---
+
+# **ACCESSIBILITY & USABILITY**
+
+* WCAG-compliant contrast
+* Keyboard navigation
+* Clear focus states
+* Large readable text
+* Fast loading
+
+---
+
+# **TECHNICAL REQUIREMENTS**
+
+* Semantic HTML5
+* Modular CSS (clean & maintainable)
+* Lightweight vanilla JavaScript
+* SEO-friendly structure
+* Optimized images (use Unsplash placeholders)
+
+---
+
+# **OUTPUT INSTRUCTIONS (CRITICAL)**
+
+* Output ONLY:
+
+  * HTML file
+  * CSS file
+  * JavaScript file
+
+* Do NOT:
+
+  * Explain anything
+  * Add commentary
+  * Break structure
+
+* Content must sound:
+
+  * Professional
+  * Technical
+  * Concise
+  * B2B-oriented
+
+---
+
+# **FINAL DIRECTIVE**
+
+Design like a **precision engineering company**, not a brand campaign.
+
+Everything must communicate:
+
+**Capability · Reliability · Scale · Engineering Confidence**
+
+Nothing decorative. Nothing excessive. Nothing unnecessary.
+
+
