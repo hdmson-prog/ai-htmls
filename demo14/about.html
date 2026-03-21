@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Atelier Home</title>
+    <meta
+      name="description"
+      content="Learn about Atelier Home, our design philosophy, craftsmanship, and the people behind our premium appliance collections."
+    />
+    <meta name="author" content="Atelier Home" />
+    <meta property="og:title" content="About Us | Atelier Home" />
+    <meta
+      property="og:description"
+      content="A closer look at Atelier Home's heritage, values, and approach to product design."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./src/assets/brand-story.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./src/assets/brand-story.jpg" />
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="./index.html#top" class="brand">Atelier</a>
+        <div class="nav-links desktop-nav">
+          <div class="nav-dropdown">
+            <button class="nav-link-button" type="button">Products</button>
+            <div class="nav-submenu">
+              <a href="./products.html">Products Archive</a>
+              <a href="./product-single.html">Single Product</a>
+              <a href="./products.html#kitchen">Kitchen</a>
+              <a href="./products.html#air-care">Air Care</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-link-button" type="button">Company</button>
+            <div class="nav-submenu">
+              <a href="./about.html">About Us</a>
+              <a href="./news.html">News</a>
+              <a href="./index.html#sustainability">Sustainability</a>
+              <a href="./contact.html">Support</a>
+            </div>
+          </div>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div id="mobile-nav" class="mobile-nav">
+        <details class="mobile-submenu">
+          <summary>Products</summary>
+          <div class="mobile-submenu-links">
+            <a href="./products.html">Products Archive</a>
+            <a href="./product-single.html">Single Product</a>
+            <a href="./products.html#kitchen">Kitchen</a>
+            <a href="./products.html#air-care">Air Care</a>
+          </div>
+        </details>
+        <details class="mobile-submenu">
+          <summary>Company</summary>
+          <div class="mobile-submenu-links">
+            <a href="./about.html">About Us</a>
+            <a href="./news.html">News</a>
+            <a href="./index.html#sustainability">Sustainability</a>
+            <a href="./contact.html">Support</a>
+          </div>
+        </details>
+        <a href="./contact.html">Contact Us</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="page-banner">
+        <img src="./src/assets/brand-story.jpg" alt="Atelier design heritage" class="page-banner-image" />
+        <div class="page-banner-overlay"></div>
+        <div class="container page-banner-content">
+          <p class="hero-intro fade-up" style="--delay: 150ms;">About Atelier</p>
+          <h1 class="page-banner-title fade-up" style="--delay: 300ms;">Built on Quiet Excellence</h1>
+          <p class="page-banner-copy fade-up" style="--delay: 450ms;">
+            We design appliances for homes that value restraint, long-term performance, and material integrity.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container page-grid">
+          <div class="page-main">
+            <div class="reveal page-copy-block">
+              <p class="eyebrow">Our Story</p>
+              <h2 class="section-title">Designing for the Way Modern Homes Live</h2>
+              <p class="body-copy">
+                Atelier Home began with the belief that appliances should contribute to architecture, not compete with it.
+                For more than four decades we have developed kitchen, laundry, cooling, and air care systems that balance
+                technical precision with a calm visual presence.
+              </p>
+              <p class="body-copy">
+                Our teams work across engineering, industrial design, and material development to shape products that feel
+                considered in use and durable over time. The result is a collection built for clients who care about detail.
+              </p>
+            </div>
+
+            <div class="reveal reveal-delay-1 about-metrics">
+              <div class="metric-card">
+                <p class="metric-value">43</p>
+                <p class="metric-label">Years of Craft</p>
+              </div>
+              <div class="metric-card">
+                <p class="metric-value">17</p>
+                <p class="metric-label">Design Awards</p>
+              </div>
+              <div class="metric-card">
+                <p class="metric-value">2.4M</p>
+                <p class="metric-label">Homes Worldwide</p>
+              </div>
+            </div>
+
+            <div class="reveal reveal-delay-2 page-media-grid">
+              <div class="media-frame page-media-large">
+                <img src="./src/assets/showroom.jpg" alt="Atelier showroom" />
+              </div>
+              <div class="media-frame page-media-small">
+                <img src="./src/assets/material-steel.jpg" alt="Refined material palette" />
+              </div>
+              <div class="media-frame page-media-small">
+                <img src="./src/assets/material-glass.jpg" alt="Matte glass finish details" />
+              </div>
+            </div>
+
+            <div class="reveal reveal-delay-3 about-values">
+              <article class="value-card">
+                <p class="sidebar-label">Craftsmanship</p>
+                <h3>Material-Led Decisions</h3>
+                <p>Finishes, tolerances, and touchpoints are developed to feel precise in daily use.</p>
+              </article>
+              <article class="value-card">
+                <p class="sidebar-label">Integration</p>
+                <h3>Products that Support Architecture</h3>
+                <p>Flush installation and restrained detailing allow our systems to sit naturally within a space.</p>
+              </article>
+              <article class="value-card">
+                <p class="sidebar-label">Longevity</p>
+                <h3>Performance Over Novelty</h3>
+                <p>We prioritize durable engineering and serviceable product decisions over short-cycle trends.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="page-side reveal">
+            <div class="sidebar-panel">
+              <p class="sidebar-label">Focus Areas</p>
+              <ul class="product-pill-list">
+                <li>Kitchen systems</li>
+                <li>Laundry planning</li>
+                <li>Cooling design</li>
+                <li>Air care</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-panel">
+              <p class="sidebar-label">Visit</p>
+              <p class="sidebar-note">
+                Explore our showroom environments and see how each collection is specified into complete living spaces.
+              </p>
+            </div>
+
+            <div class="sidebar-panel sidebar-panel-dark">
+              <p class="sidebar-label">Start a Project</p>
+              <p class="sidebar-note">
+                Speak with Atelier about product selection, finish coordination, and full-home appliance planning.
+              </p>
+              <a href="./contact.html" class="button button-hero button-small">Contact Us</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="brand">Atelier</p>
+            <p>
+              Precision-crafted home appliances for those who appreciate the
+              finer details of modern living.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-heading">Products</p>
+            <ul>
+              <li><a href="./products.html#kitchen">Kitchen</a></li>
+              <li><a href="./products.html#laundry">Laundry</a></li>
+              <li><a href="./products.html#cooling">Cooling</a></li>
+              <li><a href="./products.html#air-care">Air Care</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-heading">Company</p>
+            <ul>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./contact.html">Careers</a></li>
+              <li><a href="./contact.html">Press</a></li>
+              <li><a href="./index.html#sustainability">Sustainability</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-heading">Support</p>
+            <ul>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./contact.html">Warranty</a></li>
+              <li><a href="./contact.html">Service</a></li>
+              <li><a href="./contact.html">Find a Dealer</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Atelier Home. All rights reserved.</p>
+          <div class="footer-meta">
+            <a href="./index.html#top">Privacy</a>
+            <a href="./index.html#top">Terms</a>
+            <a href="./index.html#top">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
