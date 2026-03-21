@@ -19,20 +19,50 @@
                 <span class="logo-text">APEX</span>
             </a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item has-submenu">
+                    <a href="#about" class="nav-link">About <span class="submenu-toggle" aria-hidden="true"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="#global">Global Presence</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="products.html" class="nav-link">Products <span class="submenu-toggle" aria-hidden="true"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="product-detail.html">Transmission Housings</a></li>
+                        <li><a href="product-detail-gallery.html">Featured Product</a></li>
+                    </ul>
+                </li>
                 <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
                 <li><a href="#applications" class="nav-link">Applications</a></li>
                 <li><a href="#quality" class="nav-link">Quality</a></li>
                 <li><a href="#global" class="nav-link">Global</a></li>
                 <li><a href="#contact" class="nav-link nav-cta">Request Quote</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-tools">
+                <button class="nav-search-toggle" id="nav-search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="header-search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
+        <div class="header-search" id="header-search">
+            <div class="container">
+                <form class="search-form" role="search">
+                    <input class="search-input" id="search-input" type="search" placeholder="Search products, applications, or resources">
+                    <button class="btn btn-primary search-submit" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </header>
 
     <main class="main">
@@ -142,7 +172,7 @@
                             <h3 class="product-title">Transmission Housings</h3>
                             <p class="product-desc">High-strength aluminum die-cast and CNC-machined transmission housings with integrated oil galleries.</p>
                             <span class="product-applications">AT • DCT • CVT • EV Transmission</span>
-                            <a href="#" class="product-link">View Product →</a>
+                            <a href="product-detail.html" class="product-link">View Product →</a>
                         </div>
                     </article>
                     <article class="product-card">
@@ -662,7 +692,7 @@
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                             <li><a href="#">Capabilities</a></li>
                             <li><a href="#">Quality</a></li>
                             <li><a href="#">Careers</a></li>
@@ -674,7 +704,7 @@
                             <li><a href="#">Catalog</a></li>
                             <li><a href="#">Technical Docs</a></li>
                             <li><a href="#">ISO Certificates</a></li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

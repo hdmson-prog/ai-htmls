@@ -20,20 +20,50 @@
                 <span class="logo-text">APEX</span>
             </a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li class="nav-item has-submenu">
+                    <a href="about-us.html" class="nav-link">About <span class="submenu-toggle" aria-hidden="true"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="index.html#global">Global Presence</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu open">
+                    <a href="products.html" class="nav-link active">Products <span class="submenu-toggle" aria-hidden="true"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="product-detail.html">Transmission Housings</a></li>
+                        <li><a href="product-detail-gallery.html">Featured Product</a></li>
+                    </ul>
+                </li>
                 <li><a href="index.html#capabilities" class="nav-link">Capabilities</a></li>
                 <li><a href="index.html#applications" class="nav-link">Applications</a></li>
                 <li><a href="index.html#quality" class="nav-link">Quality</a></li>
                 <li><a href="index.html#global" class="nav-link">Global</a></li>
                 <li><a href="index.html#contact" class="nav-link nav-cta">Request Quote</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-tools">
+                <button class="nav-search-toggle" id="nav-search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="header-search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
+        <div class="header-search" id="header-search">
+            <div class="container">
+                <form class="search-form" role="search">
+                    <input class="search-input" id="search-input" type="search" placeholder="Search products, applications, or resources">
+                    <button class="btn btn-primary search-submit" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </header>
 
     <main class="main">
@@ -84,7 +114,7 @@
                                         <span class="category-count">12</span>
                                     </a>
                                     <ul class="subcategory-list">
-                                        <li><a href="#">Transmission Housings</a></li>
+                                        <li><a href="product-detail.html">Transmission Housings</a></li>
                                         <li><a href="#">Cylinder Blocks</a></li>
                                         <li><a href="#">Cylinder Heads</a></li>
                                         <li><a href="#">Oil Pans</a></li>
@@ -289,7 +319,7 @@
                                     <div class="product-meta">
                                         <span class="product-applications">AT • DCT • CVT • EV</span>
                                     </div>
-                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                    <a href="product-detail.html" class="btn btn-outline btn-sm">View Details</a>
                                 </div>
                             </article>
 
@@ -544,7 +574,7 @@
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
                             <li><a href="index.html#capabilities">Capabilities</a></li>
                             <li><a href="index.html#quality">Quality</a></li>
                             <li><a href="#">Careers</a></li>

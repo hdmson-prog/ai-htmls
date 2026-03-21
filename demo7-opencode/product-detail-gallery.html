@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transmission housing single product page with gallery, tabs, downloads, and related products">
+    <meta name="keywords" content="transmission housing, product detail page, automotive component, OEM supplier">
+    <title>Transmission Housings | Apex Precision Automotive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="product-detail-gallery.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">A</span>
+                <span class="logo-text">APEX</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item has-submenu">
+                    <a href="about-us.html" class="nav-link">About <span class="submenu-toggle" aria-hidden="true"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="index.html#global">Global Presence</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-submenu open">
+                    <a href="products.html" class="nav-link active">Products <span class="submenu-toggle" aria-hidden="true"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="product-detail.html">Transmission Housings</a></li>
+                        <li><a href="product-detail-gallery.html">Featured Product</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#capabilities" class="nav-link">Capabilities</a></li>
+                <li><a href="index.html#applications" class="nav-link">Applications</a></li>
+                <li><a href="index.html#quality" class="nav-link">Quality</a></li>
+                <li><a href="index.html#global" class="nav-link">Global</a></li>
+                <li><a href="index.html#contact" class="nav-link nav-cta">Request Quote</a></li>
+            </ul>
+            <div class="nav-tools">
+                <button class="nav-search-toggle" id="nav-search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="header-search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="header-search" id="header-search">
+            <div class="container">
+                <form class="search-form" role="search">
+                    <input class="search-input" id="search-input" type="search" placeholder="Search products, applications, or resources">
+                    <button class="btn btn-primary search-submit" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-banner">
+            <div class="page-banner-media">
+                <div class="page-banner-image">
+                    <div class="image-placeholder banner-placeholder">
+                        <span class="placeholder-label">Products Banner</span>
+                        <span class="placeholder-sublabel">Single Product Layout</span>
+                    </div>
+                </div>
+                <div class="page-banner-overlay"></div>
+            </div>
+            <div class="page-banner-content container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="products.html">Products</a>
+                    <span class="separator">/</span>
+                    <span class="current">Transmission Housings</span>
+                </div>
+                <h1 class="page-title">Transmission Housings</h1>
+                <p class="page-subtitle">Precision-machined powertrain housings for automatic, hybrid, and electric driveline platforms.</p>
+            </div>
+        </section>
+
+        <section class="single-product section">
+            <div class="container">
+                <div class="single-product-layout">
+                    <div class="product-gallery-panel">
+                        <div class="product-preview product-visual variant-a" id="product-preview">
+                            <div class="product-visual-copy">
+                                <span class="visual-kicker" id="preview-kicker">Hero View</span>
+                                <h2 id="preview-title">Transmission Housing Front Face</h2>
+                                <p id="preview-subtitle">Primary casting view showing machined sealing surfaces and bearing bore geometry.</p>
+                            </div>
+                        </div>
+                        <div class="thumbnail-grid" id="thumbnail-grid">
+                            <button class="thumb-card is-active" data-variant="variant-a" data-kicker="Hero View" data-title="Transmission Housing Front Face" data-subtitle="Primary casting view showing machined sealing surfaces and bearing bore geometry.">
+                                <span class="thumb-visual variant-a"></span>
+                                <span class="thumb-label">Front Face</span>
+                            </button>
+                            <button class="thumb-card" data-variant="variant-b" data-kicker="Section View" data-title="Internal Oil Gallery Section" data-subtitle="Cross-section highlighting ribbing, lubrication channels, and weight-optimized internal pockets.">
+                                <span class="thumb-visual variant-b"></span>
+                                <span class="thumb-label">Section</span>
+                            </button>
+                            <button class="thumb-card" data-variant="variant-c" data-kicker="Machining View" data-title="Datum And Bore Machining" data-subtitle="Critical datums and bearing seats controlled through multi-axis machining and in-process inspection.">
+                                <span class="thumb-visual variant-c"></span>
+                                <span class="thumb-label">Machining</span>
+                            </button>
+                            <button class="thumb-card" data-variant="variant-d" data-kicker="Assembly View" data-title="Mounted Transmission Subassembly" data-subtitle="Representative assembly fit for passenger-vehicle and hybrid transaxle integration.">
+                                <span class="thumb-visual variant-d"></span>
+                                <span class="thumb-label">Assembly</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-summary">
+                        <span class="section-tag">Powertrain</span>
+                        <h2 class="summary-title">Transmission Housings For High-Volume OEM Programs</h2>
+                        <p class="summary-copy">Apex produces aluminum transmission housings with integrated oil galleries, sensor bosses, and precision-machined interfaces for AT, DCT, CVT, and e-axle systems.</p>
+
+                        <div class="meta-box">
+                            <h3>Post Meta</h3>
+                            <ul class="meta-list">
+                                <li><span>SKU</span><strong>APX-TH-2407</strong></li>
+                                <li><span>Category</span><strong>Powertrain</strong></li>
+                                <li><span>Materials</span><strong>A380 / AlSi10Mg</strong></li>
+                                <li><span>Process</span><strong>Die Casting + CNC</strong></li>
+                                <li><span>MOQ</span><strong>2,000 pcs</strong></li>
+                                <li><span>Lead Time</span><strong>8-12 weeks</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="summary-grid">
+                            <article class="summary-card">
+                                <h3>Specifications</h3>
+                                <ul class="detail-list">
+                                    <li>Weight range: 4.8-18.5 kg</li>
+                                    <li>Flatness control: 0.03 mm max</li>
+                                    <li>Leak test: air-decay or helium</li>
+                                    <li>Traceability: lot and cavity marking</li>
+                                </ul>
+                            </article>
+                            <article class="summary-card">
+                                <h3>Features</h3>
+                                <ul class="detail-list">
+                                    <li>Integrated cooling and lubrication channels</li>
+                                    <li>Machined bearing seats and sealing faces</li>
+                                    <li>X-ray controlled porosity zones</li>
+                                    <li>PPAP and global launch support</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-tabs">
+                    <div class="tab-nav" role="tablist" aria-label="Product content tabs">
+                        <button class="tab-btn is-active" id="tab-description" data-target="panel-description" role="tab" aria-selected="true">Product Description</button>
+                        <button class="tab-btn" id="tab-application" data-target="panel-application" role="tab" aria-selected="false">Application</button>
+                        <button class="tab-btn" id="tab-downloads" data-target="panel-downloads" role="tab" aria-selected="false">Download Files</button>
+                    </div>
+                    <div class="tab-panels">
+                        <section class="tab-panel is-active" id="panel-description" role="tabpanel" aria-labelledby="tab-description">
+                            <div class="tab-copy">
+                                <h3>Product Description</h3>
+                                <p>These housings are designed to consolidate structural support, thermal management, and lubrication routing in one lightweight casting. Apex supports DFM optimization, tooling validation, serial-production control plans, and export packaging for multi-plant vehicle programs.</p>
+                                <p>Critical bores, sealing faces, and mounting interfaces are finished with dedicated fixtures and monitored with CMM and inline gauging, enabling stable downstream assembly and leak performance.</p>
+                            </div>
+                        </section>
+                        <section class="tab-panel" id="panel-application" role="tabpanel" aria-labelledby="tab-application">
+                            <div class="tab-copy">
+                                <h3>Application</h3>
+                                <div class="application-columns">
+                                    <ul class="detail-list">
+                                        <li>8AT and 10AT passenger vehicle transmissions</li>
+                                        <li>Hybrid transaxles for PHEV and HEV platforms</li>
+                                        <li>Dedicated EV reducers and e-axle systems</li>
+                                    </ul>
+                                    <ul class="detail-list">
+                                        <li>Wet and dry dual-clutch transmissions</li>
+                                        <li>Commercial vehicle gearbox programs</li>
+                                        <li>Regional OEM and Tier-1 localization projects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="tab-panel" id="panel-downloads" role="tabpanel" aria-labelledby="tab-downloads">
+                            <div class="tab-copy">
+                                <h3>Download Files</h3>
+                                <ul class="download-list">
+                                    <li><a href="#">Transmission Housing Technical Datasheet.pdf</a><span>PDF / 1.8 MB</span></li>
+                                    <li><a href="#">Material And Process Capability Sheet.pdf</a><span>PDF / 960 KB</span></li>
+                                    <li><a href="#">Inspection Plan Overview.xlsx</a><span>XLSX / 420 KB</span></li>
+                                    <li><a href="#">Standard RFQ Checklist.docx</a><span>DOCX / 210 KB</span></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <section class="related-posts">
+                    <div class="section-header related-header">
+                        <span class="section-tag">Related Posts</span>
+                        <h2 class="section-title">You May Also Need</h2>
+                    </div>
+                    <div class="related-grid">
+                        <article class="product-card">
+                            <div class="product-image">
+                                <div class="image-placeholder product-placeholder">
+                                    <span class="placeholder-label">Related Product</span>
+                                    <span class="placeholder-sublabel">Cylinder Block</span>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <span class="product-category">Powertrain</span>
+                                <h3 class="product-title">Cylinder Blocks</h3>
+                                <p class="product-desc">High-pressure die-cast engine blocks with controlled cooling jacket and bore geometry.</p>
+                                <a href="products.html" class="btn btn-outline btn-sm">View Product</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-image">
+                                <div class="image-placeholder product-placeholder">
+                                    <span class="placeholder-label">Related Product</span>
+                                    <span class="placeholder-sublabel">Differential Case</span>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <span class="product-category">Drivetrain</span>
+                                <h3 class="product-title">Differential Cases</h3>
+                                <p class="product-desc">Precision-machined cases for AWD, 4WD, and electrified driveline architectures.</p>
+                                <a href="products.html" class="btn btn-outline btn-sm">View Product</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-image">
+                                <div class="image-placeholder product-placeholder">
+                                    <span class="placeholder-label">Related Product</span>
+                                    <span class="placeholder-sublabel">Motor Housing</span>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <span class="product-category">E-Mobility</span>
+                                <h3 class="product-title">Motor Housings</h3>
+                                <p class="product-desc">Lightweight e-drive housings with thermal-management channels and tight datum control.</p>
+                                <a href="products.html" class="btn btn-outline btn-sm">View Product</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="detail-cta section section-accent">
+            <div class="container">
+                <div class="detail-cta-card">
+                    <div>
+                        <span class="section-tag">Need Pricing</span>
+                        <h2 class="section-title">Send your drawing package and target annual volume</h2>
+                        <p class="section-desc">We can return a manufacturability review, tooling proposal, and launch plan for your transmission housing program.</p>
+                    </div>
+                    <div class="detail-cta-actions">
+                        <a href="index.html#contact" class="btn btn-primary">Request Quote</a>
+                        <a href="products.html" class="btn btn-outline">Browse Products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-image">
+            <div class="footer-placeholder"></div>
+        </div>
+        <div class="footer-content container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">A</span>
+                        <span class="logo-text">APEX</span>
+                    </a>
+                    <p>Precision engineering for automotive excellence. Serving global OEMs and Tier-1 suppliers with high-quality components since 1989.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="products.html">Powertrain</a></li>
+                            <li><a href="products.html">Chassis</a></li>
+                            <li><a href="products.html">E-Mobility</a></li>
+                            <li><a href="products.html">Body Structure</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#capabilities">Capabilities</a></li>
+                            <li><a href="index.html#quality">Quality</a></li>
+                            <li><a href="index.html#global">Global Footprint</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="products.html">Catalog</a></li>
+                            <li><a href="#">Technical Docs</a></li>
+                            <li><a href="#">Certificates</a></li>
+                            <li><a href="index.html#contact">RFQ Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Precision Automotive. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="product-detail-gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+.product-banner {
+    min-height: 520px;
+}
+
+.detail-banner-placeholder {
+    min-height: 520px;
+}
+
+.detail-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 420px);
+    gap: 40px;
+    align-items: end;
+}
+
+.detail-hero-copy .page-title {
+    margin-bottom: 20px;
+}
+
+.detail-hero-copy .page-subtitle {
+    max-width: 720px;
+}
+
+.detail-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.detail-summary-card,
+.spec-card,
+.feature-panel,
+.info-panel,
+.detail-cta-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow);
+}
+
+.detail-summary-card {
+    padding: 28px;
+    backdrop-filter: blur(14px);
+}
+
+.detail-summary-card h2,
+.spec-card h3,
+.feature-panel h3,
+.info-panel h3 {
+    font-family: var(--font-secondary);
+    color: var(--white);
+    margin-bottom: 18px;
+}
+
+.detail-summary-list,
+.spec-list,
+.application-list,
+.process-list {
+    display: grid;
+    gap: 14px;
+}
+
+.detail-summary-list li,
+.spec-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--silver);
+    font-size: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-summary-list li:last-child,
+.spec-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-summary-list strong,
+.spec-list strong {
+    color: var(--white);
+    text-align: right;
+}
+
+.detail-overview-grid,
+.detail-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    align-items: center;
+}
+
+.detail-product-visual {
+    min-height: 460px;
+}
+
+.detail-overview-copy p {
+    color: var(--silver);
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.detail-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.detail-chip {
+    padding: 10px 16px;
+    border: 1px solid var(--graphite-light);
+    background-color: var(--graphite);
+    color: var(--off-white);
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.spec-card,
+.feature-panel,
+.info-panel {
+    padding: 28px;
+}
+
+.feature-stack {
+    display: grid;
+    gap: 20px;
+}
+
+.feature-panel p,
+.info-panel li {
+    color: var(--silver);
+}
+
+.detail-side-column {
+    display: grid;
+    gap: 20px;
+}
+
+.application-list,
+.process-list {
+    padding-left: 18px;
+}
+
+.application-list li {
+    list-style: disc;
+    margin-bottom: 10px;
+}
+
+.process-list li:last-child,
+.application-list li:last-child {
+    margin-bottom: 0;
+}
+
+.process-list li {
+    list-style: decimal;
+    margin-bottom: 10px;
+}
+
+.detail-cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 40px;
+}
+
+.detail-cta-card .section-title,
+.detail-cta-card .section-desc {
+    margin-bottom: 0;
+}
+
+.detail-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+    .detail-hero,
+    .detail-overview-grid,
+    .detail-content-grid,
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-summary-card {
+        max-width: 520px;
+    }
+
+    .detail-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-banner,
+    .detail-banner-placeholder {
+        min-height: 460px;
+    }
+
+    .detail-summary-list li,
+    .spec-list li {
+        flex-direction: column;
+    }
+
+    .detail-summary-list strong,
+    .spec-list strong {
+        text-align: left;
+    }
+
+    .detail-product-visual {
+        min-height: 320px;
+    }
+
+    .detail-cta-card,
+    .spec-card,
+    .feature-panel,
+    .info-panel,
+    .detail-summary-card {
+        padding: 24px;
+    }
+}

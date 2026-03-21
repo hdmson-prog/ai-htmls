@@ -4,8 +4,13 @@
     const header = document.getElementById('header');
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const searchToggle = document.getElementById('nav-search-toggle');
+    const headerSearch = document.getElementById('header-search');
+    const searchInput = document.getElementById('search-input');
+    const searchForm = document.querySelector('.search-form');
     const contactForm = document.getElementById('contact-form');
     const navLinks = document.querySelectorAll('.nav-link');
+    const submenuTriggers = document.querySelectorAll('.nav-item.has-submenu > .nav-link');
 
     function handleScroll() {
         if (window.scrollY > 50) {
@@ -24,12 +29,56 @@
     function closeMenu() {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
+        closeSubmenus();
         document.body.style.overflow = '';
+    }
+
+    function openSearch() {
+        if (!searchToggle || !headerSearch) return;
+        searchToggle.classList.add('active');
+        searchToggle.setAttribute('aria-expanded', 'true');
+        headerSearch.classList.add('active');
+        if (searchInput) {
+            setTimeout(() => searchInput.focus(), 180);
+        }
+    }
+
+    function closeSearch() {
+        if (!searchToggle || !headerSearch) return;
+        searchToggle.classList.remove('active');
+        searchToggle.setAttribute('aria-expanded', 'false');
+        headerSearch.classList.remove('active');
+    }
+
+    function toggleSearch() {
+        if (!headerSearch) return;
+        if (headerSearch.classList.contains('active')) {
+            closeSearch();
+        } else {
+            openSearch();
+        }
+    }
+
+    function closeSubmenus() {
+        document.querySelectorAll('.nav-item.has-submenu.open').forEach(item => {
+            item.classList.remove('open');
+        });
+    }
+
+    function toggleSubmenu(e) {
+        if (window.innerWidth > 992) return;
+
+        e.preventDefault();
+        const item = this.closest('.nav-item.has-submenu');
+        const willOpen = !item.classList.contains('open');
+
+        closeSubmenus();
+        item.classList.toggle('open', willOpen);
     }
 
     function smoothScroll(e) {
         const href = this.getAttribute('href');
-        if (href.startsWith('#')) {
+        if (href && href.startsWith('#')) {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
@@ -182,14 +231,49 @@
         if (window.innerWidth > 992 && navMenu.classList.contains('active')) {
             closeMenu();
         }
+        if (window.innerWidth > 992) {
+            closeSubmenus();
+        }
+    }
+
+    function handleDocumentClick(e) {
+        if (!e.target.closest('.nav-item.has-submenu')) {
+            closeSubmenus();
+        }
+
+        if (
+            headerSearch &&
+            headerSearch.classList.contains('active') &&
+            !e.target.closest('#header-search') &&
+            !e.target.closest('#nav-search-toggle')
+        ) {
+            closeSearch();
+        }
+    }
+
+    function handleSearchSubmit(e) {
+        e.preventDefault();
+        if (searchInput) {
+            searchInput.blur();
+        }
     }
 
     function init() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', handleResize, { passive: true });
+        document.addEventListener('click', handleDocumentClick);
         
         navToggle.addEventListener('click', toggleMenu);
         navLinks.forEach(link => link.addEventListener('click', smoothScroll));
+        submenuTriggers.forEach(trigger => trigger.addEventListener('click', toggleSubmenu));
+
+        if (searchToggle) {
+            searchToggle.addEventListener('click', toggleSearch);
+        }
+
+        if (searchForm) {
+            searchForm.addEventListener('submit', handleSearchSubmit);
+        }
         
         if (contactForm) {
             contactForm.addEventListener('submit', handleFormSubmit);

@@ -178,6 +178,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: relative;
 }
 
 .nav-logo {
@@ -205,7 +206,19 @@ ul {
     gap: 40px;
 }
 
+.nav-item {
+    position: relative;
+}
+
+.nav-item.has-submenu {
+    display: flex;
+    align-items: center;
+}
+
 .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -232,6 +245,20 @@ ul {
     width: 100%;
 }
 
+.submenu-toggle {
+    width: 10px;
+    height: 10px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: var(--transition);
+}
+
+.nav-item.open .submenu-toggle,
+.nav-item:hover .submenu-toggle {
+    transform: rotate(-135deg) translateY(-1px);
+}
+
 .nav-cta {
     padding: 10px 24px;
     background-color: var(--accent);
@@ -245,6 +272,110 @@ ul {
 
 .nav-cta::after {
     display: none;
+}
+
+.nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-search-toggle {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-search-toggle:hover,
+.nav-search-toggle.active {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+.nav-search-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.nav-submenu {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 0;
+    min-width: 220px;
+    padding: 14px 0;
+    background-color: rgba(15, 15, 15, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 20;
+}
+
+.nav-submenu a {
+    display: block;
+    padding: 10px 18px;
+    color: var(--silver);
+    font-size: 14px;
+}
+
+.nav-submenu a:hover {
+    background-color: rgba(0, 102, 184, 0.14);
+    color: var(--white);
+}
+
+.nav-item:hover .nav-submenu,
+.nav-item.open .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header-search {
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(10, 10, 10, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: max-height 0.35s ease;
+}
+
+.header-search.active {
+    max-height: 120px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px 24px;
+}
+
+.search-input {
+    flex: 1;
+    width: 100%;
+    padding: 14px 18px;
+    color: var(--white);
+    background-color: var(--graphite);
+    border: 1px solid var(--graphite-light);
+    font-family: var(--font-primary);
+    font-size: 15px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.search-submit {
+    min-width: 140px;
 }
 
 .nav-toggle {
@@ -1118,16 +1249,69 @@ ul {
         height: calc(100vh - 80px);
         background-color: var(--carbon-black);
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         justify-content: flex-start;
         padding-top: 48px;
-        gap: 32px;
+        padding-inline: 24px;
+        gap: 16px;
         transform: translateX(100%);
         transition: var(--transition);
+        overflow-y: auto;
     }
     
     .nav-menu.active {
         transform: translateX(0);
+    }
+
+    .nav-item.has-submenu {
+        display: block;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .nav-submenu {
+        position: static;
+        min-width: 100%;
+        margin-top: 8px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    .nav-item.open .nav-submenu {
+        display: block;
+    }
+
+    .nav-submenu a {
+        padding: 10px 0 10px 16px;
+    }
+
+    .nav-tools {
+        gap: 12px;
+    }
+
+    .nav-search-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 24px 20px;
+    }
+    
+    .search-submit {
+        width: 100%;
     }
     
     .nav-toggle {

@@ -1,0 +1,263 @@
+.company-intro-grid,
+.company-values-grid,
+.timeline-grid,
+.contact-page-grid,
+.office-grid,
+.support-grid,
+.detail-cta-card {
+    display: grid;
+    gap: 24px;
+}
+
+.company-intro,
+.value-card,
+.timeline-card,
+.office-card,
+.support-card,
+.contact-form-shell,
+.contact-map-card,
+.detail-cta-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: var(--shadow);
+}
+
+.company-intro-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.company-intro-copy p,
+.value-card p,
+.timeline-card p,
+.office-card p,
+.support-card p,
+.contact-map-card p {
+    color: var(--silver);
+}
+
+.company-intro-copy .section-title,
+.company-story .section-title,
+.company-values .section-title,
+.contact-direct .section-title {
+    text-align: left;
+}
+
+.company-intro-copy .section-desc {
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.company-stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.company-stat {
+    padding: 20px;
+    background-color: var(--graphite);
+    border: 1px solid var(--graphite-light);
+}
+
+.company-stat strong {
+    display: block;
+    font-family: var(--font-secondary);
+    font-size: 30px;
+    color: var(--white);
+    margin-bottom: 6px;
+}
+
+.company-stat span {
+    font-size: 13px;
+    color: var(--steel-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.company-intro-visual .image-placeholder {
+    min-height: 440px;
+}
+
+.company-story {
+    padding: 0 0 120px;
+}
+
+.company-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.company-story-copy p {
+    margin-bottom: 18px;
+    color: var(--silver);
+}
+
+.story-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.story-list li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--off-white);
+}
+
+.story-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+}
+
+.company-values-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.value-card,
+.timeline-card,
+.office-card,
+.support-card,
+.contact-map-card,
+.contact-form-shell {
+    padding: 28px;
+}
+
+.value-card h3,
+.timeline-card h3,
+.office-card h3,
+.support-card h3,
+.contact-map-card h3 {
+    font-family: var(--font-secondary);
+    color: var(--white);
+    margin-bottom: 14px;
+}
+
+.value-card strong,
+.timeline-year {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--accent-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.timeline-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.contact-page-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+    gap: 48px;
+}
+
+.contact-form-shell .contact-form-wrapper {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.contact-map-card .image-placeholder {
+    min-height: 260px;
+    margin: 20px 0 24px;
+}
+
+.map-points {
+    display: grid;
+    gap: 14px;
+}
+
+.map-points li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--silver);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.map-points li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.map-points strong {
+    color: var(--white);
+}
+
+.office-grid,
+.support-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.office-card strong,
+.support-card strong {
+    display: block;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.office-card a,
+.support-card a {
+    color: var(--accent-light);
+}
+
+.office-card a:hover,
+.support-card a:hover {
+    color: var(--white);
+}
+
+.contact-direct {
+    padding-top: 0;
+}
+
+.detail-cta-card {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 40px;
+}
+
+.detail-cta-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+    .company-intro-grid,
+    .company-story-grid,
+    .contact-page-grid,
+    .company-values-grid,
+    .timeline-grid,
+    .office-grid,
+    .support-grid,
+    .detail-cta-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-stat-row {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card,
+    .timeline-card,
+    .office-card,
+    .support-card,
+    .contact-map-card,
+    .contact-form-shell,
+    .detail-cta-card {
+        padding: 22px;
+    }
+}
