@@ -16,22 +16,111 @@
      NAVIGATION
 ============================================ -->
 <nav class="nav" id="mainNav" aria-label="Primary navigation">
-  <a href="#" class="nav__logo" aria-label="Axiom Drive home">
-    <div class="nav__logo-mark" aria-hidden="true"></div>
-    <div>
-      AXIOM DRIVE
-      <span class="nav__logo-sub">Precision Hub Systems</span>
-    </div>
-  </a>
-  <ul class="nav__links" role="list">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo" aria-label="Axiom Drive home">
+      <div class="nav__logo-mark" aria-hidden="true"></div>
+      <div>
+        AXIOM DRIVE
+        <span class="nav__logo-sub">Precision Hub Systems</span>
+      </div>
+    </a>
+    <ul class="nav__links" role="list">
     <li><a href="#capabilities" class="nav__link">Capabilities</a></li>
-    <li><a href="#products" class="nav__link">Products</a></li>
+    <li class="nav__item">
+      <a href="products-archive.html" class="nav__link">
+        Products
+        <svg class="nav__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="nav__megamenu">
+        <div class="nav__megamenu__grid">
+          <div class="nav__megamenu__col">
+            <div class="nav__megamenu__title">By Generation</div>
+            <div class="nav__megamenu__links">
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">Generation I</div>
+                  <div class="nav__megamenu__link-desc">Standard duty · 32kN load</div>
+                </div>
+              </a>
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">Generation II</div>
+                  <div class="nav__megamenu__link-desc">ABS integrated · 42-48kN</div>
+                </div>
+              </a>
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">Generation III</div>
+                  <div class="nav__megamenu__link-desc">EV optimised · 52-56kN</div>
+                </div>
+              </a>
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">Heavy Duty</div>
+                  <div class="nav__megamenu__link-desc">Commercial · 85kN max</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="nav__megamenu__col">
+            <div class="nav__megamenu__title">By Application</div>
+            <div class="nav__megamenu__links">
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">Passenger Vehicle</div>
+                  <div class="nav__megamenu__link-desc">Sedan, SUV, CUV</div>
+                </div>
+              </a>
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">EV Platform</div>
+                  <div class="nav__megamenu__link-desc">BEV, PHEV, HEV</div>
+                </div>
+              </a>
+              <a href="products-archive.html" class="nav__megamenu__link">
+                <div class="nav__megamenu__link-icon"></div>
+                <div class="nav__megamenu__link-info">
+                  <div class="nav__megamenu__link-name">Commercial Vehicle</div>
+                  <div class="nav__megamenu__link-desc">Truck, bus, industrial</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="nav__megamenu__featured">
+            <div class="nav__megamenu__featured-image">
+              <span style="position:absolute;bottom:8px;right:8px;font-family:var(--f-mono);font-size:8px;color:var(--c-steel-mid);">IMAGE</span>
+              <div class="nav__megamenu__featured-label">
+                <div class="nav__megamenu__featured-title">AX-3560 EV Hub</div>
+                <a href="product-detail.html" class="nav__megamenu__featured-link">
+                  View Product
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav__megamenu__footer">
+          <span class="nav__megamenu__footer-text">48+ products available</span>
+          <a href="products-archive.html" class="nav__megamenu__footer-link">
+            View All Products
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </li>
     <li><a href="#engineering" class="nav__link">Engineering</a></li>
     <li><a href="#quality" class="nav__link">Quality</a></li>
     <li><a href="#global" class="nav__link">Global</a></li>
     <li><a href="#contact" class="nav__link">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav__cta">Request Quote</a>
+    <a href="#contact" class="nav__cta">Request Quote</a>
+  </div>
   <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
