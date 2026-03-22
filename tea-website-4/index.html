@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MŪSHA TEA — Single-Origin Green Tea from the Heart of the Mountain</title>
+  <meta name="description" content="MŪSHA TEA sources ultra-premium single-origin green teas from ancient mountain estates. Experience the art of tea from origin to cup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+SC:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-mark">✦</span>
+      <span class="nav__logo-text">MŪSHA TEA</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="about.html">About</a></li>
+      <li class="nav__item nav__item--has-mega">
+        <a href="products.html">Products</a>
+        <div class="nav__mega-menu">
+          <div class="nav__mega-intro">
+            <span class="nav__mega-label">Tea Archive</span>
+            <h3 class="nav__mega-title">Browse the full collection.</h3>
+            <p class="nav__mega-text">Explore ceremonial lots, estate teas, seasonal reserves, and gifting formats in one archive view.</p>
+          </div>
+          <div class="nav__mega-grid">
+            <a href="products.html#ceremonial" class="nav__mega-card">
+              <span class="nav__mega-card-image" style="background-image: linear-gradient(rgba(15, 42, 31, 0.2), rgba(15, 42, 31, 0.6)), url('https://images.unsplash.com/photo-1464306076886-da185f6a9d05?auto=format&fit=crop&w=800&q=80');"></span>
+              <span class="nav__mega-card-content">
+                <span class="nav__mega-card-title">Ceremonial Grade</span>
+                <span class="nav__mega-card-subtitle">Stone-milled and shade-grown selections</span>
+              </span>
+            </a>
+            <a href="products.html#estate" class="nav__mega-card">
+              <span class="nav__mega-card-image" style="background-image: linear-gradient(rgba(15, 42, 31, 0.2), rgba(15, 42, 31, 0.6)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80');"></span>
+              <span class="nav__mega-card-content">
+                <span class="nav__mega-card-title">Estate Collection</span>
+                <span class="nav__mega-card-subtitle">Single-origin mountain teas with terroir focus</span>
+              </span>
+            </a>
+            <a href="products.html#gift" class="nav__mega-card">
+              <span class="nav__mega-card-image" style="background-image: linear-gradient(rgba(15, 42, 31, 0.2), rgba(15, 42, 31, 0.6)), url('https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=800&q=80');"></span>
+              <span class="nav__mega-card-content">
+                <span class="nav__mega-card-title">Gift Sets</span>
+                <span class="nav__mega-card-subtitle">Archive tasting formats and collector boxes</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav__menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="about.html" class="nav__close-link">About</a></li>
+      <li><a href="products.html" class="nav__close-link">Products</a></li>
+      <li><a href="news.html" class="nav__close-link">News</a></li>
+      <li><a href="contact.html" class="nav__close-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 1 — HERO: CINEMATIC ENTRY
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__image-wrap">
+        <div class="hero__image img-placeholder img-placeholder--hero">
+          <div class="img-placeholder__inner">
+            <!-- Cinematic mountain tea garden at dawn, mist rising -->
+            <div class="img-placeholder__fog"></div>
+            <div class="img-placeholder__gradient"></div>
+            <div class="img-placeholder__label">Ancient Tea Mountains at Dawn</div>
+          </div>
+        </div>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content reveal">
+        <p class="hero__eyebrow">Single Origin · Ceremonial Grade</p>
+        <h1 class="hero__headline">
+          Where the<br />
+          <em>mountain</em><br />
+          breathes into<br />
+          the leaf.
+        </h1>
+        <div class="hero__rule"></div>
+        <p class="hero__sub">Ultra-premium green teas, harvested at altitude,<br />crafted for discerning palates worldwide.</p>
+        <a href="#origin" class="hero__cta">Discover the Origin <span>↓</span></a>
+      </div>
+
+      <div class="hero__scroll-hint">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 2 — ORIGIN: NATURE FIRST
+    ═══════════════════════════════════════ -->
+    <section class="origin" id="origin">
+      <div class="origin__layout">
+
+        <div class="origin__image-primary reveal-left">
+          <div class="img-placeholder img-placeholder--tall">
+            <!-- Vertical: tiered tea terraces ascending mountain, morning mist -->
+            <div class="img-placeholder__inner">
+              <div class="img-placeholder__gradient gradient--green"></div>
+              <div class="img-placeholder__label">Tea Terraces · Altitude 1,400m</div>
+            </div>
+          </div>
+          <div class="origin__caption">Wuyi Mountain, Fujian Province</div>
+        </div>
+
+        <div class="origin__text reveal-right">
+          <span class="section-tag">I. Origin</span>
+          <h2 class="section-headline">
+            Rooted in<br /><em>ancient earth,</em><br />shaped by cloud.
+          </h2>
+          <p class="body-text">
+            At elevations where cloud and stone meet, our teas emerge from soils cultivated for over three centuries. The altitude draws moisture, the mist diffuses light, and the mineral-rich earth imparts a clarity of flavour unachievable in the valley below.
+          </p>
+          <p class="body-text">
+            MŪSHA works exclusively with three mountain estates — each a distinct terroir, each a distinct expression of the land's quiet intelligence.
+          </p>
+          <div class="origin__data">
+            <div class="origin__data-item">
+              <span class="data-number">1,400<span class="data-unit">m</span></span>
+              <span class="data-label">Average Altitude</span>
+            </div>
+            <div class="origin__data-item">
+              <span class="data-number">3</span>
+              <span class="data-label">Estate Partners</span>
+            </div>
+            <div class="origin__data-item">
+              <span class="data-number">300<span class="data-unit">+</span></span>
+              <span class="data-label">Years of Cultivation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="origin__image-secondary reveal">
+          <div class="img-placeholder img-placeholder--landscape">
+            <!-- Wide: rolling fog over tea garden valley -->
+            <div class="img-placeholder__inner">
+              <div class="img-placeholder__gradient gradient--mist"></div>
+              <div class="img-placeholder__label">Morning Fog · Estate Three</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 3 — HARVEST: HUMAN TOUCH
+    ═══════════════════════════════════════ -->
+    <section class="harvest" id="harvest">
+      <div class="harvest__layout">
+
+        <div class="harvest__text reveal">
+          <span class="section-tag">II. Harvest</span>
+          <h2 class="section-headline">
+            Hands that<br />know the<br /><em>single bud.</em>
+          </h2>
+          <p class="body-text">
+            Each spring, master pickers ascend the mountain before the dew lifts. The first flush — two leaves and a bud — is selected by hand, one stem at a time. No machine can replicate the sensitivity of a trained touch distinguishing the perfect from the nearly perfect.
+          </p>
+          <blockquote class="harvest__quote">
+            <p>"We do not pick when it is convenient. We pick when the tea is ready."</p>
+            <cite>— Master Chen, Estate One</cite>
+          </blockquote>
+        </div>
+
+        <div class="harvest__images reveal-right">
+          <div class="harvest__image-main">
+            <div class="img-placeholder img-placeholder--portrait">
+              <!-- Portrait: close-up hands picking tea buds, morning light -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--warm"></div>
+                <div class="img-placeholder__label">First Flush Hand-Picking</div>
+              </div>
+            </div>
+          </div>
+          <div class="harvest__image-inset reveal">
+            <div class="img-placeholder img-placeholder--square">
+              <!-- Square: farmer profile in bamboo hat, misty terraces behind -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--green"></div>
+                <div class="img-placeholder__label">Tea Farmer · Estate Two</div>
+              </div>
+            </div>
+            <p class="harvest__image-note">Spring harvest begins the moment the mountain speaks.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 4 — CRAFT: PROCESS AS ART
+    ═══════════════════════════════════════ -->
+    <section class="craft" id="craft">
+      <div class="craft__header reveal">
+        <span class="section-tag">III. Craft</span>
+        <h2 class="section-headline craft__headline">
+          The art of<br /><em>controlled</em><br />transformation.
+        </h2>
+        <p class="body-text craft__intro">
+          Between leaf and cup lies a sequence of gestures refined across generations — each step calibrated not by instrument alone, but by decades of sensory memory.
+        </p>
+      </div>
+
+      <div class="craft__steps">
+
+        <div class="craft__step reveal-left">
+          <div class="craft__step-image">
+            <div class="img-placeholder img-placeholder--cinematic">
+              <!-- Withering: leaves spread on bamboo trays, diffused light -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--mist"></div>
+                <div class="img-placeholder__label">Withering · Natural Air</div>
+              </div>
+            </div>
+          </div>
+          <div class="craft__step-text">
+            <span class="craft__step-num">01</span>
+            <h3 class="craft__step-title">Withering</h3>
+            <p>Fresh leaves rest on bamboo trays in cool, circulating air. Moisture releases slowly, the leaf relaxes — chemistry begins its quiet work.</p>
+          </div>
+        </div>
+
+        <div class="craft__step craft__step--reverse reveal-right">
+          <div class="craft__step-image">
+            <div class="img-placeholder img-placeholder--cinematic">
+              <!-- Fixation: wok pan-firing, steam rising, artisan hands -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--warm"></div>
+                <div class="img-placeholder__label">Sha Qing · Kill-Green Fixation</div>
+              </div>
+            </div>
+          </div>
+          <div class="craft__step-text">
+            <span class="craft__step-num">02</span>
+            <h3 class="craft__step-title">Fixation</h3>
+            <p>High heat arrests oxidation and sets the leaf's character. The master's hand navigates the wok by memory — every gesture precise, unhurried.</p>
+          </div>
+        </div>
+
+        <div class="craft__step reveal-left">
+          <div class="craft__step-image">
+            <div class="img-placeholder img-placeholder--cinematic">
+              <!-- Rolling: hands shaping leaves into needles, close detail -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--jade"></div>
+                <div class="img-placeholder__label">Rolling · Shape & Structure</div>
+              </div>
+            </div>
+          </div>
+          <div class="craft__step-text">
+            <span class="craft__step-num">03</span>
+            <h3 class="craft__step-title">Rolling</h3>
+            <p>Gentle pressure coaxes the leaf into its final form. Cell walls open slightly, releasing essential oils that will bloom in the cup.</p>
+          </div>
+        </div>
+
+        <div class="craft__step craft__step--reverse reveal-right">
+          <div class="craft__step-image">
+            <div class="img-placeholder img-placeholder--cinematic">
+              <!-- Drying: oven or sun-drying, golden light through leaves -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--gold"></div>
+                <div class="img-placeholder__label">Final Drying · Fire & Air</div>
+              </div>
+            </div>
+          </div>
+          <div class="craft__step-text">
+            <span class="craft__step-num">04</span>
+            <h3 class="craft__step-title">Final Drying</h3>
+            <p>A final reduction of moisture locks in flavour, aroma, and longevity. The leaf is now complete — ready for its next transformation in your cup.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 5 — FEATURED TEAS: COLLECTION
+    ═══════════════════════════════════════ -->
+    <section class="teas" id="teas">
+      <div class="teas__header reveal">
+        <span class="section-tag">IV. Collection</span>
+        <h2 class="section-headline">
+          Each tea,<br />a <em>complete</em><br />world.
+        </h2>
+        <p class="body-text teas__intro">
+          Five expressions. Five mountains. Five distinct conversations between earth, sky, and craft.
+        </p>
+      </div>
+
+      <div class="teas__grid">
+
+        <div class="tea-card reveal">
+          <div class="tea-card__image">
+            <div class="img-placeholder img-placeholder--tea-card">
+              <!-- Pale jade green tea in glass cup, white background -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--jade"></div>
+                <div class="img-placeholder__label">Bǎo Lóng Yín Zhēn</div>
+              </div>
+            </div>
+          </div>
+          <div class="tea-card__content">
+            <span class="tea-card__type">Silver Needle Green</span>
+            <h3 class="tea-card__name">Precious Dragon<br />Silver Needle</h3>
+            <p class="tea-card__desc">Ethereal and luminous. Single buds only, harvested on three mornings each spring. Notes of fresh orchid and morning dew.</p>
+            <div class="tea-card__meta">
+              <span>Estate One · Wuyi</span>
+              <span>First Flush</span>
+            </div>
+            <a href="#contact" class="tea-card__cta">Request Sample</a>
+          </div>
+        </div>
+
+        <div class="tea-card tea-card--offset reveal">
+          <div class="tea-card__image">
+            <div class="img-placeholder img-placeholder--tea-card">
+              <!-- Deep green rolled pellets, jade bowl -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--deep-green"></div>
+                <div class="img-placeholder__label">Taihu Biluochun</div>
+              </div>
+            </div>
+          </div>
+          <div class="tea-card__content">
+            <span class="tea-card__type">Bi Luo Chun</span>
+            <h3 class="tea-card__name">Taihu Lake<br />Green Spiral</h3>
+            <p class="tea-card__desc">Tightly spiralled with white down. An intensely fragrant cup — stone fruit, jasmine, a mineral finish that lingers long.</p>
+            <div class="tea-card__meta">
+              <span>Estate Two · Taihu</span>
+              <span>Pre-Qingming</span>
+            </div>
+            <a href="#contact" class="tea-card__cta">Request Sample</a>
+          </div>
+        </div>
+
+        <div class="tea-card reveal">
+          <div class="tea-card__image">
+            <div class="img-placeholder img-placeholder--tea-card">
+              <!-- Flat green needle leaves, bamboo mat styling -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--warm-green"></div>
+                <div class="img-placeholder__label">Anji Bai Cha</div>
+              </div>
+            </div>
+          </div>
+          <div class="tea-card__content">
+            <span class="tea-card__type">White Leaf Green</span>
+            <h3 class="tea-card__name">Anji<br />White Leaf</h3>
+            <p class="tea-card__desc">A rare albino cultivar. Pale gold liquor of astonishing sweetness — umami undercurrent, clean spring finish, low astringency.</p>
+            <div class="tea-card__meta">
+              <span>Estate Three · Anji</span>
+              <span>Early Spring</span>
+            </div>
+            <a href="#contact" class="tea-card__cta">Request Sample</a>
+          </div>
+        </div>
+
+        <div class="tea-card tea-card--offset reveal">
+          <div class="tea-card__image">
+            <div class="img-placeholder img-placeholder--tea-card">
+              <!-- Gyokuro dark green leaves in ceramic vessel -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--dark-jade"></div>
+                <div class="img-placeholder__label">Uji Gyokuro</div>
+              </div>
+            </div>
+          </div>
+          <div class="tea-card__content">
+            <span class="tea-card__type">Gyokuro · Ceremonial</span>
+            <h3 class="tea-card__name">Uji Shadow<br />Gyokuro</h3>
+            <p class="tea-card__desc">Shaded for 21 days to deepen chlorophyll and umami. A profound, oceanic cup — the highest expression of the shade-grown tradition.</p>
+            <div class="tea-card__meta">
+              <span>Uji, Kyoto</span>
+              <span>First Harvest</span>
+            </div>
+            <a href="#contact" class="tea-card__cta">Request Sample</a>
+          </div>
+        </div>
+
+        <div class="tea-card reveal">
+          <div class="tea-card__image">
+            <div class="img-placeholder img-placeholder--tea-card">
+              <!-- Loose jade green pearls, morning light -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--green"></div>
+                <div class="img-placeholder__label">Dragon Well Reserve</div>
+              </div>
+            </div>
+          </div>
+          <div class="tea-card__content">
+            <span class="tea-card__type">Longjing · Reserve</span>
+            <h3 class="tea-card__name">West Lake<br />Dragon Well</h3>
+            <p class="tea-card__desc">The imperial classic, sourced exclusively from Lion Peak. Flat, smooth needles. Chestnut warmth, a mellow sweetness, enduring aftertaste.</p>
+            <div class="tea-card__meta">
+              <span>Lion Peak · Hangzhou</span>
+              <span>Ming Qian Grade</span>
+            </div>
+            <a href="#contact" class="tea-card__cta">Request Sample</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 6 — EXPERIENCE: LIFESTYLE
+    ═══════════════════════════════════════ -->
+    <section class="experience" id="experience">
+      <div class="experience__intro reveal">
+        <span class="section-tag">V. Experience</span>
+        <h2 class="section-headline">
+          The ceremony<br />of <em>stillness.</em>
+        </h2>
+        <p class="body-text">Tea is not merely a beverage. It is an invitation — to slow, to notice, to return to oneself. Every cup of MŪSHA is a complete moment.</p>
+      </div>
+
+      <div class="experience__mosaic">
+        <div class="experience__cell experience__cell--large reveal-left">
+          <div class="img-placeholder img-placeholder--full">
+            <!-- Tall: pouring tea from gaiwan, soft steam, white ceramic -->
+            <div class="img-placeholder__inner">
+              <div class="img-placeholder__gradient gradient--mist"></div>
+              <div class="img-placeholder__label">Gaiwan Pour · Early Morning</div>
+            </div>
+          </div>
+        </div>
+        <div class="experience__cell-stack">
+          <div class="experience__cell reveal">
+            <div class="img-placeholder img-placeholder--medium">
+              <!-- Square: hand cupping warm tea bowl -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--warm"></div>
+                <div class="img-placeholder__label">The Warm Hold</div>
+              </div>
+            </div>
+          </div>
+          <div class="experience__text-panel reveal">
+            <h3>"The first sip opens<br /><em>a quiet door."</em></h3>
+            <p>Each preparation is its own ritual — water temperature, vessel weight, the patience of the wait.</p>
+          </div>
+          <div class="experience__cell reveal">
+            <div class="img-placeholder img-placeholder--medium">
+              <!-- Square: overhead flat lay of teaware on linen -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--beige"></div>
+                <div class="img-placeholder__label">Teaware Still Life</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="experience__cell experience__cell--wide reveal">
+          <div class="img-placeholder img-placeholder--wide">
+            <!-- Wide: two people sharing tea at low table, soft natural light -->
+            <div class="img-placeholder__inner">
+              <div class="img-placeholder__gradient gradient--warm-green"></div>
+              <div class="img-placeholder__label">Shared Tea Ceremony</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 7 — QUALITY & ORIGIN: TRUST
+    ═══════════════════════════════════════ -->
+    <section class="quality" id="quality">
+      <div class="quality__layout">
+        <div class="quality__text reveal-left">
+          <span class="section-tag">VI. Quality</span>
+          <h2 class="section-headline">
+            Traceable<br />to the<br /><em>single bush.</em>
+          </h2>
+          <p class="body-text">
+            Every batch carries a provenance record — harvest date, picker, altitude, processing notes. Our quality commitment is not a claim; it is a chain of custody from mountain to door.
+          </p>
+          <div class="quality__certifications">
+            <div class="quality__cert reveal">
+              <div class="quality__cert-icon">◈</div>
+              <div>
+                <strong>EU Organic Certified</strong>
+                <p>Zero synthetic inputs across all estates.</p>
+              </div>
+            </div>
+            <div class="quality__cert reveal">
+              <div class="quality__cert-icon">◈</div>
+              <div>
+                <strong>SGS Laboratory Tested</strong>
+                <p>Every lot tested for 500+ pesticide residues.</p>
+              </div>
+            </div>
+            <div class="quality__cert reveal">
+              <div class="quality__cert-icon">◈</div>
+              <div>
+                <strong>Single-Origin Traceability</strong>
+                <p>GPS-tagged estate, batch, and picker records.</p>
+              </div>
+            </div>
+            <div class="quality__cert reveal">
+              <div class="quality__cert-icon">◈</div>
+              <div>
+                <strong>Halal &amp; Kosher Compliant</strong>
+                <p>Certified for global distribution requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quality__image reveal-right">
+          <div class="img-placeholder img-placeholder--tall-wide">
+            <!-- Vertical wide: tea leaves sorted under clean light, lab aesthetic -->
+            <div class="img-placeholder__inner">
+              <div class="img-placeholder__gradient gradient--jade"></div>
+              <div class="img-placeholder__label">Quality Sorting · Estate One</div>
+            </div>
+          </div>
+          <div class="quality__image-sub reveal">
+            <div class="img-placeholder img-placeholder--landscape-sm">
+              <!-- Landscape small: certificates / documentation close-up -->
+              <div class="img-placeholder__inner">
+                <div class="img-placeholder__gradient gradient--beige"></div>
+                <div class="img-placeholder__label">Provenance Documentation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 8 — GLOBAL PRESENCE
+    ═══════════════════════════════════════ -->
+    <section class="global" id="global">
+      <div class="global__header reveal">
+        <span class="section-tag">VII. Reach</span>
+        <h2 class="section-headline">
+          The mountain's<br />gift, <em>delivered</em><br />worldwide.
+        </h2>
+      </div>
+      <div class="global__layout">
+        <div class="global__map reveal">
+          <div class="img-placeholder img-placeholder--map">
+            <!-- Soft illustrated world map with route dots -->
+            <div class="img-placeholder__inner">
+              <div class="global__map-visual">
+                <div class="global__map-bg"></div>
+                <div class="global__dot global__dot--origin" data-label="Origin · China / Japan"></div>
+                <div class="global__dot global__dot--sg" data-label="Singapore Hub"></div>
+                <div class="global__dot global__dot--uk" data-label="United Kingdom"></div>
+                <div class="global__dot global__dot--de" data-label="Germany"></div>
+                <div class="global__dot global__dot--us" data-label="United States"></div>
+                <div class="global__dot global__dot--ae" data-label="UAE"></div>
+                <div class="global__dot global__dot--au" data-label="Australia"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="global__stats reveal-right">
+          <div class="global__stat">
+            <span class="data-number">28<span class="data-unit">+</span></span>
+            <span class="data-label">Export Destinations</span>
+          </div>
+          <div class="global__stat">
+            <span class="data-number">180<span class="data-unit">+</span></span>
+            <span class="data-label">Premium Retail Partners</span>
+          </div>
+          <div class="global__stat">
+            <span class="data-number">14<span class="data-unit">yr</span></span>
+            <span class="data-label">Export Experience</span>
+          </div>
+          <div class="global__stat">
+            <span class="data-number">6</span>
+            <span class="data-label">Continents Served</span>
+          </div>
+          <p class="body-text global__text">
+            From boutique tea rooms in London to five-star hotels in Dubai, MŪSHA teas are chosen by those who will accept nothing less than the extraordinary.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 9 — CONTACT: CALM CONVERSION
+    ═══════════════════════════════════════ -->
+    <section class="contact" id="contact">
+      <div class="contact__layout">
+
+        <div class="contact__image reveal-left">
+          <div class="img-placeholder img-placeholder--contact">
+            <!-- Vertical: single cup of green tea on stone surface, serene light -->
+            <div class="img-placeholder__inner">
+              <div class="img-placeholder__gradient gradient--warm"></div>
+              <div class="img-placeholder__label">A Cup in Stillness</div>
+            </div>
+          </div>
+          <div class="contact__image-caption">
+            <p>"Every inquiry begins<br />a new conversation<br />with the mountain."</p>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap reveal-right">
+          <span class="section-tag">VIII. Connect</span>
+          <h2 class="section-headline contact__headline">
+            Begin a<br /><em>conversation.</em>
+          </h2>
+          <p class="body-text">
+            Whether you are a retailer, a hospitality buyer, or simply a devotee of fine tea — we would love to hear from you.
+          </p>
+          <form class="contact__form" id="contactForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Full name" required />
+              </div>
+              <div class="form-field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Organisation" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-field">
+              <label for="interest">Area of Interest</label>
+              <select id="interest" name="interest">
+                <option value="">Select one...</option>
+                <option>Wholesale / Bulk Import</option>
+                <option>Retail Partnership</option>
+                <option>Hospitality / Food Service</option>
+                <option>Private Label / OEM</option>
+                <option>Sample Request</option>
+                <option>Other Inquiry</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your interest in MŪSHA tea..."></textarea>
+            </div>
+            <button type="submit" class="contact__submit">
+              <span>Send Inquiry</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </form>
+          <div class="contact__form-success" id="formSuccess">
+            <span class="success-icon">✦</span>
+            <p>Your message has arrived. We will respond with care.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER — SOFT CLOSURE
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__texture"></div>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo-mark">✦</span>
+        <span class="footer__logo-name">MŪSHA TEA</span>
+        <p class="footer__tagline">Single-Origin · Mountain-Grown · Crafted with Patience</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Collection</h4>
+          <ul>
+            <li><a href="products.html">Green Teas</a></li>
+            <li><a href="products.html">Ceremonial Grade</a></li>
+            <li><a href="products.html">Seasonal Releases</a></li>
+            <li><a href="products.html">Gift Selections</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="#quality">Quality Standards</a></li>
+            <li><a href="#global">Export Program</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@mushatea.com">hello@mushatea.com</a></li>
+            <li><a href="contact.html">Trade Inquiries</a></li>
+            <li><a href="contact.html">Sample Requests</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 MŪSHA TEA. All rights reserved. Cultivated with reverence.</p>
+      <p>Origin: Fujian · Zhejiang · Uji, Kyoto</p>
+    </div>
+  </footer>
+
+  <div class="floating-widget" aria-label="Quick contact tools">
+    <div class="floating-widget__item">
+      <button type="button" class="floating-widget__button" aria-label="WhatsApp">
+        <span>WA</span>
+      </button>
+      <div class="floating-widget__panel">
+        <span class="floating-widget__label">WhatsApp</span>
+        <div class="floating-widget__qr" aria-hidden="true"></div>
+        <p class="floating-widget__text">Scan to chat with MUSHA TEA on WhatsApp.</p>
+      </div>
+    </div>
+    <div class="floating-widget__item">
+      <button type="button" class="floating-widget__button" aria-label="Email">
+        <span>@</span>
+      </button>
+      <div class="floating-widget__panel">
+        <span class="floating-widget__label">Email</span>
+        <p class="floating-widget__text">hello@mushatea.com</p>
+        <p class="floating-widget__text">Trade and sample inquiries welcome.</p>
+      </div>
+    </div>
+    <div class="floating-widget__item">
+      <button type="button" class="floating-widget__button floating-widget__button--top" aria-label="Go to top">
+        <span>&uarr;</span>
+      </button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
