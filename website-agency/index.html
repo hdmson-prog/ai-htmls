@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOID — Digital Experience Studio</title>
+  <meta name="description" content="VOID is a premier digital experience studio crafting high-performance websites, UI/UX design, and brand identity for ambitious companies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">V</span>
+        <span class="logo-text">OID</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Start a Project <span class="cta-arrow">↗</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#work" class="mobile-link">Work</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#process" class="mobile-link">Process</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid-lines"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="dot"></span>
+        Digital Experience Studio — Est. 2019
+      </div>
+      <h1 class="hero-headline reveal">
+        <span class="line">We Build</span>
+        <span class="line italic">Digital Things</span>
+        <span class="line">That Matter.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Brand identities, immersive websites, and digital products<br/>
+        for companies that refuse to be ordinary.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#work" class="btn-primary">View Our Work</a>
+        <a href="#contact" class="btn-ghost">Start a Project ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-mockup-frame">
+        <div class="mockup-bar">
+          <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+          <span class="mockup-url">voidstudio.co/work/arcform</span>
+        </div>
+        <div class="mockup-screen">
+          <div class="mock-hero-area">
+            <div class="mock-headline-block"></div>
+            <div class="mock-headline-block short"></div>
+            <div class="mock-body-block"></div>
+            <div class="mock-cta-block"></div>
+          </div>
+          <div class="mock-visual-area">
+            <div class="mock-img-big"></div>
+            <div class="mock-img-small"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-card card-1">
+        <div class="fc-icon">⚡</div>
+        <div class="fc-text">
+          <strong>+340%</strong>
+          <span>Conversion lift</span>
+        </div>
+      </div>
+      <div class="hero-float-card card-2">
+        <div class="fc-icon">🏆</div>
+        <div class="fc-text">
+          <strong>Awwwards</strong>
+          <span>Site of the Day</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat reveal">
+        <span class="stat-num">87+</span>
+        <span class="stat-label">Projects Launched</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num">12</span>
+        <span class="stat-label">Industry Awards</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- TICKER -->
+  <!-- ═══════════════════════════════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Web Design</span><span class="ticker-sep">◆</span>
+      <span>UI/UX Design</span><span class="ticker-sep">◆</span>
+      <span>Brand Identity</span><span class="ticker-sep">◆</span>
+      <span>Web Development</span><span class="ticker-sep">◆</span>
+      <span>Motion Design</span><span class="ticker-sep">◆</span>
+      <span>Conversion Optimization</span><span class="ticker-sep">◆</span>
+      <span>Digital Strategy</span><span class="ticker-sep">◆</span>
+      <span>Web Design</span><span class="ticker-sep">◆</span>
+      <span>UI/UX Design</span><span class="ticker-sep">◆</span>
+      <span>Brand Identity</span><span class="ticker-sep">◆</span>
+      <span>Web Development</span><span class="ticker-sep">◆</span>
+      <span>Motion Design</span><span class="ticker-sep">◆</span>
+      <span>Conversion Optimization</span><span class="ticker-sep">◆</span>
+      <span>Digital Strategy</span><span class="ticker-sep">◆</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- FEATURED WORK -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="work" id="work">
+    <div class="section-header reveal">
+      <div class="section-tag">Selected Work</div>
+      <h2 class="section-title">Where Strategy<br/><em>Meets Craft</em></h2>
+      <a href="#" class="view-all-link">View All Projects ↗</a>
+    </div>
+
+    <div class="work-grid">
+
+      <article class="work-card work-card--large reveal" data-index="01">
+        <div class="work-card-img">
+          <div class="img-placeholder gradient-1">
+            <div class="placeholder-ui">
+              <div class="pui-nav"></div>
+              <div class="pui-hero">
+                <div class="pui-h-text">
+                  <div class="pui-line long"></div>
+                  <div class="pui-line medium"></div>
+                  <div class="pui-line short"></div>
+                </div>
+                <div class="pui-h-img"></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card-overlay">
+            <a href="#" class="work-view-btn">View Project ↗</a>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-meta">
+            <span class="work-num">01</span>
+            <span class="work-tag">E-Commerce · Web Design</span>
+          </div>
+          <h3 class="work-card-title">ArcForm Studio</h3>
+          <p class="work-card-desc">A luxury homeware brand reborn through immersive product storytelling and a conversion-optimized shopping experience.</p>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-index="02">
+        <div class="work-card-img">
+          <div class="img-placeholder gradient-2">
+            <div class="placeholder-ui dash">
+              <div class="dash-cards">
+                <div class="dash-card"></div>
+                <div class="dash-card"></div>
+                <div class="dash-card"></div>
+              </div>
+              <div class="dash-chart"></div>
+            </div>
+          </div>
+          <div class="work-card-overlay">
+            <a href="#" class="work-view-btn">View Project ↗</a>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-meta">
+            <span class="work-num">02</span>
+            <span class="work-tag">SaaS · UI/UX</span>
+          </div>
+          <h3 class="work-card-title">Lumora Analytics</h3>
+          <p class="work-card-desc">Enterprise dashboard redesign that reduced cognitive load and boosted user activation by 230%.</p>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-index="03">
+        <div class="work-card-img">
+          <div class="img-placeholder gradient-3">
+            <div class="placeholder-ui brand">
+              <div class="brand-mark"></div>
+              <div class="brand-color-row">
+                <div class="bc"></div><div class="bc"></div><div class="bc"></div><div class="bc"></div>
+              </div>
+              <div class="brand-type-preview">
+                <div class="btp-big"></div>
+                <div class="btp-small"></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card-overlay">
+            <a href="#" class="work-view-btn">View Project ↗</a>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-meta">
+            <span class="work-num">03</span>
+            <span class="work-tag">Branding · Identity</span>
+          </div>
+          <h3 class="work-card-title">Norde Capital</h3>
+          <p class="work-card-desc">Full brand identity system for a fintech startup entering competitive European markets.</p>
+        </div>
+      </article>
+
+      <article class="work-card work-card--wide reveal" data-index="04">
+        <div class="work-card-img">
+          <div class="img-placeholder gradient-4">
+            <div class="placeholder-ui mobile-app">
+              <div class="app-phone">
+                <div class="app-screen">
+                  <div class="app-topbar"></div>
+                  <div class="app-hero-card"></div>
+                  <div class="app-rows">
+                    <div class="app-row"></div>
+                    <div class="app-row"></div>
+                    <div class="app-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="app-phone app-phone--back">
+                <div class="app-screen">
+                  <div class="app-topbar"></div>
+                  <div class="app-hero-card short"></div>
+                  <div class="app-rows">
+                    <div class="app-row"></div>
+                    <div class="app-row"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card-overlay">
+            <a href="#" class="work-view-btn">View Project ↗</a>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-meta">
+            <span class="work-num">04</span>
+            <span class="work-tag">Mobile App · Product Design</span>
+          </div>
+          <h3 class="work-card-title">Velox Finance</h3>
+          <p class="work-card-desc">Mobile-first personal finance app with intelligent spending insights and a frictionless onboarding flow.</p>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-index="05">
+        <div class="work-card-img">
+          <div class="img-placeholder gradient-5">
+            <div class="placeholder-ui editorial">
+              <div class="ed-headline-big"></div>
+              <div class="ed-img-strip"></div>
+              <div class="ed-body-cols">
+                <div class="ed-col"></div>
+                <div class="ed-col"></div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card-overlay">
+            <a href="#" class="work-view-btn">View Project ↗</a>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-meta">
+            <span class="work-num">05</span>
+            <span class="work-tag">Editorial · Web Design</span>
+          </div>
+          <h3 class="work-card-title">Meridian Journal</h3>
+          <p class="work-card-desc">Award-winning editorial platform pushing the boundaries of digital longform storytelling.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- CASE STUDY PREVIEW -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="case-study" id="case-study">
+    <div class="cs-inner">
+      <div class="cs-label reveal">Featured Case Study</div>
+
+      <div class="cs-layout">
+        <div class="cs-visual reveal">
+          <div class="cs-img-main">
+            <div class="cs-gradient-bg">
+              <div class="cs-mockup-layers">
+                <div class="cs-layer cs-layer-1"></div>
+                <div class="cs-layer cs-layer-2"></div>
+                <div class="cs-layer cs-layer-3">
+                  <div class="cs-screen-content">
+                    <div class="cs-sc-nav"></div>
+                    <div class="cs-sc-hero">
+                      <div class="cs-sc-h-lines">
+                        <div></div><div></div><div></div>
+                      </div>
+                      <div class="cs-sc-h-img"></div>
+                    </div>
+                    <div class="cs-sc-cards">
+                      <div class="cs-sc-card"></div>
+                      <div class="cs-sc-card"></div>
+                      <div class="cs-sc-card"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs-stat-badge">
+            <span class="cs-stat-num">+480%</span>
+            <span class="cs-stat-desc">Revenue growth post-launch</span>
+          </div>
+        </div>
+
+        <div class="cs-content reveal">
+          <div class="cs-meta">
+            <span>ArcForm Studio</span>
+            <span>·</span>
+            <span>2024</span>
+          </div>
+          <h2 class="cs-title">From Invisible<br/>to Industry-Defining</h2>
+          <div class="cs-brief">
+            <div class="cs-brief-item">
+              <span class="cs-brief-label">Challenge</span>
+              <p>An iconic homeware brand with zero digital presence, competing against well-funded DTC players in a saturated market.</p>
+            </div>
+            <div class="cs-brief-item">
+              <span class="cs-brief-label">Solution</span>
+              <p>A cinematic brand world, immersive product pages, and a conversion funnel engineered for premium buyers.</p>
+            </div>
+            <div class="cs-brief-item">
+              <span class="cs-brief-label">Results</span>
+              <p>480% revenue increase, 3.2× conversion rate, and Awwwards SOTD within the first month.</p>
+            </div>
+          </div>
+          <a href="#" class="btn-primary mt-lg">Read Full Case Study ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- ABOUT -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-img-container">
+          <div class="about-img-placeholder">
+            <div class="studio-scene">
+              <div class="studio-desk"></div>
+              <div class="studio-monitor"></div>
+              <div class="studio-person"></div>
+              <div class="studio-light"></div>
+            </div>
+          </div>
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-award-badge reveal">
+          <div class="award-icon">★</div>
+          <div class="award-text">
+            <strong>Awwwards</strong>
+            <span>SOTD × 8</span>
+          </div>
+        </div>
+        <div class="about-years-badge reveal">
+          <span class="years-num">5+</span>
+          <span class="years-label">Years of craft</span>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <div class="section-tag">About the Studio</div>
+        <h2 class="section-title">We believe design<br/><em>changes everything.</em></h2>
+        <p class="about-body">VOID is a small, obsessively focused digital studio. We don't do volume — we take on a handful of ambitious projects each year and pour everything into them. Our work lives at the intersection of strategy, aesthetics, and engineering.</p>
+        <p class="about-body">Founded by designers who got fed up with average, we build things that earn attention, hold it, and convert it into growth.</p>
+
+        <div class="about-pillars">
+          <div class="pillar">
+            <span class="pillar-icon">◎</span>
+            <div>
+              <strong>Craft-Obsessed</strong>
+              <p>Every pixel, interaction, and word is deliberate.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">◎</span>
+            <div>
+              <strong>Strategy-Led</strong>
+              <p>Beautiful work that performs. Always.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">◎</span>
+            <div>
+              <strong>Partner Mentality</strong>
+              <p>We're invested in your success, not just your project.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary mt-lg">Work With Us ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- SERVICES -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Our Capabilities</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon-area">
+            <div class="service-icon-placeholder si-1">
+              <div class="si-shapes">
+                <div class="si-rect"></div>
+                <div class="si-circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-num">01</div>
+          <h3 class="service-title">Web Design</h3>
+          <p class="service-desc">Visually striking, conversion-optimised websites that position your brand as the obvious choice.</p>
+          <a href="#" class="service-link">Explore ↗</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-area">
+            <div class="service-icon-placeholder si-2">
+              <div class="si-wireframe">
+                <div class="si-wf-row"></div>
+                <div class="si-wf-row medium"></div>
+                <div class="si-wf-row short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-num">02</div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-desc">Intuitive, delightful interfaces that reduce friction and guide users toward meaningful actions.</p>
+          <a href="#" class="service-link">Explore ↗</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-area">
+            <div class="service-icon-placeholder si-3">
+              <div class="si-brand-mark">
+                <div class="si-bm-shape"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-num">03</div>
+          <h3 class="service-title">Brand Identity</h3>
+          <p class="service-desc">Strategic brand systems — from logo and type to voice and motion — built for lasting recognition.</p>
+          <a href="#" class="service-link">Explore ↗</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-area">
+            <div class="service-icon-placeholder si-4">
+              <div class="si-code">
+                <div class="si-code-line"></div>
+                <div class="si-code-line long"></div>
+                <div class="si-code-line medium"></div>
+                <div class="si-code-line short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-num">04</div>
+          <h3 class="service-title">Development</h3>
+          <p class="service-desc">High-performance, pixel-perfect front-end development with a relentless focus on speed and quality.</p>
+          <a href="#" class="service-link">Explore ↗</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-area">
+            <div class="service-icon-placeholder si-5">
+              <div class="si-chart">
+                <div class="si-bar b1"></div>
+                <div class="si-bar b2"></div>
+                <div class="si-bar b3"></div>
+                <div class="si-bar b4"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-num">05</div>
+          <h3 class="service-title">CRO</h3>
+          <p class="service-desc">Data-driven conversion optimisation that turns your existing traffic into measurable revenue growth.</p>
+          <a href="#" class="service-link">Explore ↗</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon-area">
+            <div class="service-icon-placeholder si-6">
+              <div class="si-motion">
+                <div class="si-motion-path"></div>
+                <div class="si-motion-dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-num">06</div>
+          <h3 class="service-title">Motion Design</h3>
+          <p class="service-desc">Purposeful animation and micro-interactions that breathe life into products and elevate perceived quality.</p>
+          <a href="#" class="service-link">Explore ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- PROCESS -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="process" id="process">
+    <div class="process-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">How We Work</div>
+        <h2 class="section-title">The VOID<br/><em>Method</em></h2>
+      </div>
+
+      <div class="process-steps">
+
+        <div class="process-step reveal">
+          <div class="ps-visual">
+            <div class="ps-num">01</div>
+            <div class="ps-icon-area">
+              <div class="ps-icon discover">
+                <div class="psi-circle"></div>
+                <div class="psi-lines">
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ps-content">
+            <span class="ps-tag">Week 1–2</span>
+            <h3>Discovery & Strategy</h3>
+            <p>We immerse ourselves in your business, competitors, and customers to uncover the real opportunity. Strategy before aesthetics — always.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="ps-visual">
+            <div class="ps-num">02</div>
+            <div class="ps-icon-area">
+              <div class="ps-icon concept">
+                <div class="psi-grid">
+                  <div></div><div></div><div></div><div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ps-content">
+            <span class="ps-tag">Week 3–4</span>
+            <h3>Concept & Direction</h3>
+            <p>We develop 2–3 distinct creative directions, each representing a different strategic position. You choose. We refine.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="ps-visual">
+            <div class="ps-num">03</div>
+            <div class="ps-icon-area">
+              <div class="ps-icon design">
+                <div class="psi-screen">
+                  <div class="psi-cursor"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ps-content">
+            <span class="ps-tag">Week 5–8</span>
+            <h3>Design & Prototype</h3>
+            <p>Full design system creation — typography, colour, components — plus interactive prototypes for testing real flows.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="ps-visual">
+            <div class="ps-num">04</div>
+            <div class="ps-icon-area">
+              <div class="ps-icon build">
+                <div class="psi-brackets">&lt; /&gt;</div>
+              </div>
+            </div>
+          </div>
+          <div class="ps-content">
+            <span class="ps-tag">Week 9–14</span>
+            <h3>Build & Refine</h3>
+            <p>Pixel-perfect development with weekly demos. Every animation, transition, and edge case considered and resolved.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="ps-visual">
+            <div class="ps-num">05</div>
+            <div class="ps-icon-area">
+              <div class="ps-icon launch">
+                <div class="psi-rocket">↑</div>
+              </div>
+            </div>
+          </div>
+          <div class="ps-content">
+            <span class="ps-tag">Week 15</span>
+            <h3>Launch & Grow</h3>
+            <p>Meticulous QA, performance optimisation, and a supported launch. Then we track, measure, and keep improving.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- TESTIMONIALS -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">What Clients Say</div>
+        <h2 class="section-title">Trusted by<br/><em>Ambitious Brands</em></h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testi-card reveal">
+          <div class="testi-quote">"</div>
+          <p class="testi-body">VOID didn't just build us a website — they built us a brand world. The level of thought that went into every interaction is something we've never experienced with another agency.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <div class="avatar-placeholder">MK</div>
+            </div>
+            <div class="testi-author-info">
+              <strong>Marcus Klein</strong>
+              <span>CEO, ArcForm Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal">
+          <div class="testi-quote">"</div>
+          <p class="testi-body">We'd worked with three agencies before VOID. The difference is night and day. They actually understand business goals, not just design trends. Our conversion rate speaks for itself.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <div class="avatar-placeholder">SR</div>
+            </div>
+            <div class="testi-author-info">
+              <strong>Sophia Reyes</strong>
+              <span>Head of Growth, Lumora</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal">
+          <div class="testi-quote">"</div>
+          <p class="testi-body">Our new brand identity has completely changed how the market sees us. Investors, partners, customers — everyone treats us differently now. VOID gets premium positioning.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <div class="avatar-placeholder">JT</div>
+            </div>
+            <div class="testi-author-info">
+              <strong>James Thornton</strong>
+              <span>Founder, Norde Capital</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CLIENT LOGOS -->
+      <div class="client-logos reveal">
+        <div class="logos-label">Trusted By</div>
+        <div class="logos-grid">
+          <div class="logo-placeholder">Arcform</div>
+          <div class="logo-placeholder">Lumora</div>
+          <div class="logo-placeholder">Norde</div>
+          <div class="logo-placeholder">Velox</div>
+          <div class="logo-placeholder">Meridian</div>
+          <div class="logo-placeholder">Ostara</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- CTA -->
+  <!-- ═══════════════════════════════════ -->
+  <section class="cta-section" id="contact">
+    <div class="cta-bg">
+      <div class="cta-visual-area">
+        <div class="cta-abstract-1"></div>
+        <div class="cta-abstract-2"></div>
+        <div class="cta-abstract-3"></div>
+        <div class="cta-grid"></div>
+      </div>
+    </div>
+    <div class="cta-inner">
+      <div class="cta-eyebrow reveal">Let's Build Something Extraordinary</div>
+      <h2 class="cta-headline reveal">Your next chapter<br/><em>starts here.</em></h2>
+      <p class="cta-sub reveal">We take on 4–6 new projects per year. If you're building something ambitious, let's talk.</p>
+      <div class="cta-actions reveal">
+        <a href="mailto:hello@voidstudio.co" class="btn-primary btn-large">Start a Conversation ↗</a>
+        <a href="#work" class="btn-ghost btn-large">See Our Work</a>
+      </div>
+      <div class="cta-availability reveal">
+        <span class="avail-dot"></span>
+        Currently accepting projects for Q3 2025
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="logo-mark">V</span>OID
+          </a>
+          <p class="footer-tagline">Digital experiences for<br/>ambitious brands.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link">Tw</a>
+            <a href="#" class="social-link">Li</a>
+            <a href="#" class="social-link">Dr</a>
+            <a href="#" class="social-link">Ig</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="#">Selected Projects</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">Awards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Journal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4>Let's Talk</h4>
+          <a href="mailto:hello@voidstudio.co" class="footer-email">hello@voidstudio.co</a>
+          <p class="footer-address">London, UK · Remote-First</p>
+          <a href="#contact" class="btn-ghost btn-sm mt-md">Start a Project ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 VOID Studio. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+        <span class="footer-craft">Designed & Built with obsession.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
