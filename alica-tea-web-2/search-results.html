@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search results for Heritage Tea Manufactory - find products, articles, and information.">
+    <title>Search Results – Heritage Tea Manufactory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search-results.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Heritage Tea Manufactory</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#heritage">Heritage</a></li>
+                    <li><a href="index.html#manufactory">Manufactory</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                </ul>
+                <button class="search-toggle" id="searchToggle" aria-label="Open search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="language-switcher">
+                    <button class="language-btn" id="languageBtn" aria-label="Select language" aria-expanded="false">
+                        <svg class="language-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M2 10H18" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M10 2C11.5 4 12 7 12 10C12 13 11.5 16 10 18C8.5 16 8 13 8 10C8 7 8.5 4 10 2Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span class="language-current" id="currentLanguage">EN</span>
+                        <svg class="language-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="#" class="language-option active" data-lang="en">
+                            <span class="language-name">English</span>
+                            <span class="language-code">EN</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="fr">
+                            <span class="language-name">Français</span>
+                            <span class="language-code">FR</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="de">
+                            <span class="language-name">Deutsch</span>
+                            <span class="language-code">DE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Results Header -->
+    <section class="search-header">
+        <div class="container">
+            <div class="search-header-content">
+                <h1 class="search-title">Search Results</h1>
+                <div class="search-bar-inline">
+                    <input type="search" class="search-input-inline" id="searchQuery" placeholder="Search products, news, information..." value="organic tea">
+                    <button class="search-btn-inline">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="search-meta">Found <strong>12 results</strong> for "<span id="searchTerm">organic tea</span>"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Filters -->
+    <section class="search-filters-section">
+        <div class="container">
+            <div class="search-filters">
+                <button class="filter-chip active" data-type="all">All Results (12)</button>
+                <button class="filter-chip" data-type="products">Products (6)</button>
+                <button class="filter-chip" data-type="articles">Articles (4)</button>
+                <button class="filter-chip" data-type="pages">Pages (2)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <section class="search-results-section">
+        <div class="container">
+            <div class="results-grid">
+                
+                <!-- Product Results -->
+                <article class="result-item" data-type="products">
+                    <div class="result-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=300&q=90" alt="Imperial Green" loading="lazy">
+                    </div>
+                    <div class="result-content">
+                        <span class="result-type">Product</span>
+                        <h3 class="result-title"><a href="product-detail.html">Imperial Green</a></h3>
+                        <p class="result-excerpt">Delicate spring-harvest green with vegetal sweetness and pale jade infusion. <mark>Organic</mark> certified, minimally processed, maximally refined.</p>
+                        <div class="result-meta">
+                            <span class="result-category">Green Tea</span>
+                            <span class="result-grade">AAA Grade</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="products">
+                    <div class="result-image">
+                        <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=300&q=90" alt="Moonlight White" loading="lazy">
+                    </div>
+                    <div class="result-content">
+                        <span class="result-type">Product</span>
+                        <h3 class="result-title"><a href="product-detail.html">Moonlight White</a></h3>
+                        <p class="result-excerpt">Rare white <mark>tea</mark> with silvery tips and subtle honeyed notes. Hand-selected, naturally withered, exceptionally pure.</p>
+                        <div class="result-meta">
+                            <span class="result-category">White Tea</span>
+                            <span class="result-grade">Silver Needle</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Results -->
+                <article class="result-item" data-type="articles">
+                    <div class="result-content full-width">
+                        <span class="result-type">Article</span>
+                        <h3 class="result-title"><a href="news-single.html">Carbon neutrality achieved across all estate operations</a></h3>
+                        <p class="result-excerpt">After eight years of systematic improvements, we have achieved carbon neutrality across cultivation, processing, and distribution. Our <mark>organic</mark> practices and solar installation...</p>
+                        <div class="result-meta">
+                            <span class="result-date">December 15, 2024</span>
+                            <span class="result-read-time">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="articles">
+                    <div class="result-content full-width">
+                        <span class="result-type">Article</span>
+                        <h3 class="result-title"><a href="news-single.html">EU Organic certification renewed for fifth consecutive year</a></h3>
+                        <p class="result-excerpt">Our estate has successfully completed its annual EU <mark>organic</mark> audit with zero non-conformities, maintaining our commitment to chemical-free cultivation.</p>
+                        <div class="result-meta">
+                            <span class="result-date">November 28, 2024</span>
+                            <span class="result-read-time">3 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Page Results -->
+                <article class="result-item" data-type="pages">
+                    <div class="result-content full-width">
+                        <span class="result-type">Page</span>
+                        <h3 class="result-title"><a href="about.html">About Heritage Tea Manufactory</a></h3>
+                        <p class="result-excerpt">Four generations of <mark>tea</mark> excellence. Over 125 years, our manufactory has remained in family stewardship, producing <mark>organic</mark> teas with precision and care...</p>
+                        <div class="result-breadcrumb">
+                            <span>Home</span> / <span>About</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More Product Results -->
+                <article class="result-item" data-type="products">
+                    <div class="result-image">
+                        <img src="https://images.unsplash.com/photo-1597318130878-aa7e6a53746c?w=300&q=90" alt="Estate Reserve Black" loading="lazy">
+                    </div>
+                    <div class="result-content">
+                        <span class="result-type">Product</span>
+                        <h3 class="result-title"><a href="product-detail.html">Estate Reserve Black</a></h3>
+                        <p class="result-excerpt">Full-bodied orthodox black <mark>tea</mark> with malty depth and copper liquor. Our flagship offering, available in <mark>organic</mark> certification.</p>
+                        <div class="result-meta">
+                            <span class="result-category">Black Tea</span>
+                            <span class="result-grade">FBOP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="products">
+                    <div class="result-image">
+                        <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=300&q=90" alt="Sencha Superior" loading="lazy">
+                    </div>
+                    <div class="result-content">
+                        <span class="result-type">Product</span>
+                        <h3 class="result-title"><a href="product-detail.html">Sencha Superior</a></h3>
+                        <p class="result-excerpt">Premium Japanese steamed green <mark>tea</mark> with vibrant color and umami depth. Fresh, grassy, perfectly balanced. <mark>Organic</mark> certified.</p>
+                        <div class="result-meta">
+                            <span class="result-category">Green Tea</span>
+                            <span class="result-grade">First Grade</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="articles">
+                    <div class="result-content full-width">
+                        <span class="result-type">Article</span>
+                        <h3 class="result-title"><a href="news-single.html">Spring first flush yields exceptional quality</a></h3>
+                        <p class="result-excerpt">Favorable weather conditions during this year's spring harvest have produced some of the finest <mark>teas</mark> we have processed in recent memory, particularly our <mark>organic</mark> certified lots...</p>
+                        <div class="result-meta">
+                            <span class="result-date">November 10, 2024</span>
+                            <span class="result-read-time">4 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="products">
+                    <div class="result-image">
+                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&q=90" alt="Dragon Well" loading="lazy">
+                    </div>
+                    <div class="result-content">
+                        <span class="result-type">Product</span>
+                        <h3 class="result-title"><a href="product-detail.html">Dragon Well</a></h3>
+                        <p class="result-excerpt">Legendary pan-fired green <mark>tea</mark> with flat leaves and chestnut aroma. Sweet, fresh, remarkably smooth. Certified <mark>organic</mark>.</p>
+                        <div class="result-meta">
+                            <span class="result-category">Green Tea</span>
+                            <span class="result-grade">Pre-Qingming</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="products">
+                    <div class="result-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&q=90" alt="White Peony" loading="lazy">
+                    </div>
+                    <div class="result-content">
+                        <span class="result-type">Product</span>
+                        <h3 class="result-title"><a href="product-detail.html">White Peony</a></h3>
+                        <p class="result-excerpt">Delicate white <mark>tea</mark> with young buds and leaves. Floral, sweet, with gentle fruity undertones. <mark>Organic</mark> estate grown.</p>
+                        <div class="result-meta">
+                            <span class="result-category">White Tea</span>
+                            <span class="result-grade">Bai Mu Dan</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="articles">
+                    <div class="result-content full-width">
+                        <span class="result-type">Article</span>
+                        <h3 class="result-title"><a href="news-single.html">Rainwater harvesting system reduces water usage</a></h3>
+                        <p class="result-excerpt">New infrastructure captures and filters rainwater for use in <mark>tea</mark> processing, supporting our <mark>organic</mark> and sustainable operations...</p>
+                        <div class="result-meta">
+                            <span class="result-date">October 5, 2024</span>
+                            <span class="result-read-time">4 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="result-item" data-type="pages">
+                    <div class="result-content full-width">
+                        <span class="result-type">Page</span>
+                        <h3 class="result-title"><a href="index.html#sustainability">Sustainability & Responsibility</a></h3>
+                        <p class="result-excerpt">Our longevity depends on the health of the land, the dignity of labor, and the preservation of knowledge. Certified <mark>organic</mark> estates with regenerative soil practices...</p>
+                        <div class="result-breadcrumb">
+                            <span>Home</span> / <span>Sustainability</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- No Results State (Hidden by default) -->
+            <div class="no-results" style="display: none;">
+                <svg class="no-results-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="35" cy="35" r="25" stroke="currentColor" stroke-width="3"/>
+                    <path d="M55 55L70 70" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M30 25L40 35M40 25L30 35" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <h2 class="no-results-title">No results found</h2>
+                <p class="no-results-text">We couldn't find any results for your search. Please try different keywords or browse our collections.</p>
+                <div class="no-results-actions">
+                    <a href="products.html" class="btn-primary">Browse Products</a>
+                    <a href="index.html" class="btn-secondary">Return Home</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-title">Heritage Tea Manufactory</h4>
+                    <p class="footer-text">Established 1897<br>Four generations of tea excellence</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-text">
+                        Estate Office<br>
+                        Dimbula Valley, Sri Lanka<br>
+                        +94 11 234 5678<br>
+                        corporate@heritagetea.com
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Certifications</h4>
+                    <p class="footer-text">
+                        ISO 22000:2018<br>
+                        USDA Organic<br>
+                        Fair Trade Certified<br>
+                        Rainforest Alliance
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <p class="footer-text">
+                        <a href="#" class="footer-link">Privacy Policy</a><br>
+                        <a href="#" class="footer-link">Terms of Service</a><br>
+                        <a href="#" class="footer-link">Export Compliance</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Heritage Tea Manufactory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="search-results.js"></script>
+</body>
+</html>

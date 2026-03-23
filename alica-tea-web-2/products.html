@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our complete collection of heritage teas. From estate reserve blacks to rare white teas, each offering represents decades of refinement.">
+    <title>Tea Collection – Heritage Tea Manufactory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products-page.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Heritage Tea Manufactory</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#heritage">Heritage</a></li>
+                    <li><a href="index.html#manufactory">Manufactory</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#sustainability">Sustainability</a></li>
+                    <li><a href="index.html#capabilities">Capabilities</a></li>
+                    <li><a href="index.html#contact" class="nav-cta">Corporate Inquiries</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <span class="section-label">Portfolio</span>
+                <h1 class="page-title">Our tea collection</h1>
+                <p class="page-intro">Each tea represents generations of expertise. From single-origin estates to carefully composed blends, these offerings embody our commitment to excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label for="categoryFilter" class="filter-label">Category</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Teas</option>
+                        <option value="black">Black Tea</option>
+                        <option value="green">Green Tea</option>
+                        <option value="oolong">Oolong</option>
+                        <option value="white">White Tea</option>
+                        <option value="pu-erh">Pu-erh</option>
+                        <option value="blend">Blends</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortFilter" class="filter-label">Sort By</label>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="featured">Featured</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+                <div class="results-count">
+                    <span id="resultsCount">24</span> products
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Archive -->
+    <section class="products-archive">
+        <div class="container">
+            <div class="products-layout">
+                
+                <!-- Sidebar -->
+                <aside class="products-sidebar">
+                    
+                    <!-- Category Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Tea Categories</h3>
+                        <ul class="category-list">
+                            <li class="category-item active">
+                                <a href="#" class="category-link" data-category="all">
+                                    <span class="category-name">All Teas</span>
+                                    <span class="category-count">24</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link" data-category="black">
+                                    <span class="category-name">Black Tea</span>
+                                    <span class="category-count">8</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link" data-category="green">
+                                    <span class="category-name">Green Tea</span>
+                                    <span class="category-count">6</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link" data-category="oolong">
+                                    <span class="category-name">Oolong</span>
+                                    <span class="category-count">3</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link" data-category="white">
+                                    <span class="category-name">White Tea</span>
+                                    <span class="category-count">4</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link" data-category="pu-erh">
+                                    <span class="category-name">Pu-erh</span>
+                                    <span class="category-count">2</span>
+                                </a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-link" data-category="blend">
+                                    <span class="category-name">Blends</span>
+                                    <span class="category-count">5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Widget -->
+                    <div class="sidebar-widget widget-contact">
+                        <h3 class="widget-title">Need Assistance?</h3>
+                        <p class="widget-text">Our team is available to discuss wholesale pricing, custom blends, and partnership opportunities.</p>
+                        <div class="widget-contact-info">
+                            <div class="widget-contact-item">
+                                <svg class="widget-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 4L8.16 8.67C9.21 9.45 10.79 9.45 11.84 8.67L18 4M4 16H16C17.1 16 18 15.1 18 14V6C18 4.9 17.1 4 16 4H4C2.9 4 2 4.9 2 6V14C2 15.1 2.9 16 4 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <div>
+                                    <span class="widget-contact-label">Email</span>
+                                    <a href="mailto:export@heritagetea.com" class="widget-contact-link">export@heritagetea.com</a>
+                                </div>
+                            </div>
+                            <div class="widget-contact-item">
+                                <svg class="widget-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 5C2 3.89543 2.89543 3 4 3H6.5C6.77614 3 7 3.22386 7 3.5V7.5C7 7.77614 6.77614 8 6.5 8H4C2.89543 8 2 7.10457 2 6V5Z" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M18 5C18 3.89543 17.1046 3 16 3H13.5C13.2239 3 13 3.22386 13 3.5V7.5C13 7.77614 13.2239 8 13.5 8H16C17.1046 8 18 7.10457 18 6V5Z" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M7 7.5V11C7 11.5523 7.44772 12 8 12H12C12.5523 12 13 11.5523 13 11V7.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M10 12V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                                <div>
+                                    <span class="widget-contact-label">Phone</span>
+                                    <a href="tel:+94112345679" class="widget-contact-link">+94 11 234 5679</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="widget-btn">Get In Touch</a>
+                    </div>
+
+                    <!-- Featured Product Widget -->
+                    <div class="sidebar-widget widget-featured">
+                        <h3 class="widget-title">Featured</h3>
+                        <div class="widget-product">
+                            <img src="https://images.unsplash.com/photo-1597318130878-aa7e6a53746c?w=400&q=90" alt="Estate Reserve Black" loading="lazy">
+                            <div class="widget-product-info">
+                                <h4 class="widget-product-name">Estate Reserve Black</h4>
+                                <p class="widget-product-text">Our flagship offering for over a century.</p>
+                                <a href="product-detail.html" class="widget-product-link">View Details →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-archive-grid" id="productsGrid">
+                
+                <!-- Product Item -->
+                <article class="product-archive-item" data-category="black">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1597318130878-aa7e6a53746c?w=600&q=90" alt="Estate Reserve Black Tea" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Black Tea</span>
+                        <h3 class="product-archive-name">Estate Reserve Black</h3>
+                        <p class="product-archive-excerpt">Full-bodied orthodox black tea with malty depth and copper liquor. Our flagship offering for over a century.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Sri Lanka</span>
+                            <span class="product-grade">FBOP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="green">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=90" alt="Imperial Green Tea" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Green Tea</span>
+                        <h3 class="product-archive-name">Imperial Green</h3>
+                        <p class="product-archive-excerpt">Delicate spring-harvest green with vegetal sweetness and pale jade infusion. Minimally processed, maximally refined.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">China</span>
+                            <span class="product-grade">AAA</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="oolong">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&q=90" alt="High Mountain Oolong" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Oolong</span>
+                        <h3 class="product-archive-name">High Mountain Oolong</h3>
+                        <p class="product-archive-excerpt">Semi-oxidized tea with floral complexity and lingering finish. Sourced from elevations above 1,500 meters.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Taiwan</span>
+                            <span class="product-grade">Premium</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="white">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=600&q=90" alt="Moonlight White Tea" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">White Tea</span>
+                        <h3 class="product-archive-name">Moonlight White</h3>
+                        <p class="product-archive-excerpt">Rare white tea with silvery tips and subtle honeyed notes. Hand-selected, naturally withered, exceptionally pure.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Fujian</span>
+                            <span class="product-grade">Silver Needle</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="blend">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=90" alt="Heritage Breakfast Blend" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Blend</span>
+                        <h3 class="product-archive-name">Heritage Breakfast Blend</h3>
+                        <p class="product-archive-excerpt">Robust morning blend of Assam and Ceylon. Formulated in 1923, unchanged since. Full, satisfying, dependable.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Multi-Origin</span>
+                            <span class="product-grade">Estate Blend</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="pu-erh">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=90" alt="Aged Pu-erh" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Pu-erh</span>
+                        <h3 class="product-archive-name">Aged Pu-erh</h3>
+                        <p class="product-archive-excerpt">Fermented tea with earthy complexity and smooth, dark liquor. Aged in controlled conditions for a minimum of seven years.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Yunnan</span>
+                            <span class="product-grade">Vintage 2015</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="white">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1563822249366-3efcc93e2168?w=600&q=90" alt="Jasmine Silver Needle" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">White Tea</span>
+                        <h3 class="product-archive-name">Jasmine Silver Needle</h3>
+                        <p class="product-archive-excerpt">Premium white tea scented with night-blooming jasmine. Delicate, aromatic, labor-intensive. A study in restraint.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Fujian</span>
+                            <span class="product-grade">Scented</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="black">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=90" alt="Golden Yunnan" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Black Tea</span>
+                        <h3 class="product-archive-name">Golden Yunnan</h3>
+                        <p class="product-archive-excerpt">Distinctive black tea with peppery notes and golden tips. Smooth, full-bodied, with natural honey sweetness.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Yunnan</span>
+                            <span class="product-grade">Golden Tip</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="green">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=600&q=90" alt="Dragon Well Green" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Green Tea</span>
+                        <h3 class="product-archive-name">Dragon Well</h3>
+                        <p class="product-archive-excerpt">Legendary pan-fired green tea with flat leaves and chestnut aroma. Sweet, fresh, and remarkably smooth.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Zhejiang</span>
+                            <span class="product-grade">Pre-Qingming</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="black">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1545435321-6e6d88b1f5f0?w=600&q=90" alt="Darjeeling First Flush" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Black Tea</span>
+                        <h3 class="product-archive-name">Darjeeling First Flush</h3>
+                        <p class="product-archive-excerpt">Light, aromatic spring harvest from the Himalayan foothills. Muscatel notes with bright, champagne-like character.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">India</span>
+                            <span class="product-grade">SFTGFOP1</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="oolong">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1587651635009-5c8e78b03313?w=600&q=90" alt="Iron Goddess Oolong" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Oolong</span>
+                        <h3 class="product-archive-name">Iron Goddess</h3>
+                        <p class="product-archive-excerpt">Classic rolled oolong with orchid fragrance and creamy texture. Multiple infusions reveal layers of complexity.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Anxi</span>
+                            <span class="product-grade">Traditional</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="green">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600&q=90" alt="Sencha Superior" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Green Tea</span>
+                        <h3 class="product-archive-name">Sencha Superior</h3>
+                        <p class="product-archive-excerpt">Premium Japanese steamed green tea with vibrant color and umami depth. Fresh, grassy, perfectly balanced.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Shizuoka</span>
+                            <span class="product-grade">First Grade</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="black">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&q=90" alt="Ceylon Orange Pekoe" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Black Tea</span>
+                        <h3 class="product-archive-name">Ceylon Orange Pekoe</h3>
+                        <p class="product-archive-excerpt">Classic Ceylon tea with bright, citrusy notes and medium body. Crisp, clean, and endlessly drinkable.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Sri Lanka</span>
+                            <span class="product-grade">OP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="white">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1597318130878-aa7e6a53746c?w=600&q=90" alt="White Peony" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">White Tea</span>
+                        <h3 class="product-archive-name">White Peony</h3>
+                        <p class="product-archive-excerpt">Delicate white tea with young buds and leaves. Floral, sweet, with gentle fruity undertones.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Fujian</span>
+                            <span class="product-grade">Bai Mu Dan</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="blend">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=90" alt="Earl Grey Imperial" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Blend</span>
+                        <h3 class="product-archive-name">Earl Grey Imperial</h3>
+                        <p class="product-archive-excerpt">Refined bergamot blend using premium Ceylon base. Citrus-forward yet balanced, elegant and timeless.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Multi-Origin</span>
+                            <span class="product-grade">Estate Blend</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="oolong">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&q=90" alt="Oriental Beauty" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Oolong</span>
+                        <h3 class="product-archive-name">Oriental Beauty</h3>
+                        <p class="product-archive-excerpt">Heavily oxidized oolong with natural honey sweetness and fruity complexity. A true artisan tea.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Taiwan</span>
+                            <span class="product-grade">Competition Grade</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="black">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=600&q=90" alt="Assam TGFOP" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Black Tea</span>
+                        <h3 class="product-archive-name">Assam TGFOP</h3>
+                        <p class="product-archive-excerpt">Bold, malty black tea from India's premier growing region. Rich, full-bodied, excellent with milk.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Assam</span>
+                            <span class="product-grade">TGFOP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="green">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=90" alt="Gyokuro" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Green Tea</span>
+                        <h3 class="product-archive-name">Gyokuro</h3>
+                        <p class="product-archive-excerpt">Shade-grown Japanese green tea with intense umami and emerald liquor. A pinnacle of green tea craftsmanship.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Uji</span>
+                            <span class="product-grade">Imperial</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="blend">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=90" alt="Afternoon Tea Blend" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Blend</span>
+                        <h3 class="product-archive-name">Afternoon Tea Blend</h3>
+                        <p class="product-archive-excerpt">Refined afternoon blend with Ceylon and Darjeeling. Light, aromatic, perfectly suited to delicate pastries.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Multi-Origin</span>
+                            <span class="product-grade">Estate Blend</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="black">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=90" alt="Lapsang Souchong" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Black Tea</span>
+                        <h3 class="product-archive-name">Lapsang Souchong</h3>
+                        <p class="product-archive-excerpt">Distinctive pine-smoked black tea with bold, campfire character. Not for everyone. Unforgettable for connoisseurs.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Wuyi</span>
+                            <span class="product-grade">Traditional Smoke</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="white">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1563822249366-3efcc93e2168?w=600&q=90" alt="Shou Mei" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">White Tea</span>
+                        <h3 class="product-archive-name">Shou Mei</h3>
+                        <p class="product-archive-excerpt">Mature white tea with larger leaves and robust character. Smooth, slightly sweet, with excellent aging potential.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Fujian</span>
+                            <span class="product-grade">Premium</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="green">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=600&q=90" alt="Gunpowder Green" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Green Tea</span>
+                        <h3 class="product-archive-name">Gunpowder Green</h3>
+                        <p class="product-archive-excerpt">Tightly rolled green tea with bold, slightly smoky flavor. Strong, refreshing, traditional.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Zhejiang</span>
+                            <span class="product-grade">Temple of Heaven</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="pu-erh">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1545435321-6e6d88b1f5f0?w=600&q=90" alt="Raw Pu-erh Cake" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Pu-erh</span>
+                        <h3 class="product-archive-name">Raw Pu-erh Cake</h3>
+                        <p class="product-archive-excerpt">Unfermented pu-erh pressed into traditional cake form. Complex, astringent, improving with age.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Yunnan</span>
+                            <span class="product-grade">Vintage 2018</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-archive-item" data-category="blend">
+                    <div class="product-archive-image">
+                        <img src="https://images.unsplash.com/photo-1587651635009-5c8e78b03313?w=600&q=90" alt="Evening Herbal Blend" loading="lazy">
+                    </div>
+                    <div class="product-archive-content">
+                        <span class="product-category">Blend</span>
+                        <h3 class="product-archive-name">Evening Herbal Blend</h3>
+                        <p class="product-archive-excerpt">Caffeine-free infusion with chamomile, lavender, and mint. Calming, aromatic, suitable for evening service.</p>
+                        <div class="product-meta">
+                            <span class="product-origin">Multi-Origin</span>
+                            <span class="product-grade">Herbal</span>
+                        </div>
+                    </div>
+                </article>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="pagination" aria-label="Product pagination">
+                <button class="pagination-btn pagination-prev" id="prevPage" disabled>
+                    <span class="pagination-arrow">←</span>
+                    <span class="pagination-text">Previous</span>
+                </button>
+                
+                <div class="pagination-numbers" id="paginationNumbers">
+                    <button class="pagination-number active" data-page="1">1</button>
+                    <button class="pagination-number" data-page="2">2</button>
+                    <button class="pagination-number" data-page="3">3</button>
+                </div>
+                
+                <button class="pagination-btn pagination-next" id="nextPage">
+                    <span class="pagination-text">Next</span>
+                    <span class="pagination-arrow">→</span>
+                </button>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-title">Heritage Tea Manufactory</h4>
+                    <p class="footer-text">Established 1897<br>Four generations of tea excellence</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-text">
+                        Estate Office<br>
+                        Dimbula Valley, Sri Lanka<br>
+                        +94 11 234 5678<br>
+                        corporate@heritagetea.com
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Certifications</h4>
+                    <p class="footer-text">
+                        ISO 22000:2018<br>
+                        USDA Organic<br>
+                        Fair Trade Certified<br>
+                        Rainforest Alliance
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <p class="footer-text">
+                        <a href="#" class="footer-link">Privacy Policy</a><br>
+                        <a href="#" class="footer-link">Terms of Service</a><br>
+                        <a href="#" class="footer-link">Export Compliance</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Heritage Tea Manufactory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products-page.js"></script>
+</body>
+</html>

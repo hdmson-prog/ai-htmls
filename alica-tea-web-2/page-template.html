@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Page description - 150-160 characters for SEO]">
+    <title>[Page Title] – Heritage Tea Manufactory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-template.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Heritage Tea Manufactory</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#heritage">Heritage</a></li>
+                    <li><a href="index.html#manufactory">Manufactory</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                </ul>
+                <button class="search-toggle" id="searchToggle" aria-label="Open search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="language-switcher">
+                    <button class="language-btn" id="languageBtn" aria-label="Select language" aria-expanded="false">
+                        <svg class="language-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M2 10H18" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M10 2C11.5 4 12 7 12 10C12 13 11.5 16 10 18C8.5 16 8 13 8 10C8 7 8.5 4 10 2Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span class="language-current" id="currentLanguage">EN</span>
+                        <svg class="language-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="#" class="language-option active" data-lang="en">
+                            <span class="language-name">English</span>
+                            <span class="language-code">EN</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="fr">
+                            <span class="language-name">Français</span>
+                            <span class="language-code">FR</span>
+                        </a>
+                        <a href="#" class="language-option" data-lang="de">
+                            <span class="language-name">Deutsch</span>
+                            <span class="language-code">DE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay (Optional - Include if needed) -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            <div class="container">
+                <div class="search-bar">
+                    <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 16L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="search" class="search-input" id="searchInput" placeholder="Search products, news, information..." autocomplete="off">
+                    <button class="search-close" id="searchClose" aria-label="Close search">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <div class="search-suggestion-group">
+                        <h4 class="search-suggestion-title">Popular Searches</h4>
+                        <ul class="search-suggestion-list">
+                            <li><a href="#" class="search-suggestion-link">Estate Reserve Black Tea</a></li>
+                            <li><a href="#" class="search-suggestion-link">Organic Certification</a></li>
+                            <li><a href="#" class="search-suggestion-link">Wholesale Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb (Optional - Include if needed) -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">[Current Page]</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <span class="section-label">[Optional Label]</span>
+                <h1 class="page-title">[Page Title]</h1>
+                <p class="page-intro">[Optional introduction paragraph that provides context and sets expectations for the content below.]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                
+                <!-- Single Column Content -->
+                <div class="section-header centered">
+                    <span class="section-label">[Section Label]</span>
+                    <h2 class="section-title">[Section Title]</h2>
+                    <p class="section-intro">[Section introduction text that explains what follows.]</p>
+                </div>
+
+                <!-- Example: Two Column Layout -->
+                <div class="two-column-layout">
+                    <div class="column-content">
+                        <h3 class="content-subheading">Subheading Example</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    </div>
+                    <div class="column-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=90" alt="[Descriptive alt text]" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Grid Section (Optional) -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">[Features]</span>
+                <h2 class="section-title">[Features Title]</h2>
+            </div>
+            <div class="feature-grid">
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <!-- Optional icon/number -->
+                        <span class="feature-number">01</span>
+                    </div>
+                    <h3 class="feature-title">Feature Title</h3>
+                    <p class="feature-description">Feature description that explains the benefit or capability in clear, concise language.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <span class="feature-number">02</span>
+                    </div>
+                    <h3 class="feature-title">Feature Title</h3>
+                    <p class="feature-description">Feature description that explains the benefit or capability in clear, concise language.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <span class="feature-number">03</span>
+                    </div>
+                    <h3 class="feature-title">Feature Title</h3>
+                    <p class="feature-description">Feature description that explains the benefit or capability in clear, concise language.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Content with Sidebar Layout (Optional) -->
+    <section class="content-with-sidebar">
+        <div class="container">
+            <div class="sidebar-layout">
+                
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Widget Title</h3>
+                        <ul class="widget-list">
+                            <li><a href="#" class="widget-link">Link Item 1</a></li>
+                            <li><a href="#" class="widget-link">Link Item 2</a></li>
+                            <li><a href="#" class="widget-link">Link Item 3</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="sidebar-content">
+                    <h2 class="content-title">Content Title</h2>
+                    <p>Main content area with sidebar. This layout is useful for pages that need navigation or supplementary information alongside the primary content.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section (Optional) -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">[Call to Action Title]</h2>
+                <p class="cta-description">[Brief description that encourages the desired action.]</p>
+                <a href="contact.html" class="btn-primary">Primary Action</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-title">Heritage Tea Manufactory</h4>
+                    <p class="footer-text">Established 1897<br>Four generations of tea excellence</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-text">
+                        Estate Office<br>
+                        Dimbula Valley, Sri Lanka<br>
+                        +94 11 234 5678<br>
+                        corporate@heritagetea.com
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Certifications</h4>
+                    <p class="footer-text">
+                        ISO 22000:2018<br>
+                        USDA Organic<br>
+                        Fair Trade Certified<br>
+                        Rainforest Alliance
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <p class="footer-text">
+                        <a href="#" class="footer-link">Privacy Policy</a><br>
+                        <a href="#" class="footer-link">Terms of Service</a><br>
+                        <a href="#" class="footer-link">Export Compliance</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Heritage Tea Manufactory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- <script src="page-template.js"></script> -->
+</body>
+</html>

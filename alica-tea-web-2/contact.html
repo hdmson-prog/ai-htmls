@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Heritage Tea Manufactory for corporate inquiries, partnership opportunities, and wholesale information.">
+    <title>Contact Us – Heritage Tea Manufactory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Heritage Tea Manufactory</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#heritage">Heritage</a></li>
+                    <li><a href="index.html#manufactory">Manufactory</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <span class="section-label">Get In Touch</span>
+                <h1 class="page-title">We welcome thoughtful inquiries</h1>
+                <p class="page-intro">Whether you represent a luxury hotel group, specialty distributor, or private label brand, we are interested in building relationships with partners who share our commitment to excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information & Form -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Details -->
+                <div class="contact-details-section">
+                    <div class="section-header">
+                        <span class="section-label">Reach Us</span>
+                        <h2 class="section-title">Contact information</h2>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3 class="contact-method-title">Estate Office</h3>
+                        <p class="contact-method-text">
+                            Heritage Tea Manufactory<br>
+                            Dimbula Valley Estate<br>
+                            Hatton 22000<br>
+                            Sri Lanka
+                        </p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3 class="contact-method-title">Telephone</h3>
+                        <p class="contact-method-text">
+                            Main Office: +94 11 234 5678<br>
+                            Export Dept: +94 11 234 5679<br>
+                            Available Mon-Fri, 9:00-17:00 IST
+                        </p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3 class="contact-method-title">Email</h3>
+                        <p class="contact-method-text">
+                            General Inquiries: corporate@heritagetea.com<br>
+                            Export Sales: export@heritagetea.com<br>
+                            Quality Assurance: quality@heritagetea.com
+                        </p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3 class="contact-method-title">Response Time</h3>
+                        <p class="contact-method-text">
+                            We respond to all qualified inquiries within two business days. Complex requests may require additional time for proper evaluation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <span class="form-error" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                <span class="form-error" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Telephone</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company Name <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" class="form-input" required>
+                            <span class="form-error" id="companyError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiryType" class="form-label">Inquiry Type <span class="required">*</span></label>
+                            <select id="inquiryType" name="inquiryType" class="form-select" required>
+                                <option value="">Select an option</option>
+                                <option value="distribution">Distribution Partnership</option>
+                                <option value="private-label">Private Label Services</option>
+                                <option value="bulk-order">Bulk Tea Orders</option>
+                                <option value="custom-blend">Custom Blending</option>
+                                <option value="estate-visit">Estate Visit Request</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                            <span class="form-error" id="inquiryTypeError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-checkbox-wrapper">
+                                <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
+                                <span class="form-checkbox-label">I agree to the privacy policy and consent to Heritage Tea Manufactory contacting me regarding this inquiry. <span class="required">*</span></span>
+                            </label>
+                            <span class="form-error" id="privacyError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-submit">Submit Inquiry</button>
+                        
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section class="location-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Location</span>
+                <h2 class="section-title">The Dimbula Valley</h2>
+            </div>
+            <div class="location-content">
+                <div class="location-map">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&q=90" alt="Estate location map" loading="lazy">
+                </div>
+                <div class="location-info">
+                    <h3 class="location-title">Estate Visits</h3>
+                    <p class="location-text">We welcome qualified partners to visit our estate and processing facility. Tours are arranged by appointment and include meetings with our production team, tasting sessions, and facility walkthroughs.</p>
+                    <p class="location-text">The nearest airport is Bandaranaike International Airport (CMB) in Colombo, approximately 150 kilometers from the estate. We can arrange ground transportation for confirmed visits.</p>
+                    <p class="location-text">Please submit visit requests at least four weeks in advance to ensure proper scheduling and accommodation arrangements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Common Questions</span>
+                <h2 class="section-title">Frequently asked questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">What is your minimum order quantity?</h3>
+                    <p class="faq-answer">Our standard minimum order is 50 kilograms per SKU. For custom blends and private label projects, minimums may vary based on complexity and packaging requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer samples?</h3>
+                    <p class="faq-answer">Yes. We provide sample sets to qualified trade partners following an initial consultation. Samples are shipped at no charge for serious inquiries.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What certifications do you hold?</h3>
+                    <p class="faq-answer">We maintain ISO 22000:2018, USDA Organic, EU Organic, Fair Trade, and Rainforest Alliance certifications. Full documentation is available upon request.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can you develop custom blends?</h3>
+                    <p class="faq-answer">Yes. Our master blender works directly with partners to develop bespoke formulations. The process typically requires 6-8 weeks from brief to final approval.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer private label services?</h3>
+                    <p class="faq-answer">Yes. We provide complete private label solutions including formulation, packaging consultation, and fulfillment. Brand confidentiality agreements are standard.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What are your lead times?</h3>
+                    <p class="faq-answer">Standard orders ship within 2-3 weeks. Custom blends and private label projects require 8-12 weeks depending on specifications and packaging requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-title">Heritage Tea Manufactory</h4>
+                    <p class="footer-text">Established 1897<br>Four generations of tea excellence</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-text">
+                        Estate Office<br>
+                        Dimbula Valley, Sri Lanka<br>
+                        +94 11 234 5678<br>
+                        corporate@heritagetea.com
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Certifications</h4>
+                    <p class="footer-text">
+                        ISO 22000:2018<br>
+                        USDA Organic<br>
+                        Fair Trade Certified<br>
+                        Rainforest Alliance
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <p class="footer-text">
+                        <a href="#" class="footer-link">Privacy Policy</a><br>
+                        <a href="#" class="footer-link">Terms of Service</a><br>
+                        <a href="#" class="footer-link">Export Compliance</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Heritage Tea Manufactory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
