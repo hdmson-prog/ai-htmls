@@ -1,0 +1,388 @@
+Act as a senior full-stack software architect and enterprise HR system designer.
+
+Build a production-ready, module-based Professional HRM Web Application using:
+
+Backend: PHP (OOP, MVC structure preferred)
+
+Frontend: HTML5, CSS3, JavaScript (AJAX where needed)
+
+Database: MySQL (well-structured relational schema)
+
+Security: Secure authentication, validation, and protection against SQL injection, XSS, CSRF
+
+The system must be clean, scalable, logically structured, and follow professional HR workflow standards.
+
+🎯 Core System Requirements
+
+1️⃣ Authentication Module
+
+Create a secure authentication system:
+
+Features:
+
+Login page
+
+Email/Username + Password
+
+“Remember Me” functionality (secure cookie-based token)
+
+Registration page
+
+Logout
+
+Password hashing using password_hash()
+
+Session management
+
+Role-ready structure (admin/staff expandable)
+
+2️⃣ Dashboard Module (Data Visualization + Smart Overview)
+
+Design a modern, clean dashboard UI with:
+
+Dashboard Widgets:
+
+Total Employee Counter
+
+Gender Ratio Pie Chart (Male/Female)
+
+Contracts Ending Soon
+
+List staff names whose contracts end within next 90 days
+
+Latest Signed Contracts
+
+Show recently signed employees
+
+Departments Overview
+
+List all departments
+
+Show number of staff per department
+
+Global Smart Search Bar
+
+Can search any staff field (name, phone, department, contract date, etc.)
+
+Clicking result goes directly to the Single Staff Page
+
+Use:
+
+Chart.js (or equivalent JS chart library)
+
+AJAX for live search
+
+3️⃣ Department Module (CRUD)
+
+Create a complete Department Management Module:
+
+Fields:
+
+Department Name
+
+Description
+
+Created At
+
+Features:
+
+Create Department
+
+Edit Department
+
+Delete Department
+
+View Department
+
+Display total staff count in each department
+
+Prevent deletion if staff exists (or require confirmation logic)
+
+4️⃣ Staff Module (Core HR Logic Module)
+
+This is the main system module.
+
+A. Create Staff Page
+
+Fields:
+
+Staff Name
+
+Staff Image (upload to /uploads/)
+
+Date of Birth
+
+Age (Auto-calculated)
+
+Living Address
+
+Home Address
+
+Cellphone
+
+Gender
+
+Department (Dropdown, relational)
+
+Onboarding Date
+
+Employee Contract Signed Date
+
+Employee Contract End Date (Auto calculate 3 years)
+
+Remark
+
+Requirements:
+
+Image validation
+
+Age auto-calculation (JS + backend validation)
+
+Contract duration default: 3 years
+
+Clean form UI
+
+Server-side validation required
+
+B. Staff List Page
+
+Display all active staff in a professional table:
+
+Features:
+
+Pagination
+
+Column filtering
+
+Search
+
+Sort
+
+Action buttons:
+
+View
+
+Edit
+
+Delete
+
+Delete should:
+
+Soft delete preferred (status change)
+
+OR move to resigned table
+
+C. Single Staff Page
+
+Two modes:
+
+1. View Mode
+
+Display full staff profile
+
+Profile image
+
+Department
+
+Contract details
+
+Status badge (Active / Resigned)
+
+2. Edit Mode
+
+Editable form
+
+Update information
+
+Update contract if needed
+
+Additional Action:
+
+“Resign Staff” Button
+
+5️⃣ Employee Contract Module (Connected to Staff)
+
+Separate but relational module.
+
+Fields:
+
+Staff ID (Foreign Key)
+
+Contract Signed Date
+
+Contract End Date
+
+Status (Active / Ended)
+
+Created At
+
+Business Logic:
+
+Default duration = 3 years
+
+When staff resigns:
+
+Contract auto ends
+
+Contract record marked as ended (not deleted ideally)
+
+When staff re-onboards:
+
+Must create new contract
+
+Old contracts preserved for history
+
+6️⃣ Resigned Staff Module
+
+Create a separate page for resigned staff.
+
+Features:
+
+Same table layout as Staff List
+
+Additional column: Resign Date
+
+Action button: “Re-Onboard”
+
+Re-Onboard Logic:
+
+When clicked:
+
+Staff status changes back to Active
+
+Must sign new contract
+
+New contract record created
+
+Old contracts remain as history
+
+🧠 Business Logic Requirements
+
+System must:
+
+Maintain clean relational integrity
+
+Use foreign keys
+
+Use transactions where necessary
+
+Never lose historical contract data
+
+Avoid direct hard deletes where possible
+
+Maintain audit timestamps
+
+🗂 Database Design (Required)
+
+Design normalized tables such as:
+
+users
+
+departments
+
+staff
+
+contracts
+
+resignations (optional if separated)
+
+password_remember_tokens
+
+Use:
+
+Proper indexing
+
+Foreign key constraints
+
+ENUM or status fields
+
+🎨 UI/UX Requirements
+
+Clean, professional HR SaaS-style interface
+
+Sidebar navigation
+
+Top navigation bar
+
+Responsive design
+
+Clear workflow
+
+Status badges
+
+Confirmation modals
+
+Form validation feedback
+
+🔒 Security Requirements
+
+Prepared statements (PDO preferred)
+
+CSRF tokens
+
+File upload validation
+
+Session regeneration on login
+
+Role-ready access control
+
+Input sanitization
+
+📈 Performance & Scalability
+
+AJAX where appropriate
+
+Optimized queries
+
+Pagination using LIMIT
+
+Avoid N+1 queries
+
+🔄 Workflow Summary
+
+Admin logs in
+
+Creates departments
+
+Creates staff + contract
+
+Dashboard auto-updates stats
+
+Contract nearing end shows alert
+
+Staff resigns → contract ends
+
+Staff re-onboards → new contract created
+
+🏗 Architecture Expectations
+
+Prefer:
+
+MVC structure
+
+Reusable components
+
+Separate config file
+
+Clean folder structure:
+
+/config
+/controllers
+/models
+/views
+/uploads
+/assets
+
+🎯 Final Goal
+
+Build a scientific, logical, efficient HRM workflow system that:
+
+Improves HR management efficiency
+
+Keeps historical contract data
+
+Is scalable and maintainable
+
+Looks professional like a SaaS product
+
+Is production-ready
