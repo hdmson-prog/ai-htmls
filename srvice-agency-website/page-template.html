@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sample page template with sidebar - Enterprise Solutions">
+    <title>Page Template | Enterprise Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="index.html" class="logo">ENTERPRISE</a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#metrics" class="nav-link">Performance</a></li>
+                    <li><a href="index.html#team" class="nav-link">Team</a></li>
+                    <li><a href="news-list.html" class="nav-link">News</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link nav-cta">Request Demo</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Sample Page Template</h1>
+                <p class="page-subtitle">A flexible page layout with sidebar navigation and rich content areas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Resources</a></li>
+                <li>Sample Page</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Content with Sidebar -->
+    <section class="page-content-section">
+        <div class="container">
+            <div class="page-layout">
+                <!-- Sidebar -->
+                <aside class="page-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Navigation</h3>
+                        <nav class="sidebar-nav">
+                            <ul class="sidebar-menu">
+                                <li class="active"><a href="#introduction">Introduction</a></li>
+                                <li><a href="#features">Key Features</a></li>
+                                <li><a href="#implementation">Implementation</a></li>
+                                <li><a href="#best-practices">Best Practices</a></li>
+                                <li><a href="#case-studies">Case Studies</a></li>
+                                <li><a href="#resources">Resources</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Quick Links</h3>
+                        <ul class="quick-links">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Support Portal</a></li>
+                            <li><a href="contact.html">Contact Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget highlight-widget">
+                        <h3 class="widget-title">Need Help?</h3>
+                        <p class="widget-text">Our team is here to assist you with any questions or technical challenges.</p>
+                        <a href="contact.html" class="btn btn-primary btn-full">Get Support</a>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Related Topics</h3>
+                        <ul class="related-topics">
+                            <li><a href="#">Enterprise Architecture</a></li>
+                            <li><a href="#">Cloud Migration</a></li>
+                            <li><a href="#">Security Framework</a></li>
+                            <li><a href="#">Data Governance</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="page-main">
+                    <div class="content-block" id="introduction">
+                        <h2>Introduction</h2>
+                        <p class="lead-text">This template demonstrates a flexible page layout that combines rich content presentation with sidebar navigation, perfect for documentation, resource pages, and detailed information architecture.</p>
+                        
+                        <p>Enterprise Solutions provides comprehensive technology frameworks designed to support complex organizational requirements. Our approach combines proven methodologies with innovative solutions to deliver measurable business value.</p>
+
+                        <div class="info-box info-note">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <strong>Note:</strong> This is a sample informational callout box. Use these to highlight important information, warnings, or tips throughout your content.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block" id="features">
+                        <h2>Key Features</h2>
+                        <p>Our enterprise solutions are built on a foundation of core capabilities that address the most critical business and technical requirements:</p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <h3>Enterprise Security</h3>
+                                <p>Multi-layered security architecture with advanced threat detection and compliance management.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3>Performance</h3>
+                                <p>Optimized for high-volume operations with guaranteed 99.9% uptime SLA.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    </svg>
+                                </div>
+                                <h3>Scalability</h3>
+                                <p>Dynamic resource allocation that grows with your business needs.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                </div>
+                                <h3>Integration</h3>
+                                <p>Seamless connectivity with existing enterprise systems and third-party platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block" id="implementation">
+                        <h2>Implementation</h2>
+                        <p>Our structured implementation methodology ensures smooth deployment and rapid time-to-value:</p>
+
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Discovery & Assessment</h3>
+                                    <p>Comprehensive analysis of current state architecture, business requirements, and success criteria. We conduct stakeholder interviews, technical audits, and gap analysis to establish a clear baseline.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Solution Design</h3>
+                                    <p>Collaborative design sessions to define target architecture, integration patterns, and implementation roadmap. Our architects work closely with your team to ensure alignment with strategic objectives.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Development & Configuration</h3>
+                                    <p>Agile development approach with regular sprint reviews and iterative refinement. We maintain transparent communication and provide continuous progress updates throughout the build phase.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Testing & Validation</h3>
+                                    <p>Rigorous quality assurance including functional testing, performance testing, security testing, and user acceptance testing. We ensure all requirements are met before production deployment.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h3>Deployment & Support</h3>
+                                    <p>Carefully orchestrated production rollout with comprehensive training, documentation, and ongoing support. Our team remains engaged to ensure successful adoption and optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block" id="best-practices">
+                        <h2>Best Practices</h2>
+                        <p>Follow these proven guidelines to maximize the value of your enterprise solution:</p>
+
+                        <div class="best-practices-grid">
+                            <div class="practice-card">
+                                <h3>Governance Framework</h3>
+                                <p>Establish clear decision-making processes, change management procedures, and accountability structures from the outset.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>Data Quality</h3>
+                                <p>Invest in data cleansing and standardization early. High-quality data is essential for accurate analytics and reporting.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>User Training</h3>
+                                <p>Comprehensive training programs ensure user adoption and maximize return on investment in new technology.</p>
+                            </div>
+
+                            <div class="practice-card">
+                                <h3>Continuous Improvement</h3>
+                                <p>Regular reviews and optimization cycles keep your solution aligned with evolving business needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box info-warning">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <strong>Important:</strong> Ensure proper planning and stakeholder alignment before beginning implementation to avoid costly rework and delays.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block" id="case-studies">
+                        <h2>Case Studies</h2>
+                        <p>See how leading organizations have achieved transformative results with our solutions:</p>
+
+                        <div class="case-study-card">
+                            <div class="case-study-header">
+                                <h3>Global Financial Services Transformation</h3>
+                                <span class="case-study-industry">Financial Services</span>
+                            </div>
+                            <p>A Fortune 100 financial institution modernized its core banking platform, reducing operational costs by 35% while improving transaction processing speed by 60%.</p>
+                            <div class="case-study-metrics">
+                                <div class="metric">
+                                    <strong>35%</strong>
+                                    <span>Cost Reduction</span>
+                                </div>
+                                <div class="metric">
+                                    <strong>60%</strong>
+                                    <span>Speed Increase</span>
+                                </div>
+                                <div class="metric">
+                                    <strong>99.99%</strong>
+                                    <span>Uptime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block" id="resources">
+                        <h2>Additional Resources</h2>
+                        <p>Explore these resources to deepen your understanding:</p>
+
+                        <div class="resources-list">
+                            <a href="#" class="resource-link">
+                                <div class="resource-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="resource-content">
+                                    <h4>Technical Documentation</h4>
+                                    <p>Comprehensive guides and API references</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="resource-link">
+                                <div class="resource-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </div>
+                                <div class="resource-content">
+                                    <h4>Video Tutorials</h4>
+                                    <p>Step-by-step implementation guides</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="resource-link">
+                                <div class="resource-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="resource-content">
+                                    <h4>Community Forum</h4>
+                                    <p>Connect with other enterprise users</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-text">Contact our team to learn how we can help your organization achieve its technology goals.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#team">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="news-list.html">Press & Media</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Enterprise Consulting</a></li>
+                        <li><a href="#">Digital Transformation</a></li>
+                        <li><a href="#">Cloud Infrastructure</a></li>
+                        <li><a href="#">Security & Compliance</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                        <li><a href="#">AI & Machine Learning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">White Papers</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="news-list.html">Blog</a></li>
+                        <li><a href="contact.html">Support Center</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2026 Enterprise Solutions. All rights reserved.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
