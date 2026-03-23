@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Atelier Home</title>
+    <meta
+      name="description"
+      content="Contact Atelier Home for showroom visits, product guidance, service inquiries, and project consultations."
+    />
+    <meta name="author" content="Atelier Home" />
+    <meta property="og:title" content="Contact Us | Atelier Home" />
+    <meta
+      property="og:description"
+      content="Get in touch with Atelier Home for product support, project consultations, and showroom appointments."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./src/assets/showroom.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./src/assets/showroom.jpg" />
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="./index.html#top" class="brand">Atelier</a>
+        <div class="nav-links desktop-nav">
+          <div class="nav-dropdown">
+            <button class="nav-link-button" type="button">Products</button>
+            <div class="nav-submenu">
+              <a href="./products.html">Products Archive</a>
+              <a href="./product-single.html">Single Product</a>
+              <a href="./products.html#kitchen">Kitchen</a>
+              <a href="./products.html#air-care">Air Care</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-link-button" type="button">Company</button>
+            <div class="nav-submenu">
+              <a href="./about.html">About Us</a>
+              <a href="./news.html">News</a>
+              <a href="./index.html#sustainability">Sustainability</a>
+              <a href="./contact.html">Support</a>
+            </div>
+          </div>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div id="mobile-nav" class="mobile-nav">
+        <details class="mobile-submenu">
+          <summary>Products</summary>
+          <div class="mobile-submenu-links">
+            <a href="./products.html">Products Archive</a>
+            <a href="./product-single.html">Single Product</a>
+            <a href="./products.html#kitchen">Kitchen</a>
+            <a href="./products.html#air-care">Air Care</a>
+          </div>
+        </details>
+        <details class="mobile-submenu">
+          <summary>Company</summary>
+          <div class="mobile-submenu-links">
+            <a href="./about.html">About Us</a>
+            <a href="./news.html">News</a>
+            <a href="./index.html#sustainability">Sustainability</a>
+            <a href="./contact.html">Support</a>
+          </div>
+        </details>
+        <a href="./contact.html">Contact Us</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="page-banner">
+        <img src="./src/assets/showroom.jpg" alt="Atelier showroom consultation" class="page-banner-image" />
+        <div class="page-banner-overlay"></div>
+        <div class="container page-banner-content">
+          <p class="hero-intro fade-up" style="--delay: 150ms;">Contact Atelier</p>
+          <h1 class="page-banner-title fade-up" style="--delay: 300ms;">Project Support, Showroom Visits, and Service</h1>
+          <p class="page-banner-copy fade-up" style="--delay: 450ms;">
+            Reach our team for appliance planning, product guidance, after-sales support, or a private showroom appointment.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container page-grid">
+          <div class="page-main">
+            <div class="reveal page-copy-block">
+              <p class="eyebrow">Get in Touch</p>
+              <h2 class="section-title">Tell Us About Your Project</h2>
+              <p class="body-copy">
+                Whether you are designing a new home, upgrading a single room, or arranging service support, our team can
+                guide you to the right collection and next steps.
+              </p>
+            </div>
+
+            <div class="reveal reveal-delay-1 contact-page-card">
+              <form class="contact-form contact-form-light">
+                <input type="text" name="name" placeholder="Full Name" />
+                <input type="email" name="email" placeholder="Email Address" />
+                <input type="text" name="project" placeholder="Project Type" />
+                <textarea name="message" rows="5" placeholder="Tell us what you need"></textarea>
+                <button type="submit" class="button button-hero">Send Inquiry</button>
+              </form>
+            </div>
+
+            <div class="reveal reveal-delay-2 contact-info-grid">
+              <article class="value-card">
+                <p class="sidebar-label">Showroom</p>
+                <h3>Private Consultations</h3>
+                <p>Mon to Sat, 10:00 to 18:00 by appointment in our curated appliance showroom.</p>
+              </article>
+              <article class="value-card">
+                <p class="sidebar-label">Support</p>
+                <h3>Service and Warranty</h3>
+                <p>For technical support, maintenance scheduling, and warranty requests, our care team can assist directly.</p>
+              </article>
+              <article class="value-card">
+                <p class="sidebar-label">Trade</p>
+                <h3>Architect and Designer Accounts</h3>
+                <p>We provide product specifications, finish references, and planning support for professional partners.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="page-side reveal">
+            <div class="sidebar-panel">
+              <p class="sidebar-label">Direct Contact</p>
+              <ul class="product-spec-list">
+                <li><span>Email</span><strong>hello@atelier-home.com</strong></li>
+                <li><span>Phone</span><strong>+1 (310) 555-0148</strong></li>
+                <li><span>Service</span><strong>support@atelier-home.com</strong></li>
+                <li><span>Location</span><strong>West Hollywood Studio</strong></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-panel">
+              <p class="sidebar-label">Appointments</p>
+              <p class="sidebar-note">
+                Book a tailored walkthrough for kitchen suites, laundry planning, cooling walls, and air care systems.
+              </p>
+            </div>
+
+            <div class="sidebar-panel sidebar-panel-dark">
+              <p class="sidebar-label">Looking for Products?</p>
+              <p class="sidebar-note">
+                Browse our archive first, then contact us with the models or categories you want to review in detail.
+              </p>
+              <a href="./products.html" class="button button-hero button-small">Browse Products</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="brand">Atelier</p>
+            <p>
+              Precision-crafted home appliances for those who appreciate the
+              finer details of modern living.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-heading">Products</p>
+            <ul>
+              <li><a href="./products.html#kitchen">Kitchen</a></li>
+              <li><a href="./products.html#laundry">Laundry</a></li>
+              <li><a href="./products.html#cooling">Cooling</a></li>
+              <li><a href="./products.html#air-care">Air Care</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-heading">Company</p>
+            <ul>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./contact.html">Careers</a></li>
+              <li><a href="./contact.html">Press</a></li>
+              <li><a href="./index.html#sustainability">Sustainability</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer-heading">Support</p>
+            <ul>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./contact.html">Warranty</a></li>
+              <li><a href="./contact.html">Service</a></li>
+              <li><a href="./contact.html">Find a Dealer</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Atelier Home. All rights reserved.</p>
+          <div class="footer-meta">
+            <a href="./index.html#top">Privacy</a>
+            <a href="./index.html#top">Terms</a>
+            <a href="./index.html#top">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
