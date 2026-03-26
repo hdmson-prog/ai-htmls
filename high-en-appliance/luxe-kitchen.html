@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VÖRN — Precision Kitchen Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Suisse+Int%27l:wght@300;400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  /* ─────────────────────────────────────────────
+     TOKENS & RESET
+  ───────────────────────────────────────────── */
+  :root{
+    --c-void:#0a0908;
+    --c-graphite:#141210;
+    --c-charcoal:#1e1b18;
+    --c-iron:#2d2926;
+    --c-ash:#4a4540;
+    --c-stone:#7a7268;
+    --c-parchment:#c8bfb0;
+    --c-cream:#e8e0d4;
+    --c-white:#f4f0eb;
+    --c-gold:#c9a96e;
+    --c-gold-dim:#8c7040;
+    --c-accent:#d4c4a8;
+    --ff-serif:'Cormorant Garamond',Georgia,serif;
+    --ff-sans:'DM Sans','Helvetica Neue',sans-serif;
+    --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+    --ease-in-out-quad:cubic-bezier(0.45,0,0.55,1);
+    --dur-fast:0.3s;
+    --dur-med:0.7s;
+    --dur-slow:1.2s;
+    --dur-cinematic:1.8s;
+    --max-w:1440px;
+    --gutter:clamp(24px,4vw,80px);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;font-size:16px}
+  body{
+    background:var(--c-void);
+    color:var(--c-cream);
+    font-family:var(--ff-sans);
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+    cursor:none;
+  }
+  img{display:block;width:100%;object-fit:cover}
+  a{color:inherit;text-decoration:none}
+  button{cursor:none;border:none;background:none;font:inherit;color:inherit}
+
+  /* ─────────────────────────────────────────────
+     CUSTOM CURSOR
+  ───────────────────────────────────────────── */
+  #cursor{
+    position:fixed;top:0;left:0;width:8px;height:8px;
+    background:var(--c-gold);border-radius:50%;
+    pointer-events:none;z-index:9999;
+    transform:translate(-50%,-50%);
+    transition:width var(--dur-fast),height var(--dur-fast),background var(--dur-fast);
+    mix-blend-mode:difference;
+  }
+  #cursor-ring{
+    position:fixed;top:0;left:0;width:36px;height:36px;
+    border:1px solid rgba(201,169,110,0.4);border-radius:50%;
+    pointer-events:none;z-index:9998;
+    transform:translate(-50%,-50%);
+    transition:transform 0.12s var(--ease-out-expo),width 0.3s,height 0.3s,border-color 0.3s;
+  }
+  body:has(a:hover) #cursor,
+  body:has(button:hover) #cursor{width:16px;height:16px;background:var(--c-accent)}
+  body:has(a:hover) #cursor-ring,
+  body:has(button:hover) #cursor-ring{width:52px;height:52px;border-color:rgba(201,169,110,0.8)}
+
+  /* ─────────────────────────────────────────────
+     SCROLL PROGRESS
+  ───────────────────────────────────────────── */
+  #progress{
+    position:fixed;top:0;left:0;height:1px;
+    background:linear-gradient(90deg,var(--c-gold-dim),var(--c-gold));
+    z-index:9997;width:0%;transition:width 0.1s linear;
+  }
+
+  /* ─────────────────────────────────────────────
+     NAVIGATION
+  ───────────────────────────────────────────── */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:900;
+    padding:28px var(--gutter);
+    display:flex;align-items:center;justify-content:space-between;
+    transition:padding var(--dur-med) var(--ease-out-expo),
+                background var(--dur-med),
+                backdrop-filter var(--dur-med);
+  }
+  nav.scrolled{
+    padding:16px var(--gutter);
+    background:rgba(10,9,8,0.88);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(201,169,110,0.08);
+  }
+  .nav__logo{
+    font-family:var(--ff-serif);
+    font-size:clamp(22px,2vw,28px);
+    font-weight:300;
+    letter-spacing:0.35em;
+    color:var(--c-white);
+    text-transform:uppercase;
+  }
+  .nav__logo span{color:var(--c-gold)}
+  .nav__links{
+    display:flex;gap:clamp(24px,3vw,52px);
+    list-style:none;
+  }
+  .nav__links a{
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-stone);
+    transition:color var(--dur-fast);
+    position:relative;
+  }
+  .nav__links a::after{
+    content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;
+    background:var(--c-gold);transition:width var(--dur-med) var(--ease-out-expo);
+  }
+  .nav__links a:hover{color:var(--c-cream)}
+  .nav__links a:hover::after{width:100%}
+  .nav__cta{
+    font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--c-void);background:var(--c-gold);
+    padding:10px 24px;
+    transition:background var(--dur-fast),color var(--dur-fast);
+  }
+  .nav__cta:hover{background:var(--c-cream);color:var(--c-void)}
+  .nav__burger{display:none;flex-direction:column;gap:5px;padding:4px}
+  .nav__burger span{width:24px;height:1px;background:var(--c-cream);display:block;transition:all var(--dur-fast)}
+
+  /* ─────────────────────────────────────────────
+     UTILITY
+  ───────────────────────────────────────────── */
+  .container{max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)}
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity var(--dur-cinematic) var(--ease-out-expo),transform var(--dur-cinematic) var(--ease-out-expo)}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .reveal-left{opacity:0;transform:translateX(-50px);transition:opacity var(--dur-cinematic) var(--ease-out-expo),transform var(--dur-cinematic) var(--ease-out-expo)}
+  .reveal-left.visible{opacity:1;transform:translateX(0)}
+  .reveal-right{opacity:0;transform:translateX(50px);transition:opacity var(--dur-cinematic) var(--ease-out-expo),transform var(--dur-cinematic) var(--ease-out-expo)}
+  .reveal-right.visible{opacity:1;transform:translateX(0)}
+  .reveal-scale{opacity:0;transform:scale(0.94);transition:opacity var(--dur-cinematic) var(--ease-out-expo),transform var(--dur-cinematic) var(--ease-out-expo)}
+  .reveal-scale.visible{opacity:1;transform:scale(1)}
+  [data-delay="1"]{transition-delay:0.15s}
+  [data-delay="2"]{transition-delay:0.3s}
+  [data-delay="3"]{transition-delay:0.45s}
+  [data-delay="4"]{transition-delay:0.6s}
+  [data-delay="5"]{transition-delay:0.75s}
+  [data-delay="6"]{transition-delay:0.9s}
+
+  .overline{
+    font-size:10px;letter-spacing:0.35em;text-transform:uppercase;
+    color:var(--c-gold);font-family:var(--ff-sans);font-weight:400;
+    display:flex;align-items:center;gap:16px;
+  }
+  .overline::before{content:'';width:32px;height:1px;background:var(--c-gold-dim)}
+
+  .label{
+    font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+    color:var(--c-stone);font-weight:400;
+  }
+
+  /* ─────────────────────────────────────────────
+     IMAGE PLACEHOLDERS — luxury feel
+  ───────────────────────────────────────────── */
+  .img-ph{
+    background:var(--c-charcoal);
+    position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .img-ph::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,
+      rgba(201,169,110,0.04) 0%,
+      transparent 50%,
+      rgba(201,169,110,0.02) 100%);
+  }
+  .img-ph__label{
+    position:absolute;bottom:20px;left:20px;
+    font-size:9px;letter-spacing:0.25em;text-transform:uppercase;
+    color:rgba(201,169,110,0.35);
+    background:rgba(10,9,8,0.6);
+    padding:6px 12px;
+    border:1px solid rgba(201,169,110,0.12);
+    backdrop-filter:blur(4px);
+    font-family:var(--ff-sans);
+  }
+  .img-ph__icon{
+    width:64px;height:64px;opacity:0.06;
+    border:1px solid var(--c-gold);
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+  }
+  /* Subtle shimmer */
+  .img-ph::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.015) 50%,transparent 60%);
+    background-size:200% 100%;
+    animation:shimmer 4s infinite linear;
+  }
+  @keyframes shimmer{
+    0%{background-position:200% 0}
+    100%{background-position:-200% 0}
+  }
+
+  /* ─────────────────────────────────────────────
+     1. HERO
+  ───────────────────────────────────────────── */
+  .hero{
+    height:100svh;min-height:700px;
+    position:relative;overflow:hidden;
+    display:flex;align-items:flex-end;
+  }
+  .hero__bg{
+    position:absolute;inset:0;
+    background:linear-gradient(160deg,#0f0c09 0%,#1a1410 40%,#0d0b08 100%);
+  }
+  /* Cinematic noise grain */
+  .hero__bg::after{
+    content:'';position:absolute;inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity:0.4;pointer-events:none;
+  }
+  .hero__img-area{
+    position:absolute;inset:0;
+    height:100%;width:100%;
+    overflow:hidden;
+  }
+  .hero__img-ph{
+    width:100%;height:100%;
+    background:linear-gradient(135deg,#110e0b 0%,#1e1a15 50%,#0d0b08 100%);
+    position:relative;
+  }
+  .hero__img-ph::before{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,169,110,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 80% at 20% 80%, rgba(180,140,80,0.04) 0%, transparent 60%);
+  }
+  .hero__img-ph .img-ph__label{bottom:auto;top:50%;left:50%;transform:translate(-50%,-50%);font-size:10px}
+  .hero__overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to right, rgba(10,9,8,0.85) 0%, rgba(10,9,8,0.4) 50%, transparent 80%),
+               linear-gradient(to top, rgba(10,9,8,0.7) 0%, transparent 50%);
+  }
+  .hero__content{
+    position:relative;z-index:2;
+    padding:0 var(--gutter) clamp(60px,8vh,120px);
+    width:100%;
+  }
+  .hero__eyebrow{
+    font-size:10px;letter-spacing:0.4em;text-transform:uppercase;
+    color:var(--c-gold);margin-bottom:24px;
+    display:flex;align-items:center;gap:16px;
+    opacity:0;transform:translateY(20px);
+    animation:heroIn 1.2s var(--ease-out-expo) 0.4s forwards;
+  }
+  .hero__eyebrow::before{content:'';width:40px;height:1px;background:var(--c-gold-dim)}
+  .hero__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(52px,7.5vw,120px);
+    font-weight:300;line-height:0.95;
+    letter-spacing:-0.01em;
+    color:var(--c-white);
+    max-width:14ch;
+    opacity:0;transform:translateY(30px);
+    animation:heroIn 1.4s var(--ease-out-expo) 0.6s forwards;
+  }
+  .hero__headline em{
+    font-style:italic;color:var(--c-parchment);
+  }
+  .hero__sub{
+    margin-top:clamp(20px,3vh,40px);
+    font-size:clamp(13px,1.2vw,15px);
+    color:var(--c-stone);
+    max-width:38ch;line-height:1.7;
+    opacity:0;transform:translateY(20px);
+    animation:heroIn 1.2s var(--ease-out-expo) 0.9s forwards;
+  }
+  .hero__actions{
+    margin-top:clamp(32px,4vh,56px);
+    display:flex;align-items:center;gap:32px;
+    opacity:0;transform:translateY(20px);
+    animation:heroIn 1s var(--ease-out-expo) 1.1s forwards;
+  }
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:14px;
+    padding:16px 36px;
+    background:var(--c-gold);color:var(--c-void);
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    font-weight:400;font-family:var(--ff-sans);
+    transition:background var(--dur-fast),transform 0.2s;
+    position:relative;overflow:hidden;
+  }
+  .btn-primary::before{
+    content:'';position:absolute;inset:0;background:var(--c-cream);
+    transform:translateX(-100%);transition:transform var(--dur-med) var(--ease-out-expo);
+  }
+  .btn-primary:hover::before{transform:translateX(0)}
+  .btn-primary span{position:relative;z-index:1}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-stone);
+    transition:color var(--dur-fast);
+  }
+  .btn-ghost:hover{color:var(--c-cream)}
+  .btn-ghost .arrow{font-size:14px;transition:transform var(--dur-fast)}
+  .btn-ghost:hover .arrow{transform:translateX(5px)}
+  .hero__scroll{
+    position:absolute;bottom:40px;right:var(--gutter);
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    opacity:0;animation:heroIn 1s var(--ease-out-expo) 1.5s forwards;
+  }
+  .hero__scroll-text{
+    font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--c-stone);writing-mode:vertical-rl;
+  }
+  .hero__scroll-line{
+    width:1px;height:60px;background:linear-gradient(to bottom,var(--c-gold-dim),transparent);
+    animation:scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes heroIn{to{opacity:1;transform:translateY(0)}}
+  @keyframes scrollPulse{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(0.6);opacity:0.5}}
+
+  /* ─────────────────────────────────────────────
+     2. BRAND MANIFESTO
+  ───────────────────────────────────────────── */
+  .manifesto{
+    padding:clamp(100px,14vh,180px) var(--gutter);
+    background:var(--c-void);
+    position:relative;
+  }
+  .manifesto__grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:center;
+    max-width:var(--max-w);margin:0 auto;
+  }
+  .manifesto__text{}
+  .manifesto__number{
+    font-family:var(--ff-serif);
+    font-size:clamp(80px,10vw,160px);
+    font-weight:300;
+    color:rgba(201,169,110,0.06);
+    line-height:1;
+    user-select:none;
+    position:absolute;top:-0.2em;left:-0.1em;
+  }
+  .manifesto__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(36px,4.5vw,68px);
+    font-weight:300;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+    color:var(--c-white);
+    margin-top:28px;margin-bottom:32px;
+  }
+  .manifesto__headline em{font-style:italic;color:var(--c-gold)}
+  .manifesto__body{
+    font-size:clamp(14px,1.1vw,16px);
+    color:var(--c-stone);
+    line-height:1.85;
+    max-width:44ch;
+    border-left:1px solid var(--c-iron);
+    padding-left:24px;
+  }
+  .manifesto__img{
+    height:clamp(400px,55vh,680px);
+    position:relative;
+  }
+  .manifesto__img .img-ph{height:100%}
+  .manifesto__img-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to bottom,transparent 50%,rgba(10,9,8,0.6) 100%);
+    pointer-events:none;
+  }
+  .manifesto__quote{
+    position:absolute;bottom:32px;left:32px;right:32px;
+    font-family:var(--ff-serif);
+    font-size:clamp(18px,2vw,24px);
+    font-style:italic;
+    color:var(--c-cream);
+    line-height:1.4;
+  }
+  .manifesto__stats{
+    display:flex;gap:40px;margin-top:48px;
+  }
+  .stat{}
+  .stat__num{
+    font-family:var(--ff-serif);
+    font-size:clamp(32px,3.5vw,52px);
+    font-weight:300;
+    color:var(--c-gold);
+    line-height:1;
+  }
+  .stat__label{
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-ash);margin-top:6px;
+  }
+  .divider{
+    width:100%;height:1px;
+    background:linear-gradient(to right,transparent,var(--c-iron) 30%,var(--c-iron) 70%,transparent);
+    margin:0;
+  }
+
+  /* ─────────────────────────────────────────────
+     3. PRODUCT ECOSYSTEM
+  ───────────────────────────────────────────── */
+  .ecosystem{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-graphite);
+  }
+  .ecosystem__header{
+    max-width:var(--max-w);margin:0 auto 64px;
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:40px;
+  }
+  .ecosystem__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(32px,4vw,60px);
+    font-weight:300;line-height:1.1;
+    color:var(--c-white);
+  }
+  .ecosystem__desc{
+    font-size:14px;color:var(--c-stone);
+    max-width:32ch;line-height:1.7;text-align:right;
+  }
+  .ecosystem__grid{
+    max-width:var(--max-w);margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:auto;
+    gap:3px;
+  }
+  .eco-card{
+    position:relative;overflow:hidden;
+    cursor:none;
+  }
+  .eco-card:nth-child(1){grid-column:1/8;grid-row:1;height:clamp(320px,42vh,540px)}
+  .eco-card:nth-child(2){grid-column:8/13;grid-row:1;height:clamp(320px,42vh,540px)}
+  .eco-card:nth-child(3){grid-column:1/5;grid-row:2;height:clamp(260px,34vh,420px)}
+  .eco-card:nth-child(4){grid-column:5/9;grid-row:2;height:clamp(260px,34vh,420px)}
+  .eco-card:nth-child(5){grid-column:9/13;grid-row:2;height:clamp(260px,34vh,420px)}
+  .eco-card .img-ph{height:100%}
+  .eco-card__overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(10,9,8,0.9) 0%,rgba(10,9,8,0.2) 50%,transparent 80%);
+    transition:background var(--dur-med);
+  }
+  .eco-card:hover .eco-card__overlay{
+    background:linear-gradient(to top,rgba(10,9,8,0.95) 0%,rgba(10,9,8,0.5) 60%,rgba(10,9,8,0.1) 100%);
+  }
+  .eco-card__content{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:24px 28px;
+    transform:translateY(4px);
+    transition:transform var(--dur-med) var(--ease-out-expo);
+  }
+  .eco-card:hover .eco-card__content{transform:translateY(0)}
+  .eco-card__cat{
+    font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--c-gold);margin-bottom:8px;
+  }
+  .eco-card__title{
+    font-family:var(--ff-serif);
+    font-size:clamp(18px,1.8vw,26px);
+    font-weight:300;
+    color:var(--c-white);
+    line-height:1.2;
+  }
+  .eco-card__link{
+    margin-top:10px;
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-stone);
+    display:flex;align-items:center;gap:8px;
+    opacity:0;transform:translateY(8px);
+    transition:opacity var(--dur-fast) 0.1s,transform var(--dur-fast) 0.1s,color var(--dur-fast);
+  }
+  .eco-card:hover .eco-card__link{opacity:1;transform:translateY(0)}
+  .eco-card__link:hover{color:var(--c-gold)}
+  .eco-card__zoom-hint{
+    position:absolute;top:20px;right:20px;
+    width:36px;height:36px;
+    border:1px solid rgba(201,169,110,0.2);
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;color:rgba(201,169,110,0.4);
+    opacity:0;transform:scale(0.8);
+    transition:opacity var(--dur-fast),transform var(--dur-fast);
+  }
+  .eco-card:hover .eco-card__zoom-hint{opacity:1;transform:scale(1)}
+
+  /* ─────────────────────────────────────────────
+     4. FEATURED PRODUCTS SLIDER
+  ───────────────────────────────────────────── */
+  .featured{
+    padding:clamp(80px,10vh,140px) 0;
+    background:var(--c-void);
+    overflow:hidden;
+  }
+  .featured__header{
+    padding:0 var(--gutter);
+    max-width:var(--max-w);margin:0 auto 52px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .featured__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(28px,3.5vw,52px);
+    font-weight:300;color:var(--c-white);
+  }
+  .featured__controls{
+    display:flex;gap:12px;
+  }
+  .slider-btn{
+    width:48px;height:48px;
+    border:1px solid var(--c-iron);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;color:var(--c-stone);
+    transition:border-color var(--dur-fast),color var(--dur-fast),background var(--dur-fast);
+  }
+  .slider-btn:hover{border-color:var(--c-gold);color:var(--c-gold)}
+  .slider-btn.active{background:var(--c-gold);border-color:var(--c-gold);color:var(--c-void)}
+  .slider-track{
+    display:flex;gap:3px;
+    padding-left:var(--gutter);
+    transform:translateX(0);
+    transition:transform 0.9s var(--ease-out-expo);
+  }
+  .product-slide{
+    flex:0 0 clamp(280px,35vw,520px);
+    position:relative;overflow:hidden;
+    cursor:none;
+  }
+  .product-slide__img{
+    height:clamp(360px,56vh,680px);
+    overflow:hidden;
+  }
+  .product-slide__img .img-ph{
+    height:100%;
+    transition:transform var(--dur-slow) var(--ease-out-expo);
+  }
+  .product-slide:hover .product-slide__img .img-ph{transform:scale(1.04)}
+  .product-slide__info{
+    padding:24px 0 0;
+  }
+  .product-slide__cat{
+    font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--c-gold-dim);margin-bottom:8px;
+  }
+  .product-slide__name{
+    font-family:var(--ff-serif);
+    font-size:clamp(20px,1.8vw,26px);
+    font-weight:300;color:var(--c-white);
+    margin-bottom:6px;
+  }
+  .product-slide__spec{
+    font-size:12px;color:var(--c-stone);
+  }
+  .product-slide__cta{
+    margin-top:16px;
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-gold);
+    display:inline-flex;align-items:center;gap:8px;
+    transition:gap var(--dur-fast),color var(--dur-fast);
+  }
+  .product-slide__cta:hover{gap:14px}
+
+  /* ─────────────────────────────────────────────
+     5. PRODUCT DETAIL GRID
+  ───────────────────────────────────────────── */
+  .detail-grid{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-charcoal);
+  }
+  .detail-grid__inner{
+    max-width:var(--max-w);margin:0 auto;
+  }
+  .detail-grid__header{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:40px;align-items:end;
+    margin-bottom:64px;
+  }
+  .detail-grid__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(32px,4vw,60px);
+    font-weight:300;color:var(--c-white);
+    line-height:1.1;
+  }
+  .detail-grid__intro{
+    font-size:14px;color:var(--c-stone);
+    line-height:1.8;
+    max-width:42ch;
+  }
+  .product-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2px;
+  }
+  .pcard{
+    background:var(--c-iron);
+    position:relative;overflow:hidden;
+    cursor:none;
+    transition:background var(--dur-fast);
+  }
+  .pcard:hover{background:var(--c-ash)}
+  .pcard__img{height:clamp(240px,30vh,360px)}
+  .pcard__img .img-ph{height:100%;transition:transform var(--dur-slow) var(--ease-out-expo)}
+  .pcard:hover .pcard__img .img-ph{transform:scale(1.05)}
+  .pcard__body{padding:24px 24px 28px}
+  .pcard__series{
+    font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--c-gold-dim);margin-bottom:10px;
+  }
+  .pcard__name{
+    font-family:var(--ff-serif);
+    font-size:clamp(18px,1.5vw,22px);
+    font-weight:300;color:var(--c-white);
+    margin-bottom:8px;
+  }
+  .pcard__specs{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:10px;margin-top:16px;
+    padding-top:16px;
+    border-top:1px solid var(--c-charcoal);
+  }
+  .pspec{}
+  .pspec__label{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--c-ash);margin-bottom:3px}
+  .pspec__value{font-size:13px;color:var(--c-parchment)}
+  .pcard__hover{
+    position:absolute;bottom:0;left:0;right:0;
+    background:var(--c-gold);padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    transform:translateY(100%);
+    transition:transform var(--dur-med) var(--ease-out-expo);
+  }
+  .pcard:hover .pcard__hover{transform:translateY(0)}
+  .pcard__hover-text{
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-void);font-weight:400;
+  }
+  .pcard__hover-arr{color:var(--c-void);font-size:16px}
+
+  /* ─────────────────────────────────────────────
+     6. SMART KITCHEN
+  ───────────────────────────────────────────── */
+  .smart{
+    padding:0;
+    background:var(--c-void);
+    position:relative;overflow:hidden;
+  }
+  .smart__full{
+    height:100svh;min-height:600px;
+    position:relative;display:flex;align-items:center;
+  }
+  .smart__bg{
+    position:absolute;inset:0;
+    background:linear-gradient(135deg,#0d0b08 0%,#161210 60%,#0a0908 100%);
+  }
+  .smart__bg .img-ph{height:100%;opacity:0.6}
+  .smart__overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to right,rgba(10,9,8,0.9) 0%,rgba(10,9,8,0.5) 50%,rgba(10,9,8,0.2) 100%);
+  }
+  .smart__content{
+    position:relative;z-index:2;
+    padding:0 var(--gutter);
+    max-width:var(--max-w);width:100%;margin:0 auto;
+  }
+  .smart__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(40px,6vw,96px);
+    font-weight:300;color:var(--c-white);
+    line-height:1;letter-spacing:-0.02em;
+    max-width:12ch;
+    margin:16px 0 28px;
+  }
+  .smart__body{
+    font-size:clamp(13px,1.1vw,16px);
+    color:var(--c-stone);
+    max-width:36ch;line-height:1.8;
+    margin-bottom:48px;
+  }
+  .smart__features{
+    display:flex;flex-direction:column;gap:1px;
+    max-width:400px;
+  }
+  .smart__feat{
+    background:rgba(20,18,16,0.7);
+    backdrop-filter:blur(8px);
+    padding:16px 20px;
+    border-left:1px solid var(--c-iron);
+    transition:border-color var(--dur-fast),background var(--dur-fast);
+  }
+  .smart__feat:hover{
+    border-color:var(--c-gold);
+    background:rgba(30,27,24,0.8);
+  }
+  .smart__feat-title{
+    font-size:12px;letter-spacing:0.15em;text-transform:uppercase;
+    color:var(--c-parchment);margin-bottom:4px;
+  }
+  .smart__feat-desc{font-size:12px;color:var(--c-stone)}
+
+  /* ─────────────────────────────────────────────
+     7. TECHNOLOGY
+  ───────────────────────────────────────────── */
+  .technology{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-graphite);
+  }
+  .technology__inner{max-width:var(--max-w);margin:0 auto}
+  .technology__layout{
+    display:grid;grid-template-columns:5fr 7fr;
+    gap:clamp(40px,6vw,100px);
+    align-items:start;
+  }
+  .technology__left{}
+  .technology__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(32px,4vw,60px);
+    font-weight:300;color:var(--c-white);
+    line-height:1.1;margin:16px 0 28px;
+  }
+  .technology__body{
+    font-size:14px;color:var(--c-stone);line-height:1.8;
+    margin-bottom:40px;
+  }
+  .tech__pillars{
+    display:flex;flex-direction:column;gap:1px;
+    margin-top:32px;
+  }
+  .tech__pillar{
+    padding:20px 0;
+    border-top:1px solid var(--c-iron);
+    display:flex;align-items:start;gap:20px;
+  }
+  .tech__pillar:last-child{border-bottom:1px solid var(--c-iron)}
+  .tech__pillar-num{
+    font-family:var(--ff-serif);
+    font-size:13px;color:var(--c-gold-dim);
+    min-width:20px;margin-top:2px;
+  }
+  .tech__pillar-title{
+    font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--c-parchment);margin-bottom:4px;
+  }
+  .tech__pillar-desc{font-size:12px;color:var(--c-stone);line-height:1.6}
+  .technology__right{}
+  .technology__main-img{
+    height:clamp(400px,55vh,680px);
+    position:relative;margin-bottom:3px;
+  }
+  .technology__main-img .img-ph{height:100%}
+  .technology__sub-imgs{
+    display:grid;grid-template-columns:1fr 1fr;gap:3px;
+  }
+  .technology__sub-img{height:clamp(160px,20vh,240px)}
+  .technology__sub-img .img-ph{height:100%}
+
+  /* ─────────────────────────────────────────────
+     8. MATERIALS
+  ───────────────────────────────────────────── */
+  .materials{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-charcoal);
+  }
+  .materials__inner{max-width:var(--max-w);margin:0 auto}
+  .materials__header{
+    text-align:center;margin-bottom:80px;
+  }
+  .materials__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(36px,5vw,80px);
+    font-weight:300;color:var(--c-white);
+    line-height:1;
+    letter-spacing:-0.02em;
+  }
+  .materials__headline em{font-style:italic;color:var(--c-gold)}
+  .materials__grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:3px;
+  }
+  .mat-card{
+    position:relative;overflow:hidden;
+    cursor:none;
+  }
+  .mat-card__img{
+    height:clamp(280px,36vh,440px);
+    overflow:hidden;
+  }
+  .mat-card__img .img-ph{
+    height:100%;
+    transition:transform 1.4s var(--ease-out-expo);
+  }
+  .mat-card:hover .mat-card__img .img-ph{transform:scale(1.08)}
+  .mat-card__info{
+    padding:20px 0 0;
+  }
+  .mat-card__name{
+    font-family:var(--ff-serif);
+    font-size:clamp(18px,1.5vw,22px);
+    font-weight:300;color:var(--c-white);
+    margin-bottom:4px;
+  }
+  .mat-card__desc{font-size:12px;color:var(--c-stone)}
+
+  /* ─────────────────────────────────────────────
+     9. QUALITY
+  ───────────────────────────────────────────── */
+  .quality{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-void);
+    border-top:1px solid var(--c-iron);
+    border-bottom:1px solid var(--c-iron);
+  }
+  .quality__inner{max-width:var(--max-w);margin:0 auto}
+  .quality__header{
+    display:flex;align-items:end;justify-content:space-between;
+    margin-bottom:64px;gap:40px;
+  }
+  .quality__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(28px,3.5vw,52px);
+    font-weight:300;color:var(--c-white);
+  }
+  .quality__note{font-size:12px;color:var(--c-stone);max-width:30ch;line-height:1.7;text-align:right}
+  .cert-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:1px;
+  }
+  .cert-item{
+    background:var(--c-graphite);
+    padding:32px 24px;
+    display:flex;flex-direction:column;align-items:center;
+    gap:16px;text-align:center;
+    transition:background var(--dur-fast);
+    cursor:none;
+  }
+  .cert-item:hover{background:var(--c-charcoal)}
+  .cert-item__icon{
+    width:48px;height:48px;
+    border:1px solid var(--c-iron);
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+    color:var(--c-gold);
+    transition:border-color var(--dur-fast);
+  }
+  .cert-item:hover .cert-item__icon{border-color:var(--c-gold)}
+  .cert-item__name{
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-parchment);
+  }
+  .cert-item__org{font-size:11px;color:var(--c-stone)}
+
+  /* ─────────────────────────────────────────────
+     10. SUSTAINABILITY
+  ───────────────────────────────────────────── */
+  .sustainability{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-graphite);
+  }
+  .sustainability__inner{
+    max-width:var(--max-w);margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:clamp(40px,8vw,120px);
+    align-items:center;
+  }
+  .sustainability__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(32px,4vw,60px);
+    font-weight:300;color:var(--c-white);
+    line-height:1.1;
+    margin:16px 0 28px;
+  }
+  .sustainability__body{
+    font-size:14px;color:var(--c-stone);line-height:1.8;margin-bottom:40px;
+  }
+  .sustain__metrics{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  }
+  .sustain__metric{}
+  .sustain__metric-val{
+    font-family:var(--ff-serif);
+    font-size:clamp(28px,2.8vw,44px);
+    font-weight:300;color:var(--c-gold);
+    line-height:1;
+  }
+  .sustain__metric-label{
+    font-size:11px;color:var(--c-stone);margin-top:6px;letter-spacing:0.05em;
+  }
+  .sustainability__img{
+    height:clamp(400px,52vh,640px);
+    position:relative;
+  }
+  .sustainability__img .img-ph{height:100%}
+
+  /* ─────────────────────────────────────────────
+     11. APPLICATIONS
+  ───────────────────────────────────────────── */
+  .applications{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-charcoal);
+  }
+  .applications__inner{max-width:var(--max-w);margin:0 auto}
+  .applications__header{text-align:center;margin-bottom:64px}
+  .applications__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(32px,4.5vw,68px);
+    font-weight:300;color:var(--c-white);
+    line-height:1.1;
+  }
+  .app-segments{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:3px;
+  }
+  .app-seg{
+    position:relative;overflow:hidden;
+    cursor:none;
+  }
+  .app-seg__img{
+    height:clamp(300px,44vh,560px);
+    overflow:hidden;
+  }
+  .app-seg__img .img-ph{
+    height:100%;
+    transition:transform var(--dur-slow) var(--ease-out-expo);
+  }
+  .app-seg:hover .app-seg__img .img-ph{transform:scale(1.06)}
+  .app-seg__overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(10,9,8,0.9) 0%,transparent 60%);
+    transition:background var(--dur-med);
+  }
+  .app-seg:hover .app-seg__overlay{
+    background:linear-gradient(to top,rgba(10,9,8,0.95) 0%,rgba(10,9,8,0.3) 70%,transparent 100%);
+  }
+  .app-seg__content{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:28px;
+  }
+  .app-seg__type{
+    font-size:9px;letter-spacing:0.35em;text-transform:uppercase;
+    color:var(--c-gold);margin-bottom:8px;
+  }
+  .app-seg__title{
+    font-family:var(--ff-serif);
+    font-size:clamp(22px,2.2vw,32px);
+    font-weight:300;color:var(--c-white);
+    margin-bottom:8px;
+  }
+  .app-seg__desc{
+    font-size:12px;color:var(--c-stone);line-height:1.6;
+    max-width:28ch;
+    opacity:0;transform:translateY(10px);
+    transition:opacity var(--dur-med),transform var(--dur-med) var(--ease-out-expo);
+  }
+  .app-seg:hover .app-seg__desc{opacity:1;transform:translateY(0)}
+
+  /* ─────────────────────────────────────────────
+     12. TESTIMONIALS
+  ───────────────────────────────────────────── */
+  .testimonials{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-void);
+  }
+  .testimonials__inner{max-width:var(--max-w);margin:0 auto}
+  .testimonials__header{margin-bottom:64px}
+  .testimonials__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(28px,3.5vw,52px);
+    font-weight:300;color:var(--c-white);
+    margin-top:16px;
+  }
+  .testimonial-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:1px;
+  }
+  .t-card{
+    background:var(--c-graphite);
+    padding:36px 32px;
+    position:relative;
+    transition:background var(--dur-fast);
+  }
+  .t-card:hover{background:var(--c-charcoal)}
+  .t-card__quote-mark{
+    font-family:var(--ff-serif);font-size:80px;
+    color:var(--c-gold-dim);line-height:0.5;
+    margin-bottom:20px;opacity:0.5;
+  }
+  .t-card__text{
+    font-family:var(--ff-serif);
+    font-size:clamp(16px,1.4vw,19px);
+    font-style:italic;
+    color:var(--c-cream);
+    line-height:1.55;
+    margin-bottom:28px;
+  }
+  .t-card__author{
+    display:flex;align-items:center;gap:14px;
+    border-top:1px solid var(--c-iron);padding-top:20px;
+  }
+  .t-card__avatar{
+    width:40px;height:40px;border-radius:50%;
+    background:var(--c-iron);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--ff-serif);font-size:16px;
+    color:var(--c-stone);
+  }
+  .t-card__name{font-size:12px;color:var(--c-parchment);font-weight:400}
+  .t-card__role{font-size:11px;color:var(--c-stone)}
+
+  /* ─────────────────────────────────────────────
+     13. JOURNAL
+  ───────────────────────────────────────────── */
+  .journal{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-graphite);
+  }
+  .journal__inner{max-width:var(--max-w);margin:0 auto}
+  .journal__header{
+    display:flex;align-items:end;justify-content:space-between;
+    margin-bottom:52px;gap:40px;
+  }
+  .journal__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(28px,3.5vw,52px);
+    font-weight:300;color:var(--c-white);
+    margin-top:12px;
+  }
+  .journal__all{
+    font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+    color:var(--c-gold);
+    display:flex;align-items:center;gap:8px;
+    white-space:nowrap;
+    transition:gap var(--dur-fast);
+  }
+  .journal__all:hover{gap:14px}
+  .journal-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:3px;
+  }
+  .j-card{cursor:none;overflow:hidden}
+  .j-card__img{
+    overflow:hidden;
+  }
+  .j-card:nth-child(1) .j-card__img{height:clamp(280px,36vh,440px)}
+  .j-card:not(:nth-child(1)) .j-card__img{height:clamp(200px,26vh,320px)}
+  .j-card__img .img-ph{
+    height:100%;
+    transition:transform var(--dur-slow) var(--ease-out-expo);
+  }
+  .j-card:hover .j-card__img .img-ph{transform:scale(1.05)}
+  .j-card__body{padding:20px 0 0}
+  .j-card__tag{
+    font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--c-gold-dim);margin-bottom:10px;
+  }
+  .j-card__title{
+    font-family:var(--ff-serif);
+    font-size:clamp(17px,1.5vw,22px);
+    font-weight:300;color:var(--c-white);
+    line-height:1.3;margin-bottom:8px;
+    transition:color var(--dur-fast);
+  }
+  .j-card:hover .j-card__title{color:var(--c-gold)}
+  .j-card__meta{font-size:11px;color:var(--c-stone)}
+
+  /* ─────────────────────────────────────────────
+     14. CONTACT
+  ───────────────────────────────────────────── */
+  .contact{
+    padding:clamp(80px,10vh,140px) var(--gutter);
+    background:var(--c-void);
+  }
+  .contact__inner{
+    max-width:var(--max-w);margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:clamp(40px,8vw,120px);
+  }
+  .contact__left{}
+  .contact__headline{
+    font-family:var(--ff-serif);
+    font-size:clamp(36px,5vw,76px);
+    font-weight:300;color:var(--c-white);
+    line-height:1;
+    margin:16px 0 28px;
+  }
+  .contact__headline em{font-style:italic;color:var(--c-gold)}
+  .contact__body{
+    font-size:14px;color:var(--c-stone);line-height:1.8;margin-bottom:48px;
+  }
+  .contact__info{
+    display:flex;flex-direction:column;gap:24px;
+  }
+  .contact__info-item{}
+  .contact__info-label{
+    font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--c-gold);margin-bottom:6px;
+  }
+  .contact__info-value{
+    font-size:14px;color:var(--c-parchment);
+  }
+  .contact__right{}
+  .contact-form{
+    display:flex;flex-direction:column;gap:1px;
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1px}
+  .form-field{
+    background:var(--c-charcoal);
+    padding:0;
+    position:relative;
+  }
+  .form-field label{
+    display:block;
+    font-size:9px;letter-spacing:0.25em;text-transform:uppercase;
+    color:var(--c-stone);
+    padding:16px 20px 0;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea{
+    width:100%;
+    background:transparent;
+    border:none;outline:none;
+    padding:4px 20px 16px;
+    font-family:var(--ff-sans);
+    font-size:14px;
+    font-weight:300;
+    color:var(--c-cream);
+    resize:none;
+    transition:background var(--dur-fast);
+  }
+  .form-field:focus-within{background:var(--c-iron)}
+  .form-field::after{
+    content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
+    background:var(--c-gold);
+    transition:width var(--dur-med) var(--ease-out-expo);
+  }
+  .form-field:focus-within::after{width:100%}
+  .form-field select option{background:var(--c-charcoal)}
+  .form-field textarea{height:120px}
+  .form-submit{
+    margin-top:1px;
+    background:var(--c-gold);
+    color:var(--c-void);
+    padding:20px 36px;
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    font-weight:400;font-family:var(--ff-sans);
+    display:flex;align-items:center;justify-content:space-between;
+    transition:background var(--dur-fast);
+    width:100%;
+  }
+  .form-submit:hover{background:var(--c-cream)}
+
+  /* ─────────────────────────────────────────────
+     FOOTER
+  ───────────────────────────────────────────── */
+  footer{
+    background:var(--c-graphite);
+    padding:60px var(--gutter) 40px;
+    border-top:1px solid var(--c-iron);
+  }
+  .footer__top{
+    max-width:var(--max-w);margin:0 auto;
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:clamp(24px,4vw,60px);
+    margin-bottom:60px;
+  }
+  .footer__brand-name{
+    font-family:var(--ff-serif);
+    font-size:clamp(24px,2.5vw,36px);
+    font-weight:300;letter-spacing:0.25em;
+    color:var(--c-white);text-transform:uppercase;
+  }
+  .footer__brand-name span{color:var(--c-gold)}
+  .footer__tagline{
+    font-size:12px;color:var(--c-stone);line-height:1.7;
+    max-width:32ch;margin-top:12px;
+  }
+  .footer__col-title{
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--c-gold);margin-bottom:20px;
+  }
+  .footer__links{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .footer__links a{
+    font-size:13px;color:var(--c-stone);
+    transition:color var(--dur-fast);
+  }
+  .footer__links a:hover{color:var(--c-cream)}
+  .footer__bottom{
+    max-width:var(--max-w);margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:24px;border-top:1px solid var(--c-iron);
+    gap:20px;flex-wrap:wrap;
+  }
+  .footer__copy{font-size:11px;color:var(--c-ash)}
+  .footer__legal{display:flex;gap:24px}
+  .footer__legal a{font-size:11px;color:var(--c-ash);transition:color var(--dur-fast)}
+  .footer__legal a:hover{color:var(--c-stone)}
+
+  /* ─────────────────────────────────────────────
+     RESPONSIVE
+  ───────────────────────────────────────────── */
+  @media(max-width:1100px){
+    .product-cards{grid-template-columns:1fr 1fr}
+    .cert-grid{grid-template-columns:repeat(3,1fr)}
+    .materials__grid{grid-template-columns:repeat(2,1fr)}
+    .footer__top{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:900px){
+    .nav__links,.nav__cta{display:none}
+    .nav__burger{display:flex}
+    .manifesto__grid{grid-template-columns:1fr}
+    .ecosystem__header{flex-direction:column;align-items:start}
+    .ecosystem__desc{text-align:left}
+    .eco-card:nth-child(1){grid-column:1/13}
+    .eco-card:nth-child(2){grid-column:1/13}
+    .eco-card:nth-child(3){grid-column:1/7}
+    .eco-card:nth-child(4){grid-column:7/13}
+    .eco-card:nth-child(5){grid-column:1/13}
+    .detail-grid__header{grid-template-columns:1fr}
+    .technology__layout{grid-template-columns:1fr}
+    .sustainability__inner{grid-template-columns:1fr}
+    .app-segments{grid-template-columns:1fr}
+    .testimonial-grid{grid-template-columns:1fr}
+    .journal-grid{grid-template-columns:1fr}
+    .contact__inner{grid-template-columns:1fr}
+    .footer__top{grid-template-columns:1fr 1fr}
+    .certgrid{grid-template-columns:repeat(3,1fr)}
+    .form-row{grid-template-columns:1fr}
+    .product-cards{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    .manifesto__stats{flex-direction:column;gap:24px}
+    .cert-grid{grid-template-columns:repeat(2,1fr)}
+    .materials__grid{grid-template-columns:1fr}
+    .sustain__metrics{grid-template-columns:1fr}
+    .footer__top{grid-template-columns:1fr}
+    .footer__bottom{flex-direction:column;align-items:start}
+    body{cursor:auto}
+    #cursor,#cursor-ring{display:none}
+  }
+
+  /* Mobile nav overlay */
+  .nav-overlay{
+    position:fixed;inset:0;
+    background:rgba(10,9,8,0.97);
+    z-index:800;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:32px;
+    transform:translateX(100%);
+    transition:transform var(--dur-slow) var(--ease-out-expo);
+  }
+  .nav-overlay.open{transform:translateX(0)}
+  .nav-overlay a{
+    font-family:var(--ff-serif);
+    font-size:clamp(28px,6vw,48px);
+    font-weight:300;color:var(--c-white);
+    letter-spacing:0.05em;
+    transition:color var(--dur-fast);
+  }
+  .nav-overlay a:hover{color:var(--c-gold)}
+</style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress"></div>
+
+<!-- Mobile nav overlay -->
+<div class="nav-overlay" id="navOverlay">
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#technology">Technology</a>
+  <a href="#applications">Applications</a>
+  <a href="#journal">Journal</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════ -->
+<nav id="mainNav">
+  <a href="#" class="nav__logo">V<span>Ö</span>RN</a>
+  <ul class="nav__links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#applications">Applications</a></li>
+    <li><a href="#journal">Journal</a></li>
+  </ul>
+  <a href="#contact" class="nav__cta">Request Consultation</a>
+  <button class="nav__burger" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     1. HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__img-area">
+    <div class="hero__img-ph img-ph">
+      <div class="img-ph__icon">◈</div>
+      <div class="img-ph__label">[ Full-bleed: Luxury kitchen environment — cinematic lighting, built-in appliances ]</div>
+    </div>
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="hero__eyebrow">Precision Kitchen Systems &nbsp;— Est. 1974</div>
+    <h1 class="hero__headline">
+      Where <em>precision</em><br>meets<br>perfection.
+    </h1>
+    <p class="hero__sub">Built-in appliances engineered for those who demand the extraordinary. Crafted to inhabit the finest kitchens in the world.</p>
+    <div class="hero__actions">
+      <a href="#products" class="btn-primary">
+        <span>Explore Collection</span>
+        <span>→</span>
+      </a>
+      <a href="#about" class="btn-ghost">Our Philosophy <span class="arrow">→</span></a>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <div class="hero__scroll-text">Scroll</div>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     2. MANIFESTO
+════════════════════════════════════════════ -->
+<section class="manifesto" id="about">
+  <div class="manifesto__grid">
+    <div class="manifesto__text">
+      <div class="manifesto__number" aria-hidden="true">01</div>
+      <div class="overline reveal">Brand Philosophy</div>
+      <h2 class="manifesto__headline reveal" data-delay="1">
+        Not appliances.<br><em>Instruments</em><br>of mastery.
+      </h2>
+      <p class="manifesto__body reveal" data-delay="2">
+        For five decades, VÖRN has pursued a singular vision: the complete unification of engineering precision and aesthetic refinement. Every surface, every mechanism, every line of code — conceived as a single, coherent statement of intent.
+        <br><br>
+        We do not follow trends. We establish standards. Our built-in systems are not installed into kitchens. They become the kitchen.
+      </p>
+      <div class="manifesto__stats reveal" data-delay="3">
+        <div class="stat">
+          <div class="stat__num">50+</div>
+          <div class="stat__label">Years of Mastery</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">140</div>
+          <div class="stat__label">Countries Worldwide</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">32</div>
+          <div class="stat__label">Design Awards</div>
+        </div>
+      </div>
+    </div>
+    <div class="manifesto__img reveal-right" data-delay="1">
+      <div class="img-ph" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Editorial: Master chef at VÖRN range — warm cinematic tones ]</div>
+      </div>
+      <div class="manifesto__img-overlay"></div>
+      <div class="manifesto__quote">"Designed as architecture. Engineered as science. Experienced as art."</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     3. PRODUCT ECOSYSTEM
+════════════════════════════════════════════ -->
+<section class="ecosystem" id="products">
+  <div class="ecosystem__header">
+    <div>
+      <div class="overline reveal">Product Ecosystem</div>
+      <h2 class="ecosystem__headline reveal" data-delay="1">The Complete<br><em style="font-family:var(--ff-serif);font-style:italic;color:var(--c-parchment)">Kitchen</em></h2>
+    </div>
+    <p class="ecosystem__desc reveal" data-delay="2">Five product families. One unified system. Designed to work in concert — aesthetically, mechanically, digitally.</p>
+  </div>
+  <div class="ecosystem__grid reveal-scale" data-delay="1">
+    <div class="eco-card">
+      <div class="img-ph eco-card__img" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Built-in ovens — stainless, dark glass door panel, architectural kitchen ]</div>
+      </div>
+      <div class="eco-card__overlay"></div>
+      <div class="eco-card__content">
+        <div class="eco-card__cat">Thermal Systems</div>
+        <div class="eco-card__title">Precision Ovens &amp; Steam</div>
+        <a href="#" class="eco-card__link">Explore Series →</a>
+      </div>
+      <div class="eco-card__zoom-hint">⊕</div>
+    </div>
+    <div class="eco-card">
+      <div class="img-ph" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Induction cooktops — flush-mounted, minimal, dark countertop ]</div>
+      </div>
+      <div class="eco-card__overlay"></div>
+      <div class="eco-card__content">
+        <div class="eco-card__cat">Surface Systems</div>
+        <div class="eco-card__title">Induction &amp; Gas Surfaces</div>
+        <a href="#" class="eco-card__link">Explore Series →</a>
+      </div>
+      <div class="eco-card__zoom-hint">⊕</div>
+    </div>
+    <div class="eco-card">
+      <div class="img-ph" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Ceiling hood vent — architectural, integrated, dramatic lighting ]</div>
+      </div>
+      <div class="eco-card__overlay"></div>
+      <div class="eco-card__content">
+        <div class="eco-card__cat">Ventilation</div>
+        <div class="eco-card__title">Extraction Systems</div>
+        <a href="#" class="eco-card__link">Explore Series →</a>
+      </div>
+      <div class="eco-card__zoom-hint">⊕</div>
+    </div>
+    <div class="eco-card">
+      <div class="img-ph" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Integrated refrigeration — flush panel, seamless cabinetry ]</div>
+      </div>
+      <div class="eco-card__overlay"></div>
+      <div class="eco-card__content">
+        <div class="eco-card__cat">Cold Systems</div>
+        <div class="eco-card__title">Integrated Refrigeration</div>
+        <a href="#" class="eco-card__link">Explore Series →</a>
+      </div>
+      <div class="eco-card__zoom-hint">⊕</div>
+    </div>
+    <div class="eco-card">
+      <div class="img-ph" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Smart kitchen touchscreen display panel — UI, ambient kitchen light ]</div>
+      </div>
+      <div class="eco-card__overlay"></div>
+      <div class="eco-card__content">
+        <div class="eco-card__cat">Digital</div>
+        <div class="eco-card__title">Smart Kitchen Interface</div>
+        <a href="#" class="eco-card__link">Explore Series →</a>
+      </div>
+      <div class="eco-card__zoom-hint">⊕</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     4. FEATURED PRODUCTS SLIDER
+════════════════════════════════════════════ -->
+<section class="featured">
+  <div class="featured__header">
+    <div>
+      <div class="overline reveal">Featured Products</div>
+      <h2 class="featured__headline reveal" data-delay="1">New Arrivals</h2>
+    </div>
+    <div class="featured__controls">
+      <button class="slider-btn" id="sliderPrev" aria-label="Previous">←</button>
+      <button class="slider-btn active" id="sliderNext" aria-label="Next">→</button>
+    </div>
+  </div>
+  <div style="overflow:hidden">
+    <div class="slider-track" id="sliderTrack">
+      <div class="product-slide">
+        <div class="product-slide__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VO-900X Oven — front 3/4 angle, dark polished steel ]</div>
+          </div>
+        </div>
+        <div class="product-slide__info">
+          <div class="product-slide__cat">Thermal Series</div>
+          <div class="product-slide__name">VO-900X Combination Oven</div>
+          <div class="product-slide__spec">90cm · Steam + Convection · IoT Enabled</div>
+          <a href="#" class="product-slide__cta">Configure →</a>
+        </div>
+      </div>
+      <div class="product-slide">
+        <div class="product-slide__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VI-720 Induction — flush surface, precision dial, stone countertop ]</div>
+          </div>
+        </div>
+        <div class="product-slide__info">
+          <div class="product-slide__cat">Surface Series</div>
+          <div class="product-slide__name">VI-720 Induction Cooktop</div>
+          <div class="product-slide__spec">72cm · 4 Zone · FlexBridge™ Technology</div>
+          <a href="#" class="product-slide__cta">Configure →</a>
+        </div>
+      </div>
+      <div class="product-slide">
+        <div class="product-slide__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VH-1200 Ceiling Hood — architectural island hood, editorial lighting ]</div>
+          </div>
+        </div>
+        <div class="product-slide__info">
+          <div class="product-slide__cat">Ventilation Series</div>
+          <div class="product-slide__name">VH-1200 Island Hood</div>
+          <div class="product-slide__spec">120cm · 1200 m³/h · SilentFlow™ Motor</div>
+          <a href="#" class="product-slide__cta">Configure →</a>
+        </div>
+      </div>
+      <div class="product-slide">
+        <div class="product-slide__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VR-180 Column Fridge — integrated panel, architectural kitchen ]</div>
+          </div>
+        </div>
+        <div class="product-slide__info">
+          <div class="product-slide__cat">Cold Series</div>
+          <div class="product-slide__name">VR-180 Column Refrigerator</div>
+          <div class="product-slide__spec">180cm · 359L · FreshShield™ Climate</div>
+          <a href="#" class="product-slide__cta">Configure →</a>
+        </div>
+      </div>
+      <div class="product-slide">
+        <div class="product-slide__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VW-600 Dishwasher — integrated front, silent open mechanism ]</div>
+          </div>
+        </div>
+        <div class="product-slide__info">
+          <div class="product-slide__cat">Hygiene Series</div>
+          <div class="product-slide__name">VW-600 Integrated Dishwasher</div>
+          <div class="product-slide__spec">60cm · 14 Settings · 38dB SilentWash™</div>
+          <a href="#" class="product-slide__cta">Configure →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     5. PRODUCT DETAIL GRID
+════════════════════════════════════════════ -->
+<section class="detail-grid">
+  <div class="detail-grid__inner">
+    <div class="detail-grid__header">
+      <div>
+        <div class="overline reveal">Signature Series</div>
+        <h2 class="detail-grid__headline reveal" data-delay="1">Architect<br>Collection</h2>
+      </div>
+      <p class="detail-grid__intro reveal" data-delay="2">The Architect Collection represents the absolute pinnacle of VÖRN engineering. Each unit is a declaration of intent — uncompromising in execution, irreducible in form.</p>
+    </div>
+    <div class="product-cards">
+      <div class="pcard reveal" data-delay="1">
+        <div class="pcard__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VO-900X — angled beauty shot, precision detail, dark studio ]</div>
+          </div>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__series">Thermal · Architect</div>
+          <div class="pcard__name">VO-900X Combination Oven</div>
+          <div class="pcard__specs">
+            <div class="pspec"><div class="pspec__label">Capacity</div><div class="pspec__value">76 Litres</div></div>
+            <div class="pspec"><div class="pspec__label">Modes</div><div class="pspec__value">24 Functions</div></div>
+            <div class="pspec"><div class="pspec__label">Steam</div><div class="pspec__value">Full Injection</div></div>
+            <div class="pspec"><div class="pspec__label">Connect</div><div class="pspec__value">VÖRN OS 4.0</div></div>
+          </div>
+        </div>
+        <div class="pcard__hover">
+          <span class="pcard__hover-text">View Product</span>
+          <span class="pcard__hover-arr">→</span>
+        </div>
+      </div>
+      <div class="pcard reveal" data-delay="2">
+        <div class="pcard__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VI-960 Induction — overhead shot, detail knobs, dark marble ]</div>
+          </div>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__series">Surface · Architect</div>
+          <div class="pcard__name">VI-960 Induction Suite</div>
+          <div class="pcard__specs">
+            <div class="pspec"><div class="pspec__label">Width</div><div class="pspec__value">96 cm</div></div>
+            <div class="pspec"><div class="pspec__label">Zones</div><div class="pspec__value">6 FlexBridge™</div></div>
+            <div class="pspec"><div class="pspec__label">Power</div><div class="pspec__value">11 kW Total</div></div>
+            <div class="pspec"><div class="pspec__label">Control</div><div class="pspec__value">TouchSlide™</div></div>
+          </div>
+        </div>
+        <div class="pcard__hover">
+          <span class="pcard__hover-text">View Product</span>
+          <span class="pcard__hover-arr">→</span>
+        </div>
+      </div>
+      <div class="pcard reveal" data-delay="3">
+        <div class="pcard__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ VH-1500 — editorial ceiling shot, architectural kitchen scene ]</div>
+          </div>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__series">Ventilation · Architect</div>
+          <div class="pcard__name">VH-1500 Ceiling Hood</div>
+          <div class="pcard__specs">
+            <div class="pspec"><div class="pspec__label">Width</div><div class="pspec__value">150 cm</div></div>
+            <div class="pspec"><div class="pspec__label">Extract</div><div class="pspec__value">1500 m³/h</div></div>
+            <div class="pspec"><div class="pspec__label">Noise</div><div class="pspec__value">32 dB(A)</div></div>
+            <div class="pspec"><div class="pspec__label">Lighting</div><div class="pspec__value">LED Matrix</div></div>
+          </div>
+        </div>
+        <div class="pcard__hover">
+          <span class="pcard__hover-text">View Product</span>
+          <span class="pcard__hover-arr">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     6. SMART KITCHEN
+════════════════════════════════════════════ -->
+<section class="smart" id="smart">
+  <div class="smart__full">
+    <div class="smart__bg">
+      <div class="img-ph" style="height:100%;opacity:0.5">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Smart kitchen — touchscreen control panel, ambient scene, connected ecosystem ]</div>
+      </div>
+    </div>
+    <div class="smart__overlay"></div>
+    <div class="smart__content">
+      <div class="overline reveal">VÖRN OS 4.0</div>
+      <h2 class="smart__headline reveal" data-delay="1">Intelligence in every interaction.</h2>
+      <p class="smart__body reveal" data-delay="2">The VÖRN ecosystem connects every appliance through a unified platform. Adaptive learning, precision climate control, and predictive maintenance — all converging in a single, frictionless experience.</p>
+      <div class="smart__features reveal" data-delay="3">
+        <div class="smart__feat">
+          <div class="smart__feat-title">AdaptiveHeat™ Algorithm</div>
+          <div class="smart__feat-desc">Machine learning continuously refines heating curves for perfect results, every time.</div>
+        </div>
+        <div class="smart__feat">
+          <div class="smart__feat-title">Unified Control Interface</div>
+          <div class="smart__feat-desc">One touchscreen governs every VÖRN appliance in your kitchen ecosystem.</div>
+        </div>
+        <div class="smart__feat">
+          <div class="smart__feat-title">Remote Monitoring</div>
+          <div class="smart__feat-desc">Full appliance status, diagnostics, and control from anywhere in the world.</div>
+        </div>
+        <div class="smart__feat">
+          <div class="smart__feat-title">Chef's Recipe Library</div>
+          <div class="smart__feat-desc">Curated programmes from Michelin-starred chefs, applied automatically.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     7. TECHNOLOGY
+════════════════════════════════════════════ -->
+<section class="technology" id="technology">
+  <div class="technology__inner">
+    <div class="technology__layout">
+      <div class="technology__left">
+        <div class="overline reveal">Engineering</div>
+        <h2 class="technology__headline reveal" data-delay="1">Precision beyond the visible.</h2>
+        <p class="technology__body reveal" data-delay="2">Every VÖRN appliance is the result of thousands of engineering hours — where tolerance is measured in microns and performance is never compromised for aesthetics, nor aesthetics for performance.</p>
+        <div class="tech__pillars">
+          <div class="tech__pillar reveal" data-delay="1">
+            <div class="tech__pillar-num">01</div>
+            <div>
+              <div class="tech__pillar-title">ThermalCore™ Cavity</div>
+              <div class="tech__pillar-desc">Double-insulated cavity with ±1°C accuracy across all 76 litres of cooking space.</div>
+            </div>
+          </div>
+          <div class="tech__pillar reveal" data-delay="2">
+            <div class="tech__pillar-num">02</div>
+            <div>
+              <div class="tech__pillar-title">FluxBlade™ Induction</div>
+              <div class="tech__pillar-desc">Proprietary coil geometry delivering 40% faster heat transfer than conventional systems.</div>
+            </div>
+          </div>
+          <div class="tech__pillar reveal" data-delay="3">
+            <div class="tech__pillar-num">03</div>
+            <div>
+              <div class="tech__pillar-title">SilentFlow™ Motor</div>
+              <div class="tech__pillar-desc">Magnetically balanced extraction achieving 1500 m³/h at 32 dB — whisper quiet power.</div>
+            </div>
+          </div>
+          <div class="tech__pillar reveal" data-delay="4">
+            <div class="tech__pillar-num">04</div>
+            <div>
+              <div class="tech__pillar-title">FreshShield™ Climate</div>
+              <div class="tech__pillar-desc">Six-zone active humidity management preserving food quality for up to 3× longer.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="technology__right">
+        <div class="technology__main-img reveal-right" data-delay="1">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Engineering: VÖRN manufacturing / robotics line — dark, high-contrast ]</div>
+          </div>
+        </div>
+        <div class="technology__sub-imgs">
+          <div class="technology__sub-img reveal" data-delay="2">
+            <div class="img-ph" style="height:100%">
+              <div class="img-ph__icon">◈</div>
+              <div class="img-ph__label">[ Engineering close-up: induction coil detail ]</div>
+            </div>
+          </div>
+          <div class="technology__sub-img reveal" data-delay="3">
+            <div class="img-ph" style="height:100%">
+              <div class="img-ph__icon">◈</div>
+              <div class="img-ph__label">[ Lab: quality testing, technician, precision instruments ]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     8. MATERIALS
+════════════════════════════════════════════ -->
+<section class="materials">
+  <div class="materials__inner">
+    <div class="materials__header">
+      <div class="overline reveal" style="justify-content:center">Materials &amp; Craft</div>
+      <h2 class="materials__headline reveal" data-delay="1">Touched by <em>hands.</em><br>Tested by <em>time.</em></h2>
+    </div>
+    <div class="materials__grid">
+      <div class="mat-card reveal" data-delay="1">
+        <div class="mat-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Macro: brushed stainless steel surface detail ]</div>
+          </div>
+        </div>
+        <div class="mat-card__info">
+          <div class="label">Material 01</div>
+          <div class="mat-card__name">Brushed Stainless</div>
+          <div class="mat-card__desc">AISI 316L marine-grade. Satin-finished by hand.</div>
+        </div>
+      </div>
+      <div class="mat-card reveal" data-delay="2">
+        <div class="mat-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Macro: dark tempered ceramic glass — light refraction ]</div>
+          </div>
+        </div>
+        <div class="mat-card__info">
+          <div class="label">Material 02</div>
+          <div class="mat-card__name">Tempered Ceramic Glass</div>
+          <div class="mat-card__desc">9mm black ceramic. Heat-resistant to 500°C.</div>
+        </div>
+      </div>
+      <div class="mat-card reveal" data-delay="3">
+        <div class="mat-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Macro: anodised aluminium — texture, metallic sheen ]</div>
+          </div>
+        </div>
+        <div class="mat-card__info">
+          <div class="label">Material 03</div>
+          <div class="mat-card__name">Anodised Aluminium</div>
+          <div class="mat-card__desc">Hard-coat anodised. Precision CNC-milled profiles.</div>
+        </div>
+      </div>
+      <div class="mat-card reveal" data-delay="4">
+        <div class="mat-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Macro: hammered graphite enamel — texture, warm studio light ]</div>
+          </div>
+        </div>
+        <div class="mat-card__info">
+          <div class="label">Material 04</div>
+          <div class="mat-card__name">Graphite Enamel</div>
+          <div class="mat-card__desc">Kiln-fired at 850°C. Scratch and acid resistant.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     9. QUALITY
+════════════════════════════════════════════ -->
+<section class="quality">
+  <div class="quality__inner">
+    <div class="quality__header">
+      <div>
+        <div class="overline reveal">Standards</div>
+        <h2 class="quality__headline reveal" data-delay="1">Certified Excellence</h2>
+      </div>
+      <p class="quality__note reveal" data-delay="2">Every VÖRN product must exceed the most stringent global standards before leaving our factory. Certification is the floor, not the ceiling.</p>
+    </div>
+    <div class="cert-grid reveal" data-delay="1">
+      <div class="cert-item">
+        <div class="cert-item__icon">✦</div>
+        <div class="cert-item__name">ISO 9001:2015</div>
+        <div class="cert-item__org">Quality Management</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__icon">✦</div>
+        <div class="cert-item__name">CE Marking</div>
+        <div class="cert-item__org">European Conformity</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__icon">✦</div>
+        <div class="cert-item__name">Energy A+++</div>
+        <div class="cert-item__org">EU Efficiency Rating</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__icon">✦</div>
+        <div class="cert-item__name">UL Certified</div>
+        <div class="cert-item__org">North American Safety</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__icon">✦</div>
+        <div class="cert-item__name">NSF/ANSI 4</div>
+        <div class="cert-item__org">Commercial Food Safety</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__icon">✦</div>
+        <div class="cert-item__name">Red Dot 2024</div>
+        <div class="cert-item__org">Design Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     10. SUSTAINABILITY
+════════════════════════════════════════════ -->
+<section class="sustainability">
+  <div class="sustainability__inner">
+    <div>
+      <div class="overline reveal">Responsibility</div>
+      <h2 class="sustainability__headline reveal" data-delay="1">Designed for<br><em style="font-family:var(--ff-serif);font-style:italic;color:var(--c-gold)">generations.</em></h2>
+      <p class="sustainability__body reveal" data-delay="2">Luxury and responsibility are not in conflict. VÖRN engineers products built to last decades, from materials sourced with rigorous environmental and social accountability.</p>
+      <div class="sustain__metrics reveal" data-delay="3">
+        <div class="sustain__metric">
+          <div class="sustain__metric-val">−62%</div>
+          <div class="sustain__metric-label">Carbon reduction vs. 2015 baseline</div>
+        </div>
+        <div class="sustain__metric">
+          <div class="sustain__metric-val">100%</div>
+          <div class="sustain__metric-label">Renewable energy in production by 2026</div>
+        </div>
+        <div class="sustain__metric">
+          <div class="sustain__metric-val">25yr</div>
+          <div class="sustain__metric-label">Average product service life</div>
+        </div>
+        <div class="sustain__metric">
+          <div class="sustain__metric-val">94%</div>
+          <div class="sustain__metric-label">Components recyclable at end of life</div>
+        </div>
+      </div>
+    </div>
+    <div class="sustainability__img reveal-right" data-delay="1">
+      <div class="img-ph" style="height:100%">
+        <div class="img-ph__icon">◈</div>
+        <div class="img-ph__label">[ Sustainability: bright architectural kitchen, natural light, clean materials ]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     11. APPLICATIONS
+════════════════════════════════════════════ -->
+<section class="applications" id="applications">
+  <div class="applications__inner">
+    <div class="applications__header">
+      <div class="overline reveal" style="justify-content:center">Applications</div>
+      <h2 class="applications__headline reveal" data-delay="1">From private residences<br>to Michelin-starred kitchens.</h2>
+    </div>
+    <div class="app-segments">
+      <div class="app-seg reveal" data-delay="1">
+        <div class="app-seg__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Luxury residential kitchen — full VÖRN build-in installation ]</div>
+          </div>
+        </div>
+        <div class="app-seg__overlay"></div>
+        <div class="app-seg__content">
+          <div class="app-seg__type">01 — Residential</div>
+          <div class="app-seg__title">Private Residences</div>
+          <div class="app-seg__desc">For architects, interior designers, and discerning homeowners who demand the absolute best.</div>
+        </div>
+      </div>
+      <div class="app-seg reveal" data-delay="2">
+        <div class="app-seg__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ 5-star hotel kitchen — hospitality, grand scale, VÖRN branding ]</div>
+          </div>
+        </div>
+        <div class="app-seg__overlay"></div>
+        <div class="app-seg__content">
+          <div class="app-seg__type">02 — Hospitality</div>
+          <div class="app-seg__title">Luxury Hospitality</div>
+          <div class="app-seg__desc">Trusted by the world's finest hotels and resorts across six continents.</div>
+        </div>
+      </div>
+      <div class="app-seg reveal" data-delay="3">
+        <div class="app-seg__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Professional kitchen — Michelin-star restaurant, intense light, stainless ]</div>
+          </div>
+        </div>
+        <div class="app-seg__overlay"></div>
+        <div class="app-seg__content">
+          <div class="app-seg__type">03 — Professional</div>
+          <div class="app-seg__title">Professional Kitchens</div>
+          <div class="app-seg__desc">The choice of Michelin-starred chefs who trust nothing less than flawless performance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     12. TESTIMONIALS
+════════════════════════════════════════════ -->
+<section class="testimonials">
+  <div class="testimonials__inner">
+    <div class="testimonials__header">
+      <div class="overline reveal">Voices</div>
+      <h2 class="testimonials__headline reveal" data-delay="1">What the world says.</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="t-card reveal" data-delay="1">
+        <div class="t-card__quote-mark">"</div>
+        <p class="t-card__text">VÖRN ovens have an emotional quality I've never encountered in any other appliance. They respond to the cook. After two years in my kitchen, they still feel new.</p>
+        <div class="t-card__author">
+          <div class="t-card__avatar">A</div>
+          <div>
+            <div class="t-card__name">Alain Duchêne</div>
+            <div class="t-card__role">Executive Chef — 3 Michelin Stars, Paris</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card reveal" data-delay="2">
+        <div class="t-card__quote-mark">"</div>
+        <p class="t-card__text">For us, VÖRN is the only brand that meets our architectural standard. The integration is absolutely seamless. Our clients can never identify where the kitchen ends and the appliance begins.</p>
+        <div class="t-card__author">
+          <div class="t-card__avatar">M</div>
+          <div>
+            <div class="t-card__name">Maren Hoffstedt</div>
+            <div class="t-card__role">Principal Architect — Studio Hoffstedt, Berlin</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card reveal" data-delay="3">
+        <div class="t-card__quote-mark">"</div>
+        <p class="t-card__text">In 22 years of specifying premium appliances for luxury properties, VÖRN consistently delivers what others only promise. Reliability and beauty at the highest level.</p>
+        <div class="t-card__author">
+          <div class="t-card__avatar">S</div>
+          <div>
+            <div class="t-card__name">Sarah Ellsworth</div>
+            <div class="t-card__role">Interior Director — One &amp; Only Resorts Group</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     13. JOURNAL
+════════════════════════════════════════════ -->
+<section class="journal" id="journal">
+  <div class="journal__inner">
+    <div class="journal__header">
+      <div>
+        <div class="overline reveal">VÖRN Insights</div>
+        <h2 class="journal__headline reveal" data-delay="1">The Journal</h2>
+      </div>
+      <a href="#" class="journal__all reveal" data-delay="2">All Articles →</a>
+    </div>
+    <div class="journal-grid">
+      <div class="j-card reveal" data-delay="1">
+        <div class="j-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Editorial: modern kitchen architecture — magazine style, dramatic shadows ]</div>
+          </div>
+        </div>
+        <div class="j-card__body">
+          <div class="j-card__tag">Design &nbsp;·&nbsp; 8 min read</div>
+          <div class="j-card__title">The New Language of Kitchen Architecture: Integration as Aesthetic</div>
+          <div class="j-card__meta">March 2026</div>
+        </div>
+      </div>
+      <div class="j-card reveal" data-delay="2">
+        <div class="j-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Engineering: induction coil close-up, glowing, dark background ]</div>
+          </div>
+        </div>
+        <div class="j-card__body">
+          <div class="j-card__tag">Technology &nbsp;·&nbsp; 6 min read</div>
+          <div class="j-card__title">FluxBlade™: How We Reimagined Induction from First Principles</div>
+          <div class="j-card__meta">February 2026</div>
+        </div>
+      </div>
+      <div class="j-card reveal" data-delay="3">
+        <div class="j-card__img">
+          <div class="img-ph" style="height:100%">
+            <div class="img-ph__icon">◈</div>
+            <div class="img-ph__label">[ Portrait: Michelin chef in professional kitchen with VÖRN range ]</div>
+          </div>
+        </div>
+        <div class="j-card__body">
+          <div class="j-card__tag">Craft &nbsp;·&nbsp; 5 min read</div>
+          <div class="j-card__title">Alain Duchêne on the Relationship Between Chef and Appliance</div>
+          <div class="j-card__meta">January 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     14. CONTACT
+════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <div class="contact__left">
+      <div class="overline reveal">Get in Touch</div>
+      <h2 class="contact__headline reveal" data-delay="1">Begin your<br><em>VÖRN</em><br>journey.</h2>
+      <p class="contact__body reveal" data-delay="2">Our specialist consultants work with architects, interior designers, and private clients to specify the perfect VÖRN ecosystem for every project.</p>
+      <div class="contact__info reveal" data-delay="3">
+        <div class="contact__info-item">
+          <div class="contact__info-label">Global Headquarters</div>
+          <div class="contact__info-value">VÖRN Tower, Lindaustrasse 1, Munich 80339, Germany</div>
+        </div>
+        <div class="contact__info-item">
+          <div class="contact__info-label">Showroom Enquiries</div>
+          <div class="contact__info-value">+49 89 4400 7000</div>
+        </div>
+        <div class="contact__info-item">
+          <div class="contact__info-label">Trade &amp; Architecture</div>
+          <div class="contact__info-value">trade@vorn.com</div>
+        </div>
+        <div class="contact__info-item">
+          <div class="contact__info-label">Press</div>
+          <div class="contact__info-value">press@vorn.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact__right reveal-right" data-delay="1">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="—">
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="—">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="—">
+        </div>
+        <div class="form-field">
+          <label for="type">I am a</label>
+          <select id="type">
+            <option value="">— Select —</option>
+            <option>Private Client</option>
+            <option>Architect / Designer</option>
+            <option>Hospitality Professional</option>
+            <option>Press / Media</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="project">Project Description</label>
+          <textarea id="project" placeholder="Tell us about your project…"></textarea>
+        </div>
+        <button type="button" class="form-submit">
+          <span>Send Enquiry</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="footer__top">
+    <div>
+      <div class="footer__brand-name">V<span>Ö</span>RN</div>
+      <p class="footer__tagline">Precision Kitchen Systems. Engineered in Germany. Desired worldwide.</p>
+    </div>
+    <div>
+      <div class="footer__col-title">Products</div>
+      <ul class="footer__links">
+        <li><a href="#">Ovens &amp; Steam</a></li>
+        <li><a href="#">Induction Surfaces</a></li>
+        <li><a href="#">Gas Cooking</a></li>
+        <li><a href="#">Ventilation</a></li>
+        <li><a href="#">Refrigeration</a></li>
+        <li><a href="#">Dishwashers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__col-title">Company</div>
+      <ul class="footer__links">
+        <li><a href="#">About VÖRN</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Room</a></li>
+        <li><a href="#">Investors</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__col-title">Services</div>
+      <ul class="footer__links">
+        <li><a href="#">Find a Showroom</a></li>
+        <li><a href="#">Trade Programme</a></li>
+        <li><a href="#">Specification Service</a></li>
+        <li><a href="#">Installation</a></li>
+        <li><a href="#">AfterCare</a></li>
+        <li><a href="#">VÖRN Academy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__copy">© 2026 VÖRN GmbH. All rights reserved.</div>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════ -->
+<script>
+/* ── Cursor ── */
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e=>{
+  mx=e.clientX; my=e.clientY;
+  cursor.style.left=mx+'px'; cursor.style.top=my+'px';
+});
+(function animRing(){
+  rx+=(mx-rx)*0.14; ry+=(my-ry)*0.14;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+})();
+
+/* ── Scroll progress ── */
+const progressBar = document.getElementById('progress');
+window.addEventListener('scroll', ()=>{
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  progressBar.style.width = pct + '%';
+});
+
+/* ── Nav on scroll ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', ()=>{
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── Reveal on scroll ── */
+const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+}, {threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+
+/* ── Slider ── */
+const track = document.getElementById('sliderTrack');
+const slides = track.querySelectorAll('.product-slide');
+let slideIdx=0;
+const slideW = ()=>slides[0].offsetWidth + 3;
+const maxIdx = slides.length - Math.floor((window.innerWidth - 80) / slideW());
+
+function goSlide(dir){
+  slideIdx = Math.max(0, Math.min(slideIdx+dir, Math.max(0,slides.length-2)));
+  track.style.transform = `translateX(-${slideIdx * slideW()}px)`;
+}
+document.getElementById('sliderNext').addEventListener('click',()=>goSlide(1));
+document.getElementById('sliderPrev').addEventListener('click',()=>goSlide(-1));
+
+/* Touch/drag on slider */
+let startX=0, isDragging=false, startTranslate=0;
+track.addEventListener('mousedown', e=>{
+  isDragging=true; startX=e.clientX;
+  startTranslate = -slideIdx*slideW();
+  track.style.transition='none';
+});
+document.addEventListener('mousemove', e=>{
+  if(!isDragging) return;
+  const dx = e.clientX - startX;
+  track.style.transform = `translateX(${startTranslate+dx}px)`;
+});
+document.addEventListener('mouseup', e=>{
+  if(!isDragging) return; isDragging=false;
+  track.style.transition='transform 0.9s cubic-bezier(0.16,1,0.3,1)';
+  const dx = e.clientX - startX;
+  if(Math.abs(dx)>80) goSlide(dx>0?-1:1); else goSlide(0);
+});
+
+/* ── Mobile burger ── */
+const burger = document.getElementById('burgerBtn');
+const overlay = document.getElementById('navOverlay');
+let menuOpen=false;
+burger.addEventListener('click',()=>{
+  menuOpen=!menuOpen;
+  overlay.classList.toggle('open',menuOpen);
+  burger.querySelectorAll('span')[0].style.transform = menuOpen?'translateY(6px) rotate(45deg)':'';
+  burger.querySelectorAll('span')[1].style.opacity = menuOpen?'0':'1';
+  burger.querySelectorAll('span')[2].style.transform = menuOpen?'translateY(-6px) rotate(-45deg)':'';
+});
+overlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menuOpen=false; overlay.classList.remove('open');
+  burger.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity=''});
+}));
+
+/* ── Parallax hero ── */
+window.addEventListener('scroll', ()=>{
+  const hero = document.querySelector('.hero__img-ph');
+  if(hero) hero.style.transform = `translateY(${window.scrollY * 0.25}px)`;
+});
+</script>
+</body>
+</html>
