@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 40 6% 90%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 40 4% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 40 30% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 6% 88%;
+    --input: 40 6% 88%;
+    --ring: 40 30% 50%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --surface: 40 4% 96%;
+    --surface-elevated: 0 0% 100%;
+    --metallic: 0 0% 72%;
+    --metallic-light: 0 0% 85%;
+    --gold: 40 50% 52%;
+    --gold-muted: 40 25% 75%;
+    --charcoal: 0 0% 15%;
+    --charcoal-light: 0 0% 25%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 40 30% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .scene-section {
+    @apply relative w-full overflow-hidden;
+  }
+
+  .text-display {
+    font-family: var(--font-display);
+    @apply tracking-tight leading-tight;
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+    @apply leading-relaxed tracking-normal;
+  }
+
+  .text-label {
+    font-family: var(--font-body);
+    @apply text-xs uppercase tracking-[0.2em] font-medium;
+    color: hsl(var(--gold));
+  }
+
+  .surface-card {
+    @apply bg-card border border-border;
+  }
+
+  .gold-accent {
+    color: hsl(var(--gold));
+  }
+
+  .gold-line {
+    @apply h-px w-12;
+    background: hsl(var(--gold));
+  }
+
+  .metallic-text {
+    color: hsl(var(--metallic));
+  }
+
+  .floating-label-input {
+    @apply relative;
+  }
+
+  .floating-label-input input,
+  .floating-label-input textarea {
+    @apply w-full border-b border-border bg-transparent py-3 text-foreground outline-none transition-colors;
+    font-family: var(--font-body);
+  }
+
+  .floating-label-input input:focus,
+  .floating-label-input textarea:focus {
+    border-color: hsl(var(--gold));
+  }
+
+  .floating-label-input label {
+    @apply absolute left-0 top-3 text-sm transition-all pointer-events-none;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .floating-label-input input:focus + label,
+  .floating-label-input input:not(:placeholder-shown) + label,
+  .floating-label-input textarea:focus + label,
+  .floating-label-input textarea:not(:placeholder-shown) + label {
+    @apply -top-2 text-xs;
+    color: hsl(var(--gold));
+  }
+}
+
+@layer utilities {
+  .clip-reveal {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  .clip-reveal-visible {
+    clip-path: inset(0 0 0% 0);
+  }
+}

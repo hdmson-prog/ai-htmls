@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse our complete product catalog. Industrial components across multiple categories with advanced filtering and pagination." />
+  <title>Product Archive — NEXFOR Industrial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ NAV ═══════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark">NX</span>
+        <span class="logo-text">NEXFOR<em>Industrial</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">Company</a></li>
+        <li><a href="products-archive.html">Products</a></li>
+        <li><a href="index.html#capabilities">Capabilities</a></li>
+        <li><a href="index.html#industries">Industries</a></li>
+        <li><a href="index.html#quality">Quality</a></li>
+        <li><a href="index.html#network">Global</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Request Quote</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════ PAGE BANNER ═══════════════════════════════════════════ -->
+    <section class="archive-banner">
+      <div class="archive-banner-overlay"></div>
+      <div class="archive-banner-content container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li><a href="index.html">Home</a></li>
+            <li><span>Products</span></li>
+            <li aria-current="page">Archive</li>
+          </ol>
+        </nav>
+        <h1 class="archive-title reveal-up">Product Archive</h1>
+        <p class="archive-subtitle reveal-up" style="animation-delay: 0.1s;">
+          Browse our comprehensive catalog of industrial components. Filter by category, specifications, or search by SKU.
+        </p>
+        <div class="archive-stats reveal-up" style="animation-delay: 0.2s;">
+          <div class="stat">
+            <span class="stat-label">Total Products</span>
+            <span class="stat-value" id="total-products">1200+</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Active Categories</span>
+            <span class="stat-value">24</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Manufacturers</span>
+            <span class="stat-value">18</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ PRODUCTS SECTION ═══════════════════════════════════════════ -->
+    <section class="archive-section container">
+      
+      <!-- SIDEBAR -->
+      <aside class="archive-sidebar" id="archive-sidebar">
+        <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar">×</button>
+        
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Search</h3>
+          <input type="text" id="product-search" class="sidebar-search" placeholder="Search by SKU or name...">
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Category</h3>
+          <div class="sidebar-filters">
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="all" checked>
+              <span>All Categories</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="fasteners">
+              <span>Fasteners</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="bearings">
+              <span>Bearings & Bushings</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="shafts">
+              <span>Shafts & Axles</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="castings">
+              <span>Castings</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="seals">
+              <span>Seals & Gaskets</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="springs">
+              <span>Springs</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="gears">
+              <span>Gears & Couplings</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Material</h3>
+          <div class="sidebar-filters">
+            <label class="filter-option">
+              <input type="checkbox" name="material" value="steel">
+              <span>Steel</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="material" value="stainless">
+              <span>Stainless Steel</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="material" value="aluminum">
+              <span>Aluminum</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="material" value="brass">
+              <span>Brass/Bronze</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="material" value="plastic">
+              <span>Engineering Plastic</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Certification</h3>
+          <div class="sidebar-filters">
+            <label class="filter-option">
+              <input type="checkbox" name="certification" value="iso">
+              <span>ISO 9001:2015</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="certification" value="iatf">
+              <span>IATF 16949</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="certification" value="rohs">
+              <span>RoHS Compliant</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="certification" value="ce">
+              <span>CE Marked</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" id="reset-filters">Reset Filters</button>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="archive-main">
+        
+        <!-- TOOLBAR -->
+        <div class="archive-toolbar">
+          <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+            <span class="toggle-icon">☰</span>
+            <span>Filters</span>
+          </button>
+          
+          <div class="toolbar-sort">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="newest">Newest</option>
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+              <option value="sku">SKU</option>
+            </select>
+          </div>
+
+          <div class="toolbar-count">
+            <span id="results-count">Showing 1–12 of 1200 products</span>
+          </div>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid" id="product-grid">
+          <!-- Products will be populated by JavaScript -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Precision Ball Bearing</h3>
+              <p class="product-category">Bearings & Bushings</p>
+              <p class="product-sku">SKU: NX-BB-6203-RS</p>
+              <p class="product-specs">15mm bore • Double sealed • High precision</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Stainless Steel Fastener</h3>
+              <p class="product-category">Fasteners</p>
+              <p class="product-sku">SKU: NX-FAS-M8-SS</p>
+              <p class="product-specs">M8 × 1.25 • Grade A4-70 • 1000/box</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Aluminum Shaft Assembly</h3>
+              <p class="product-category">Shafts & Axles</p>
+              <p class="product-sku">SKU: NX-SHA-AL-40</p>
+              <p class="product-specs">40mm diameter • 6061-T6 • Custom lengths</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Steel Casting Component</h3>
+              <p class="product-category">Castings</p>
+              <p class="product-sku">SKU: NX-CAST-ST-256</p>
+              <p class="product-specs">Gray iron • Sand cast • ISO 8062 Grade</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Hydraulic Seal Kit</h3>
+              <p class="product-category">Seals & Gaskets</p>
+              <p class="product-sku">SKU: NX-SEAL-HY-25K</p>
+              <p class="product-specs">NBR/FKM options • Pressure rated • Kits available</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Compression Spring</h3>
+              <p class="product-category">Springs</p>
+              <p class="product-sku">SKU: NX-SPRING-C-1.5K</p>
+              <p class="product-specs">1.5mm wire • Stainless • Load rated</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Bevel Gear Set</h3>
+              <p class="product-category">Gears & Couplings</p>
+              <p class="product-sku">SKU: NX-GEAR-BV-48</p>
+              <p class="product-specs">48:1 ratio • 20° pressure angle • Precision cut</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Needle Roller Bearing</h3>
+              <p class="product-category">Bearings & Bushings</p>
+              <p class="product-sku">SKU: NX-NB-NK-10</p>
+              <p class="product-specs">10mm bore • Compact design • High speed</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Brass Coupling</h3>
+              <p class="product-category">Gears & Couplings</p>
+              <p class="product-sku">SKU: NX-COUP-BR-20</p>
+              <p class="product-specs">20mm bore • Naval brass • Vibration damping</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Fluoroelastomer Gasket</h3>
+              <p class="product-category">Seals & Gaskets</p>
+              <p class="product-sku">SKU: NX-GASK-FKM-50</p>
+              <p class="product-specs">50mm OD • -20°C to +200°C • FDA compliant</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">M10 Hex Socket Cap</h3>
+              <p class="product-category">Fasteners</p>
+              <p class="product-sku">SKU: NX-FAS-M10-HSC</p>
+              <p class="product-specs">45mm length • Grade 8.8 • DIN 912</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <div class="img-placeholder product-placeholder">
+                <div class="placeholder-grid"></div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Titanium Spring Clip</h3>
+              <p class="product-category">Springs</p>
+              <p class="product-sku">SKU: NX-SPRING-TI-CLM</p>
+              <p class="product-specs">Gr.2 titanium • Corrosion resistant • Aerospace</p>
+              <a href="#" class="product-link">View Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination-wrapper">
+          <nav class="pagination" aria-label="Product pagination">
+            <button class="pagination-btn pagination-prev" id="pagination-prev" aria-label="Previous page">
+              <span>← Previous</span>
+            </button>
+
+            <div class="pagination-pages" id="pagination-pages">
+              <button class="pagination-page active" data-page="1">1</button>
+              <button class="pagination-page" data-page="2">2</button>
+              <button class="pagination-page" data-page="3">3</button>
+              <button class="pagination-page" data-page="4">4</button>
+              <button class="pagination-page" data-page="5">5</button>
+              <span class="pagination-ellipsis">...</span>
+              <button class="pagination-page" data-page="100">100</button>
+            </div>
+
+            <button class="pagination-btn pagination-next" id="pagination-next" aria-label="Next page">
+              <span>Next →</span>
+            </button>
+          </nav>
+
+          <div class="pagination-info">
+            <label for="per-page-select">Items per page:</label>
+            <select id="per-page-select">
+              <option value="12">12</option>
+              <option value="24">24</option>
+              <option value="36">36</option>
+              <option value="48">48</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-col">
+        <h4>About NEXFOR</h4>
+        <p>Leading industrial manufacturer and exporter of precision components since 2000.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products-archive.html">Products</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Certifications</h4>
+        <ul>
+          <li>ISO 9001:2015</li>
+          <li>IATF 16949</li>
+          <li>RoHS / CE</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Global Reach</h4>
+        <p>Serving 60+ countries with reliable supply chains and on-time delivery.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 NEXFOR Industrial. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

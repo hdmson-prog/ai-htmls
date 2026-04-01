@@ -627,6 +627,214 @@ function initNetworkBars() {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   ARCHIVE PAGE — Pagination & Filtering
+   ═══════════════════════════════════════════════════════════ */
+function initArchivePage() {
+  const pageGrid = qs('#product-grid');
+  if (!pageGrid) return;
+
+  // Total products and pagination state
+  const TOTAL_PRODUCTS = 1200;
+  let currentPage = 1;
+  let itemsPerPage = 12;
+  let filteredProducts = TOTAL_PRODUCTS;
+
+  // DOM elements
+  const perPageSelect = qs('#per-page-select');
+  const sortSelect = qs('#sort-select');
+  const resetBtn = qs('#reset-filters');
+  const sidebarToggle = qs('#sidebar-toggle');
+  const sidebarClose = qs('#sidebar-close');
+  const sidebar = qs('#archive-sidebar');
+  const paginationPrev = qs('#pagination-prev');
+  const paginationNext = qs('#pagination-next');
+  const paginationPages = qs('#pagination-pages');
+  const resultsCount = qs('#results-count');
+  const productSearch = qs('#product-search');
+  const categoryCheckboxes = qsa('input[name="category"]');
+  const materialCheckboxes = qsa('input[name="material"]');
+  const certCheckboxes = qsa('input[name="certification"]');
+
+  // Toggle sidebar on mobile
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  }
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+  }
+
+  // Close sidebar when clicking outside
+  document.addEventListener('click', (e) => {
+    if (sidebar && sidebar.classList.contains('active') &&
+        !sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+      sidebar.classList.remove('active');
+    }
+  });
+
+  // Update display
+  function updateDisplay() {
+    const startIdx = (currentPage - 1) * itemsPerPage + 1;
+    const endIdx = Math.min(currentPage * itemsPerPage, filteredProducts);
+    resultsCount.textContent = `Showing ${startIdx}–${endIdx} of ${filteredProducts} products`;
+    updatePagination();
+    window.scrollTo({ top: qs('.archive-toolbar').offsetTop - 100, behavior: 'smooth' });
+  }
+
+  // Update pagination buttons
+  function updatePagination() {
+    const totalPages = Math.ceil(filteredProducts / itemsPerPage);
+    
+    paginationPrev.disabled = currentPage === 1;
+    paginationNext.disabled = currentPage === totalPages;
+
+    // Generate page buttons
+    let pagesHTML = '';
+    const maxPages = Math.min(5, totalPages);
+    
+    for (let i = 1; i <= maxPages; i++) {
+      const isActive = i === currentPage ? 'active' : '';
+      pagesHTML += `<button class="pagination-page ${isActive}" data-page="${i}">${i}</button>`;
+    }
+
+    if (totalPages > 5) {
+      pagesHTML += '<span class="pagination-ellipsis">...</span>';
+      pagesHTML += `<button class="pagination-page" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    paginationPages.innerHTML = pagesHTML;
+
+    // Add event listeners to page buttons
+    qsa('.pagination-page', paginationPages).forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentPage = parseInt(btn.dataset.page);
+        updateDisplay();
+      });
+    });
+  }
+
+  // Previous/Next buttons
+  if (paginationPrev) {
+    paginationPrev.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updateDisplay();
+      }
+    });
+  }
+
+  if (paginationNext) {
+    paginationNext.addEventListener('click', () => {
+      const totalPages = Math.ceil(filteredProducts / itemsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        updateDisplay();
+      }
+    });
+  }
+
+  // Items per page
+  if (perPageSelect) {
+    perPageSelect.addEventListener('change', (e) => {
+      itemsPerPage = parseInt(e.target.value);
+      currentPage = 1;
+      updateDisplay();
+    });
+  }
+
+  // Reset filters
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      categoryCheckboxes.forEach(cb => {
+        cb.checked = cb.value === 'all';
+      });
+      materialCheckboxes.forEach(cb => {
+        cb.checked = false;
+      });
+      certCheckboxes.forEach(cb => {
+        cb.checked = false;
+      });
+      if (productSearch) productSearch.value = '';
+      
+      filteredProducts = TOTAL_PRODUCTS;
+      currentPage = 1;
+      updateDisplay();
+    });
+  }
+
+  // Filter logic
+  function applyFilters() {
+    // Simulate filtering (in real app, would filter products array)
+    const selectedCategories = qsa('input[name="category"]:checked').map(cb => cb.value);
+    const selectedMaterials = qsa('input[name="material"]:checked').map(cb => cb.value);
+    const selectedCerts = qsa('input[name="certification"]:checked').map(cb => cb.value);
+    const searchTerm = productSearch ? productSearch.value.toLowerCase() : '';
+
+    // Calculate filtered count (simplified - in real app would filter actual products)
+    let filtered = TOTAL_PRODUCTS;
+    if (selectedCategories.length > 0 && !selectedCategories.includes('all')) {
+      filtered = Math.floor(TOTAL_PRODUCTS * 0.7);
+    }
+    if (selectedMaterials.length > 0) {
+      filtered = Math.floor(filtered * 0.8);
+    }
+    if (selectedCerts.length > 0) {
+      filtered = Math.floor(filtered * 0.9);
+    }
+    if (searchTerm) {
+      filtered = Math.floor(filtered * 0.5);
+    }
+
+    filteredProducts = Math.max(0, filtered);
+    currentPage = 1;
+    updateDisplay();
+  }
+
+  // Category filter - "All Categories" is exclusive
+  categoryCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.value === 'all' && cb.checked) {
+        categoryCheckboxes.forEach(c => {
+          c.checked = c === cb;
+        });
+      } else if (cb.value !== 'all' && cb.checked) {
+        qs('input[name="category"][value="all"]').checked = false;
+      }
+      applyFilters();
+    });
+  });
+
+  // Material & Certification filters
+  materialCheckboxes.forEach(cb => {
+    cb.addEventListener('change', applyFilters);
+  });
+
+  certCheckboxes.forEach(cb => {
+    cb.addEventListener('change', applyFilters);
+  });
+
+  // Search
+  if (productSearch) {
+    productSearch.addEventListener('input', applyFilters);
+  }
+
+  // Sort
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      // In real app, would sort product array
+      console.log('Sort by:', e.target.value);
+    });
+  }
+
+  // Initialize
+  updateDisplay();
+}
+
+/* ═══════════════════════════════════════════════════════════
    INITIALIZATION
    ═══════════════════════════════════════════════════════════ */
 onReady(() => {
@@ -648,4 +856,5 @@ onReady(() => {
   initWhyItemsReveal();
   initQualityProcess();
   initNetworkBars();
+  initArchivePage();
 });
