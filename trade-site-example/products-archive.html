@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse the CopperForge product archive with copper fittings, brass components, OEM parts, and machining services." />
+  <meta name="keywords" content="product archive, copper fittings catalogue, brass components, OEM parts, manufacturing products" />
+  <title>CopperForge Industries - Product Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar" role="banner">
+    <div class="container">
+      <span class="topbar-welcome">
+        Welcome to <span>CopperForge Industries</span> - Precision Manufacturing Since 1998
+      </span>
+      <div class="topbar-social" aria-label="Social media links">
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45H17v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.56V9h3.34v1.56h.05c.47-.88 1.6-1.81 3.29-1.81 3.52 0 4.17 2.31 4.17 5.32v6.38zM5.34 7.43a1.94 1.94 0 1 1 0-3.88 1.94 1.94 0 0 1 0 3.88zM6.82 20.45H3.86V9h2.96v11.45zM22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.38.47A3.01 3.01 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.01 3.01 0 0 0 2.12 2.13C4.5 20.4 12 20.4 12 20.4s7.5 0 9.38-.47a3.01 3.01 0 0 0 2.12-2.13C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.28 3.6-6.28 3.6z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="CopperForge Industries home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <div class="logo-name">CopperForge</div>
+          <div class="logo-tagline">Precision Manufacturing</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="nav-item">
+          <a href="products-archive.html" class="nav-link">
+            Products
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown" role="menu" aria-label="Products submenu">
+            <a href="products-archive.html" class="dropdown-item" role="menuitem">Product Archive</a>
+            <a href="product-details.html" class="dropdown-item" role="menuitem">Copper Pipe Fittings</a>
+            <a href="products-archive.html#filters" class="dropdown-item" role="menuitem">Brass Compression Fittings</a>
+            <a href="products-archive.html#filters" class="dropdown-item" role="menuitem">OEM Custom Components</a>
+            <a href="products-archive.html#filters" class="dropdown-item" role="menuitem">Machining Services</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#products" class="nav-link">Capabilities</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#products" class="nav-link">Industries</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#products" class="nav-link">Quality</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html#rfq" class="btn-primary" aria-label="Request a quote">Request Quote</a>
+        <button class="icon-btn" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <div class="lang-switcher" role="navigation" aria-label="Language selection">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+            EN
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" role="menu">
+            <a href="#" class="lang-option active" role="menuitem" lang="en">English</a>
+            <a href="#" class="lang-option" role="menuitem" lang="zh">中文</a>
+            <a href="#" class="lang-option" role="menuitem" lang="de">Deutsch</a>
+            <a href="#" class="lang-option" role="menuitem" lang="es">Español</a>
+            <a href="#" class="lang-option" role="menuitem" lang="ar">العربية</a>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-bar-wrap" id="searchBar" aria-hidden="true">
+      <div class="container">
+        <div class="search-bar-inner">
+          <input type="search" class="search-input" id="searchInput" placeholder="Search product archive..." aria-label="Search" />
+          <button class="search-close" id="searchClose" aria-label="Close search">Esc to close</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="products-archive.html" class="mobile-nav-link">Products</a>
+    <a href="index.html#products" class="mobile-nav-link">Capabilities</a>
+    <a href="index.html#products" class="mobile-nav-link">Industries</a>
+    <a href="index.html#products" class="mobile-nav-link">Quality</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-nav-cta">
+      <a href="index.html#rfq" class="btn-primary">Request a Quote</a>
+    </div>
+  </div>
+
+  <main class="archive-page">
+    <section class="page-banner" aria-label="Product archive banner">
+      <div class="container">
+        <div class="page-banner-inner reveal">
+          <div class="page-banner-copy">
+            <div class="page-banner-breadcrumb">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <span>Products Archive</span>
+            </div>
+            <p class="section-label">Product Archive</p>
+            <h1 class="page-banner-title">Browse the Full <em>Product Catalogue</em></h1>
+            <p class="page-banner-sub">
+              Explore copper fittings, brass components, OEM parts, and manufacturing services in a structured archive designed for procurement teams, engineers, and distributors.
+            </p>
+          </div>
+          <div class="page-banner-metrics" aria-label="Archive stats">
+            <div class="page-banner-metric">
+              <span class="page-banner-metric-value">48+</span>
+              <span class="page-banner-metric-label">Active SKUs</span>
+            </div>
+            <div class="page-banner-metric">
+              <span class="page-banner-metric-value">12</span>
+              <span class="page-banner-metric-label">Product Families</span>
+            </div>
+            <div class="page-banner-metric">
+              <span class="page-banner-metric-value">24h</span>
+              <span class="page-banner-metric-label">Quote Response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-page-shell" id="filters" aria-label="Products archive">
+      <div class="container">
+        <div class="archive-layout">
+          <aside class="archive-sidebar">
+            <div class="archive-panel reveal">
+              <h2 class="archive-panel-title">Filter Products</h2>
+              <p class="archive-panel-copy">Narrow the archive by product family, material, or application.</p>
+              <input class="archive-search" type="search" placeholder="Search products..." aria-label="Search products">
+            </div>
+
+            <div class="archive-panel reveal reveal-delay-1">
+              <h2 class="archive-panel-title">Categories</h2>
+              <div class="archive-list">
+                <div class="archive-list-item"><span>Copper fittings</span><span>12</span></div>
+                <div class="archive-list-item"><span>Brass fittings</span><span>10</span></div>
+                <div class="archive-list-item"><span>Push-fit systems</span><span>7</span></div>
+                <div class="archive-list-item"><span>Valves & manifolds</span><span>6</span></div>
+                <div class="archive-list-item"><span>OEM components</span><span>9</span></div>
+              </div>
+            </div>
+
+            <div class="archive-panel reveal reveal-delay-2">
+              <h2 class="archive-panel-title">Popular Tags</h2>
+              <div class="archive-chip-list">
+                <a href="#" class="archive-chip">ISO 9001</a>
+                <a href="#" class="archive-chip">EN 1254</a>
+                <a href="#" class="archive-chip">DZR Brass</a>
+                <a href="#" class="archive-chip">CNC Machined</a>
+                <a href="#" class="archive-chip">WRAS</a>
+                <a href="#" class="archive-chip">OEM</a>
+              </div>
+            </div>
+
+            <div class="archive-panel reveal reveal-delay-3">
+              <h2 class="archive-panel-title">Featured Download</h2>
+              <div class="archive-featured">
+                <div class="archive-featured-card">
+                  <div class="archive-card-media-art" aria-hidden="true" style="width:84px;height:84px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+                  </div>
+                  <h3 class="archive-featured-name">2025 Product Catalogue PDF</h3>
+                  <p class="archive-featured-meta">Download the latest product index, technical summary, and material reference sheets.</p>
+                  <a href="#" class="archive-featured-link">Download Catalogue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="archive-main">
+            <div class="archive-toolbar reveal">
+              <div class="archive-toolbar-copy">
+                <h2 class="archive-toolbar-title">All Products</h2>
+                <p class="archive-toolbar-sub">Showing 1-9 of 48 products</p>
+              </div>
+              <label class="archive-sort" for="archiveSort">
+                Sort by
+                <select id="archiveSort" aria-label="Sort archive">
+                  <option>Featured first</option>
+                  <option>Newest</option>
+                  <option>Name A-Z</option>
+                  <option>Material</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="archive-grid">
+              <article class="archive-card archive-card--amber reveal">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="5"/><path d="M4 12h4M16 12h4M12 4v4M12 16v4"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Copper Pipe Fittings</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Copper / EN 1254</span>
+                  <h3 class="archive-card-title">Copper Pipe Fittings</h3>
+                  <p class="archive-card-desc">End-feed, solder-ring, and capillary fittings for potable water and HVAC systems, available across a broad DN range.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">DN6-DN108</span>
+                    <span class="archive-card-tag">ASTM B88</span>
+                    <span class="archive-card-tag">Stocked</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="product-details.html" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--steel reveal reveal-delay-1">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="10" rx="2"/><path d="M9 15v4M15 15v4"/><path d="M8 10h8"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Brass Compression Fittings</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Brass / DZR</span>
+                  <h3 class="archive-card-title">Brass Compression Fittings</h3>
+                  <p class="archive-card-desc">Dezincification resistant brass for potable water systems, balancing durability, corrosion resistance, and quick installation.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">CW602N</span>
+                    <span class="archive-card-tag">WRAS</span>
+                    <span class="archive-card-tag">Potable Water</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--sand reveal reveal-delay-2">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 7h10v10H7z"/><path d="M9 9h6v6H9z"/><path d="M4 12h3M17 12h3"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Push-Fit Connectors</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Push-fit / EN 1254-7</span>
+                  <h3 class="archive-card-title">Push-Fit Connectors</h3>
+                  <p class="archive-card-desc">Fast-install push-fit systems for plumbing and retrofit work, designed for clean insertion and reliable sealing.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">15-42mm</span>
+                    <span class="archive-card-tag">Gas Safe</span>
+                    <span class="archive-card-tag">Retrofit</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--graphite reveal">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 14h14M7 10h10M9 6h6"/><circle cx="12" cy="17" r="2"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Valves & Manifolds</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Control / Assembly</span>
+                  <h3 class="archive-card-title">Valves &amp; Manifolds</h3>
+                  <p class="archive-card-desc">Compact control assemblies for distributed plumbing systems, underfloor heating loops, and fluid routing applications.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">Multi-port</span>
+                    <span class="archive-card-tag">OEM Ready</span>
+                    <span class="archive-card-tag">Tested</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--amber reveal reveal-delay-1">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16v8H4z"/><path d="M8 8V4h8v4"/><path d="M8 16v4h8v-4"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">OEM Custom Parts</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">OEM / Prototype</span>
+                  <h3 class="archive-card-title">OEM Custom Components</h3>
+                  <p class="archive-card-desc">Bespoke copper and brass parts developed from drawings, samples, or engineering briefs with prototype support.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">Private Label</span>
+                    <span class="archive-card-tag">NDA</span>
+                    <span class="archive-card-tag">15 Days</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--steel reveal reveal-delay-2">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19h14M7 19V9l5-4 5 4v10"/><path d="M10 19v-4h4v4"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">CNC Machined Parts</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Machining / Precision</span>
+                  <h3 class="archive-card-title">CNC Precision Machining</h3>
+                  <p class="archive-card-desc">High-volume turning and milling for copper, brass, and bronze components with controlled tolerance and repeatability.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">&plusmn;0.01mm</span>
+                    <span class="archive-card-tag">Multi-axis</span>
+                    <span class="archive-card-tag">High Volume</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--sand reveal">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 5h12v14H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Surface Finishing</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Finishing / Coating</span>
+                  <h3 class="archive-card-title">Surface Finishing</h3>
+                  <p class="archive-card-desc">Nickel, chrome, tin, and passivation processes for cosmetic quality and corrosion resistance across industrial applications.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">Plating</span>
+                    <span class="archive-card-tag">Passivation</span>
+                    <span class="archive-card-tag">Traceable</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--graphite reveal reveal-delay-1">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Quality Inspection</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Inspection / QA</span>
+                  <h3 class="archive-card-title">Quality Inspection</h3>
+                  <p class="archive-card-desc">CMM, hydrostatic testing, and material verification workflows with batch-level documentation for compliance-led buyers.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">CMM</span>
+                    <span class="archive-card-tag">XRF</span>
+                    <span class="archive-card-tag">Reports</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+
+              <article class="archive-card archive-card--amber reveal reveal-delay-2">
+                <div class="archive-card-media" aria-hidden="true">
+                  <div class="archive-card-media-frame"></div>
+                  <div class="archive-card-media-inner">
+                    <div class="archive-card-media-art">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12M6 12h12M6 16h12"/><path d="M8 4h8v4H8z"/></svg>
+                    </div>
+                    <span class="archive-card-media-label">Catalogue Bundles</span>
+                  </div>
+                </div>
+                <div class="archive-card-body">
+                  <span class="archive-card-kicker">Documents / Kits</span>
+                  <h3 class="archive-card-title">Technical Datasheet Packs</h3>
+                  <p class="archive-card-desc">Combined product sheets, installation guidance, and specification data for distributor and engineering review.</p>
+                  <div class="archive-card-tags">
+                    <span class="archive-card-tag">PDF</span>
+                    <span class="archive-card-tag">Specs</span>
+                    <span class="archive-card-tag">Guides</span>
+                  </div>
+                </div>
+                <div class="archive-card-footer">
+                  <a href="#" class="archive-card-link">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+              </article>
+            </div>
+
+            <nav class="pagination reveal" aria-label="Product archive pagination">
+              <a href="#" class="pagination-link active" aria-current="page">1</a>
+              <a href="#" class="pagination-link">2</a>
+              <a href="#" class="pagination-link">3</a>
+              <span class="pagination-ellipsis">...</span>
+              <a href="#" class="pagination-link">8</a>
+              <a href="#" class="pagination-link">Next</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo" aria-label="CopperForge Industries">
+            <div class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <div class="logo-name">CopperForge</div>
+              <div class="logo-tagline">Precision Manufacturing</div>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Precision copper and brass component manufacturer since 1998. ISO-certified, export-ready, OEM-capable. Engineering quality you can measure.
+          </p>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Industrial Zone 4, Block C, Precision Manufacturing Estate</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (234) 567-8900</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>rfq@copperforge.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Products</p>
+          <nav class="footer-links" aria-label="Products navigation">
+            <a href="products-archive.html" class="footer-link">Product Archive</a>
+            <a href="product-details.html" class="footer-link">Copper Pipe Fittings</a>
+            <a href="#" class="footer-link">Brass Compression Fittings</a>
+            <a href="#" class="footer-link">Push-Fit Connectors</a>
+            <a href="#" class="footer-link">OEM Components</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Company</p>
+          <nav class="footer-links" aria-label="Company navigation">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="index.html#products" class="footer-link">Manufacturing Facility</a>
+            <a href="index.html#products" class="footer-link">Quality Control</a>
+            <a href="contact.html" class="footer-link">Request a Quote</a>
+          </nav>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Support</p>
+          <nav class="footer-links" aria-label="Support navigation">
+            <a href="contact.html" class="footer-link">Technical Datasheets</a>
+            <a href="contact.html" class="footer-link">Installation Guides</a>
+            <a href="contact.html" class="footer-link">OEM Partnership</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 CopperForge Industries. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Compliance</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

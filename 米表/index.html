@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Domains for Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orbit" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Premium Domains Portfolio</p>
+        <h1>Domains for Sale</h1>
+        <p class="subhead">
+          Curated brandable names across tech, commerce, and lifestyle. Reach out
+          to buy or negotiate.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-action="scroll">Browse Domains</button>
+          <a class="btn ghost" href="mailto:hello@yourdomain.com">Contact Seller</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span id="countTotal" class="stat">0</span>
+            <span class="stat-label">Domains Listed</span>
+          </div>
+          <div>
+            <span id="countPremium" class="stat">0</span>
+            <span class="stat-label">Premium Tier</span>
+          </div>
+          <div>
+            <span class="stat">Instant Transfer</span>
+            <span class="stat-label">Fast & Secure</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="toolbar" id="browse">
+        <div class="search">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search domains, keywords, or category"
+            aria-label="Search domains"
+          />
+        </div>
+        <div class="filters">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="tech">Tech</button>
+          <button class="chip" data-filter="commerce">Commerce</button>
+          <button class="chip" data-filter="media">Media</button>
+          <button class="chip" data-filter="lifestyle">Lifestyle</button>
+          <button class="chip" data-filter="premium">Premium</button>
+        </div>
+      </section>
+
+      <section class="grid" id="domainGrid" aria-live="polite"></section>
+
+      <section class="cta">
+        <div>
+          <h2>Interested in a name?</h2>
+          <p>
+            Make an offer or ask for bundle pricing. I reply within 24 hours.
+          </p>
+        </div>
+        <a class="btn primary" href="mailto:hello@yourdomain.com">Send Inquiry</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Domains for Sale. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
