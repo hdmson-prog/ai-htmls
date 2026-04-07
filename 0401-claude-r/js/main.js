@@ -7,6 +7,7 @@
       const header = document.getElementById('header');
       const hamburger = document.getElementById('hamburger');
       const mobileNav = document.getElementById('mobileNav');
+      const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
       let lastScroll = 0;
 
       window.addEventListener('scroll', () => {
@@ -38,16 +39,102 @@
           document.body.style.overflow = '';
         });
       });
+
+      function closeDropdowns(except = null) {
+        dropdowns.forEach(dropdown => {
+          if (dropdown === except) return;
+          dropdown.classList.remove('open');
+          const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', (event) => {
+          event.preventDefault();
+          const isOpen = dropdown.classList.contains('open');
+          closeDropdowns(dropdown);
+          dropdown.classList.toggle('open', !isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        dropdown.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            closeDropdowns();
+          });
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-dropdown')) {
+          closeDropdowns();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeDropdowns();
+      });
     })();
 
     /* ----------------------------------------------------------
-       MODULE: Hero Slider — Auto-play, Dots, Arrows
+       MODULE: Product Details - Gallery + Tabs
+    ---------------------------------------------------------- */
+    (function initProductDetails() {
+      const gallery = document.querySelector('[data-product-gallery]');
+      const mainImage = document.getElementById('productMainImage');
+      const thumbs = Array.from(document.querySelectorAll('[data-product-thumb]'));
+      const tabRoot = document.querySelector('[data-product-tabs]');
+      if (!gallery || !mainImage) return;
+
+      function activateThumb(thumb) {
+        thumbs.forEach(item => item.classList.toggle('is-active', item === thumb));
+        const nextImage = thumb.dataset.image;
+        if (nextImage) mainImage.src = nextImage;
+        if (thumb.dataset.alt) mainImage.alt = thumb.dataset.alt;
+      }
+
+      thumbs.forEach(thumb => {
+        thumb.addEventListener('mouseenter', () => activateThumb(thumb));
+        thumb.addEventListener('focus', () => activateThumb(thumb));
+        thumb.addEventListener('click', () => activateThumb(thumb));
+      });
+
+      if (!tabRoot) return;
+      const tabs = Array.from(tabRoot.querySelectorAll('[data-tab-target]'));
+      const panels = Array.from(tabRoot.querySelectorAll('[data-tab-panel]'));
+
+      function activateTab(name) {
+        tabs.forEach(tab => {
+          const isActive = tab.dataset.tabTarget === name;
+          tab.classList.toggle('is-active', isActive);
+          tab.setAttribute('aria-selected', String(isActive));
+        });
+        panels.forEach(panel => {
+          const isActive = panel.dataset.tabPanel === name;
+          panel.classList.toggle('is-active', isActive);
+          panel.hidden = !isActive;
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab.dataset.tabTarget));
+      });
+    })();
+
+    /* ----------------------------------------------------------
+       MODULE: Hero Slider – Auto-play, Dots, Arrows
     ---------------------------------------------------------- */
     (function initHeroSlider() {
       const slides = document.querySelectorAll('.hero-slide');
       const dots = document.querySelectorAll('.hero-dot');
       const prevBtn = document.getElementById('heroPrev');
       const nextBtn = document.getElementById('heroNext');
+      const hero = document.getElementById('hero');
+      if (!slides.length || !dots.length || !prevBtn || !nextBtn || !hero) return;
+
       let currentSlide = 0;
       let autoPlayTimer = null;
       const AUTOPLAY_DURATION = 6000;
@@ -93,7 +180,6 @@
 
       // Touch / swipe support
       let touchStartX = 0;
-      const hero = document.getElementById('hero');
       hero.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
       hero.addEventListener('touchend', e => {
         const diff = touchStartX - e.changedTouches[0].clientX;
@@ -172,9 +258,11 @@
       const prevBtn = document.getElementById('scPrev');
       const nextBtn = document.getElementById('scNext');
       const progressBar = document.getElementById('scProgressBar');
+      if (!wrap || !track || !prevBtn || !nextBtn || !progressBar) return;
 
       const items = track.querySelectorAll('.showcase-item');
       const totalItems = items.length;
+      if (!totalItems) return;
       let currentOffset = 0;
       let autoTimer = null;
       const AUTO_DELAY = 3500;
