@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRTX Studio — Digital Experience Agency</title>
+  <meta name="description" content="Award-winning digital experience agency crafting websites, brands, and digital products that convert." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-mark">V</span>RTX
+    </div>
+    <ul class="nav__links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+    </ul>
+    <a href="#contact" class="nav__cta">Start a Project</a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Start a Project</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="noise-overlay"></div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow reveal">
+        <span class="dot"></span> Digital Experience Agency
+      </div>
+      <h1 class="hero__headline reveal">
+        We design<br/>
+        <em>futures</em><br/>
+        not websites.
+      </h1>
+      <p class="hero__sub reveal">
+        Crafting immersive digital experiences for brands<br/>
+        that refuse to be ordinary.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#work" class="btn btn--primary">View Our Work</a>
+        <a href="#contact" class="btn btn--ghost">Start a Project ↗</a>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal-right">
+      <div class="hero__mockup-frame">
+        <div class="hero__mockup-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="hero__mockup-screen">
+          <div class="mock-ui">
+            <div class="mock-ui__nav">
+              <div class="mock-pill"></div>
+              <div class="mock-pill wide"></div>
+              <div class="mock-pill"></div>
+            </div>
+            <div class="mock-ui__hero-img">
+              <div class="mock-gradient-block"></div>
+              <div class="mock-ui__overlay-text">
+                <div class="mock-line thick"></div>
+                <div class="mock-line"></div>
+              </div>
+            </div>
+            <div class="mock-ui__cards">
+              <div class="mock-card" style="--c:#6c47ff"></div>
+              <div class="mock-card" style="--c:#00d4aa"></div>
+              <div class="mock-card" style="--c:#ff4757"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__floating-badge badge--1">
+        <span class="badge-num">98</span>
+        <span class="badge-label">Performance<br/>Score</span>
+      </div>
+      <div class="hero__floating-badge badge--2">
+        <span class="badge-icon">✦</span>
+        <span class="badge-label">Awwwards<br/>SOTD</span>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero__ticker">
+      <div class="ticker-track">
+        <span>Web Design</span><span>·</span>
+        <span>UI/UX Design</span><span>·</span>
+        <span>Branding</span><span>·</span>
+        <span>Development</span><span>·</span>
+        <span>Motion Design</span><span>·</span>
+        <span>Digital Strategy</span><span>·</span>
+        <span>Web Design</span><span>·</span>
+        <span>UI/UX Design</span><span>·</span>
+        <span>Branding</span><span>·</span>
+        <span>Development</span><span>·</span>
+        <span>Motion Design</span><span>·</span>
+        <span>Digital Strategy</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ STATS ════════════════════════════════ -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stat reveal-up">
+        <span class="stat__num" data-count="127">0</span>
+        <span class="stat__label">Projects Delivered</span>
+      </div>
+      <div class="stat reveal-up" style="--delay:.1s">
+        <span class="stat__num" data-count="98">0</span><span class="stat__suffix">%</span>
+        <span class="stat__label">Client Retention</span>
+      </div>
+      <div class="stat reveal-up" style="--delay:.2s">
+        <span class="stat__num" data-count="12">0</span>
+        <span class="stat__label">Awards Won</span>
+      </div>
+      <div class="stat reveal-up" style="--delay:.3s">
+        <span class="stat__num" data-count="8">0</span>
+        <span class="stat__label">Years of Excellence</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ WORK ════════════════════════════════ -->
+  <!--
+    PHP LOOP NOTE:
+    This section is designed to be driven by the $projects array in work-section.php.
+    The static cards below are the exact HTML a foreach loop would produce.
+    Replace this section with <?php include 'work-section.php'; ?> in production.
+  -->
+  <section class="work" id="work">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Featured Work</span>
+      <h2 class="section-title">Proof in pixels.</h2>
+    </div>
+
+    <div class="work__grid">
+
+      <!-- Card structure is IDENTICAL for every project. Only the data attributes change. -->
+
+      <article class="work-card work-card--span-8 reveal-up" style="--accent-color:#6c47ff; --delay:0s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wc-deco wc-deco--badge">Web Design</div>
+          </div>
+          <div class="work-card__hover-overlay">
+            <span class="work-card__view">View Project ↗</span>
+          </div>
+        </a>
+        <div class="work-card__info">
+          <div>
+            <h3 class="work-card__title">NovaCrypt Platform</h3>
+            <span class="work-card__cat">Web Design · Development</span>
+          </div>
+          <span class="work-card__year">2024</span>
+        </div>
+      </article>
+
+      <article class="work-card work-card--span-4 reveal-up" style="--accent-color:#00d4aa; --delay:0.1s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wc-deco wc-deco--badge">Branding</div>
+          </div>
+          <div class="work-card__hover-overlay">
+            <span class="work-card__view">View Project ↗</span>
+          </div>
+        </a>
+        <div class="work-card__info">
+          <div>
+            <h3 class="work-card__title">Verdant Identity</h3>
+            <span class="work-card__cat">Branding · UI Design</span>
+          </div>
+          <span class="work-card__year">2024</span>
+        </div>
+      </article>
+
+      <article class="work-card work-card--span-4 reveal-up" style="--accent-color:#ff4757; --delay:0.2s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wc-deco wc-deco--badge">Web Design</div>
+          </div>
+          <div class="work-card__hover-overlay">
+            <span class="work-card__view">View Project ↗</span>
+          </div>
+        </a>
+        <div class="work-card__info">
+          <div>
+            <h3 class="work-card__title">Apex Ecommerce</h3>
+            <span class="work-card__cat">Web Design · CRO</span>
+          </div>
+          <span class="work-card__year">2023</span>
+        </div>
+      </article>
+
+      <article class="work-card work-card--span-8 reveal-up" style="--accent-color:#3b82f6; --delay:0.1s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wc-deco wc-deco--badge">UI/UX</div>
+          </div>
+          <div class="work-card__hover-overlay">
+            <span class="work-card__view">View Project ↗</span>
+          </div>
+        </a>
+        <div class="work-card__info">
+          <div>
+            <h3 class="work-card__title">DataPulse Analytics Dashboard</h3>
+            <span class="work-card__cat">UI/UX Design · Development</span>
+          </div>
+          <span class="work-card__year">2023</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="work__footer reveal-up">
+      <a href="#contact" class="btn btn--outline">View All Projects (24) →</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="noise-overlay"></div>
+    <div class="about__inner">
+      <div class="about__visual reveal-left">
+        <div class="about__img-frame">
+          <div class="about__img-placeholder">
+            <div class="about__studio-mock">
+              <div class="studio-light studio-light--1"></div>
+              <div class="studio-light studio-light--2"></div>
+              <div class="studio-shapes">
+                <div class="studio-shape s1"></div>
+                <div class="studio-shape s2"></div>
+                <div class="studio-shape s3"></div>
+              </div>
+              <div class="studio-table">
+                <div class="studio-monitor"></div>
+                <div class="studio-keyboard"></div>
+              </div>
+            </div>
+          </div>
+          <div class="about__img-tag">
+            <span>Est. 2016</span>
+          </div>
+        </div>
+        <div class="about__side-stat">
+          <span class="sstat-num">40+</span>
+          <span class="sstat-label">Global Clients</span>
+        </div>
+      </div>
+
+      <div class="about__text reveal-right">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title about__title">We don't follow trends — we set them.</h2>
+        <p class="about__body">
+          VRTX is a digital experience studio based at the intersection of art and engineering. Founded by designers who grew tired of ordinary, we build websites and brands that earn attention, trust, and revenue.
+        </p>
+        <p class="about__body">
+          Our team of strategists, designers, and engineers collaborate closely with ambitious founders and established brands to create digital experiences that are impossible to ignore.
+        </p>
+        <div class="about__values">
+          <div class="value-item">
+            <span class="value-icon">◈</span>
+            <div>
+              <strong>Craft Over Templates</strong>
+              <p>Every pixel is intentional. We build from concepts, not kits.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">◈</span>
+            <div>
+              <strong>Results-Driven Beauty</strong>
+              <p>Stunning design that converts. Art that earns its place.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--primary">Work With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SERVICES ══════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="section-header reveal-up">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">End-to-end digital.<br/>Beginning to brilliance.</h2>
+    </div>
+
+    <div class="services__grid">
+
+      <div class="service-card reveal-up">
+        <div class="service-card__icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 44h16M24 36v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 20l6 6 8-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Web Design</h3>
+        <p>Bespoke, conversion-focused websites that command attention and drive action from first scroll.</p>
+        <span class="service-card__num">01</span>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:.1s">
+        <div class="service-card__icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 4v4M24 40v4M44 24h-4M8 24H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M37.07 10.93l-2.83 2.83M13.76 34.24l-2.83 2.83M37.07 37.07l-2.83-2.83M13.76 13.76l-2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>User-centered interfaces engineered for intuition, delight, and measurable business outcomes.</p>
+        <span class="service-card__num">02</span>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:.2s">
+        <div class="service-card__icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4L8 14v20l16 10 16-10V14L24 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M24 4v30M8 14l16 10 16-10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Branding</h3>
+        <p>Visual identities with depth and strategy — logos, systems, and brand worlds that stick.</p>
+        <span class="service-card__num">03</span>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:.3s">
+        <div class="service-card__icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="6,18 14,10 22,18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="26,30 34,38 42,30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="14" y1="10" x2="34" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Development</h3>
+        <p>Pixel-perfect code with performance obsession. Fast, accessible, and built to scale.</p>
+        <span class="service-card__num">04</span>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:.1s">
+        <div class="service-card__icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 36c6.627 0 12-5.373 12-12S30.627 12 24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 18l-4-4 4-4M24 12c-6.627 0-12 5.373-12 12s5.373 12 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 30l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Conversion Optimization</h3>
+        <p>Data-driven UX improvements that turn visitors into customers. Science meets aesthetics.</p>
+        <span class="service-card__num">05</span>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:.2s">
+        <div class="service-card__icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8l4 8h8l-6.5 5 2.5 8L24 24l-8 5 2.5-8L12 16h8l4-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="24" cy="38" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Motion Design</h3>
+        <p>Animation and micro-interactions that transform static interfaces into living experiences.</p>
+        <span class="service-card__num">06</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════ CASE STUDIES ════════════════════════════ -->
+  <section class="cases" id="cases">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Case Studies</span>
+      <h2 class="section-title">Stories worth telling.</h2>
+    </div>
+
+    <div class="cases__list">
+
+      <article class="case-item reveal-up">
+        <div class="case-item__visual">
+          <div class="case-visual-placeholder cv--1">
+            <div class="cv-inner">
+              <div class="cv-screen">
+                <div class="cv-bar"></div>
+                <div class="cv-content">
+                  <div class="cv-img-block"></div>
+                  <div class="cv-text-block">
+                    <div class="cv-t1"></div>
+                    <div class="cv-t2"></div>
+                    <div class="cv-btn-mock"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-item__content">
+          <span class="case-item__tag">E-Commerce</span>
+          <h3 class="case-item__title">How we grew Apex's revenue by 340% in 6 months</h3>
+          <div class="case-item__problem">
+            <strong>Challenge:</strong> Apex had great products but a dated site hemorrhaging mobile conversions.
+          </div>
+          <div class="case-item__solution">
+            <strong>Solution:</strong> Full redesign with conversion-focused UX, mobile-first architecture, and trust-building visual hierarchy.
+          </div>
+          <div class="case-item__results">
+            <div class="result-pill">+340% Revenue</div>
+            <div class="result-pill">+218% Mobile Conv.</div>
+            <div class="result-pill">-52% Bounce Rate</div>
+          </div>
+          <a href="#contact" class="btn btn--ghost case-cta">Read Case Study →</a>
+        </div>
+      </article>
+
+      <article class="case-item case-item--reverse reveal-up" style="--delay:.1s">
+        <div class="case-item__visual">
+          <div class="case-visual-placeholder cv--2">
+            <div class="cv-inner">
+              <div class="cv-brand-showcase">
+                <div class="cvb-logo-mark"></div>
+                <div class="cvb-wordmark"></div>
+                <div class="cvb-color-row">
+                  <div class="cvb-swatch" style="background:#6c47ff"></div>
+                  <div class="cvb-swatch" style="background:#0d0d1a"></div>
+                  <div class="cvb-swatch" style="background:#ffffff22"></div>
+                  <div class="cvb-swatch" style="background:#a78bfa"></div>
+                </div>
+                <div class="cvb-type-sample"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-item__content">
+          <span class="case-item__tag">Branding</span>
+          <h3 class="case-item__title">Building NovaCrypt's identity from the ground up</h3>
+          <div class="case-item__problem">
+            <strong>Challenge:</strong> A cutting-edge crypto platform with no visual identity or brand trust.
+          </div>
+          <div class="case-item__solution">
+            <strong>Solution:</strong> Full brand system — logomark, motion identity, design system, and launch campaign visuals.
+          </div>
+          <div class="case-item__results">
+            <div class="result-pill">Brand from Zero</div>
+            <div class="result-pill">$2.4M Raise</div>
+            <div class="result-pill">Awwwards SOTD</div>
+          </div>
+          <a href="#contact" class="btn btn--ghost case-cta">Read Case Study →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROCESS ═══════════════════════════════ -->
+  <section class="process" id="process">
+    <div class="noise-overlay"></div>
+    <div class="section-header reveal-up">
+      <span class="section-tag">How We Work</span>
+      <h2 class="section-title">Chaos controlled.<br/>Creativity structured.</h2>
+    </div>
+
+    <div class="process__steps">
+
+      <div class="process-step reveal-up">
+        <div class="process-step__num">01</div>
+        <div class="process-step__icon">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M16 8V6M16 26v-2M8 16H6M26 16h-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Discover</h3>
+        <p>Deep-dive into your brand, audience, and goals. We don't guess — we understand.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="process-step reveal-up" style="--delay:.1s">
+        <div class="process-step__num">02</div>
+        <div class="process-step__icon">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 16h12M10 11h7M10 21h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Strategy</h3>
+        <p>User research, competitive analysis, and a clear creative brief. Purpose before pixels.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="process-step reveal-up" style="--delay:.2s">
+        <div class="process-step__num">03</div>
+        <div class="process-step__icon">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M14 8h10v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Design</h3>
+        <p>Bold concepts, refined through iteration. Every screen crafted with obsessive precision.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="process-step reveal-up" style="--delay:.3s">
+        <div class="process-step__num">04</div>
+        <div class="process-step__icon">
+          <svg viewBox="0 0 32 32" fill="none"><polyline points="6,22 12,14 18,18 26,8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Build</h3>
+        <p>Pixel-perfect development with performance at the core. Fast, accessible, and rock-solid.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="process-step reveal-up" style="--delay:.4s">
+        <div class="process-step__num">05</div>
+        <div class="process-step__icon">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M4 16a12 12 0 1 0 24 0 12 12 0 0 0-24 0z" stroke="currentColor" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Launch</h3>
+        <p>Go-live with confidence. QA, optimization, analytics, and post-launch support included.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Client Love</span>
+      <h2 class="section-title">Don't take our word for it.</h2>
+    </div>
+
+    <div class="testimonials__track-wrap">
+      <div class="testimonials__track" id="testimonialsTrack">
+
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p>VRTX didn't just build us a website — they built us a brand engine. Three months post-launch, our inbound leads tripled.</p>
+          <div class="testi-card__author">
+            <div class="testi-avatar" style="--ac:#6c47ff">MR</div>
+            <div>
+              <strong>Marcus Reid</strong>
+              <span>CEO, NovaCrypt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p>The most design-forward team I've worked with. They pushed us beyond what we thought was possible and the results speak for themselves.</p>
+          <div class="testi-card__author">
+            <div class="testi-avatar" style="--ac:#00d4aa">SL</div>
+            <div>
+              <strong>Sofia Laurent</strong>
+              <span>Creative Director, Verdant</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p>340% revenue growth is not something you say lightly. VRTX's redesign was the single best investment Apex made that year.</p>
+          <div class="testi-card__author">
+            <div class="testi-avatar" style="--ac:#ff4757">JK</div>
+            <div>
+              <strong>James Kim</strong>
+              <span>Founder, Apex Commerce</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p>Working with VRTX was like having an in-house creative team that actually cared. Communication, craft, and delivery — all exceptional.</p>
+          <div class="testi-card__author">
+            <div class="testi-avatar" style="--ac:#3b82f6">AN</div>
+            <div>
+              <strong>Aisha Nkosi</strong>
+              <span>VP Product, DataPulse</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="testimonials__controls">
+      <button class="testi-btn" id="testiPrev" aria-label="Previous">←</button>
+      <div class="testi-dots" id="testiDots"></div>
+      <button class="testi-btn" id="testiNext" aria-label="Next">→</button>
+    </div>
+
+    <div class="clients reveal-up">
+      <p class="clients__label">Trusted by ambitious brands</p>
+      <div class="clients__logos">
+        <div class="client-logo">NOVACRYPT</div>
+        <div class="client-logo">VERDANT</div>
+        <div class="client-logo">APEX</div>
+        <div class="client-logo">DATAPULSE</div>
+        <div class="client-logo">SOLIS</div>
+        <div class="client-logo">LUMIO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ NEWS ═══════════════════════════════ -->
+  <section class="news" id="news">
+    <div class="news__inner">
+      <div class="news__header reveal-up">
+        <div>
+          <span class="section-tag">Journal</span>
+          <h2 class="section-title">Thinking out loud.</h2>
+        </div>
+        <a href="#" class="btn btn--ghost news__all-link">All Articles →</a>
+      </div>
+
+      <div class="news__list">
+
+        <article class="news-item news-item--featured reveal-up">
+          <div class="news-item__img">
+            <div class="news-img-placeholder nip--1">
+              <div class="nip-inner">
+                <div class="nip-shape nip-shape--circle"></div>
+                <div class="nip-shape nip-shape--rect"></div>
+                <div class="nip-label">Design</div>
+              </div>
+            </div>
+            <div class="news-item__img-hover"></div>
+          </div>
+          <div class="news-item__body">
+            <div class="news-item__meta">
+              <span class="news-tag">Design Systems</span>
+              <span class="news-date">Mar 28, 2025</span>
+            </div>
+            <h3 class="news-item__title">Why your design system is failing — and how to fix it before the next sprint</h3>
+            <p class="news-item__excerpt">Most design systems die quietly. They start as living documents and end as outdated PDFs that nobody checks. Here's what separates the ones that stick.</p>
+            <a href="#" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+          </div>
+        </article>
+
+        <div class="news__sidebar">
+
+          <article class="news-item news-item--small reveal-up" style="--delay:.1s">
+            <div class="news-item__img news-item__img--small">
+              <div class="news-img-placeholder nip--2">
+                <div class="nip-inner">
+                  <div class="nip-code-lines">
+                    <div></div><div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="news-item__body">
+              <div class="news-item__meta">
+                <span class="news-tag">Performance</span>
+                <span class="news-date">Mar 14, 2025</span>
+              </div>
+              <h3 class="news-item__title">Core Web Vitals in 2025: the metrics that actually matter for conversion</h3>
+              <p class="news-item__excerpt">LCP, CLS, INP — we break down which signals Google is weighting now and what to prioritise in your next audit.</p>
+              <a href="#" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="news-item news-item--small reveal-up" style="--delay:.2s">
+            <div class="news-item__img news-item__img--small">
+              <div class="news-img-placeholder nip--3">
+                <div class="nip-inner">
+                  <div class="nip-bars">
+                    <div style="height:40%"></div>
+                    <div style="height:70%"></div>
+                    <div style="height:55%"></div>
+                    <div style="height:90%"></div>
+                    <div style="height:60%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="news-item__body">
+              <div class="news-item__meta">
+                <span class="news-tag">CRO</span>
+                <span class="news-date">Feb 27, 2025</span>
+              </div>
+              <h3 class="news-item__title">The fold is dead. Here's where users actually drop off on your homepage</h3>
+              <p class="news-item__excerpt">Heatmap data from 40 client launches reveals the real attention thresholds — and they're not where most designers assume.</p>
+              <a href="#" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="news-item news-item--small reveal-up" style="--delay:.3s">
+            <div class="news-item__img news-item__img--small">
+              <div class="news-img-placeholder nip--4">
+                <div class="nip-inner">
+                  <div class="nip-brand-mark"></div>
+                </div>
+              </div>
+            </div>
+            <div class="news-item__body">
+              <div class="news-item__meta">
+                <span class="news-tag">Branding</span>
+                <span class="news-date">Feb 10, 2025</span>
+              </div>
+              <h3 class="news-item__title">From wordmark to world: building brand systems that scale across every surface</h3>
+              <p class="news-item__excerpt">A logo is a promise. A brand system is the proof. We walk through our process for creating identities built for the long game.</p>
+              <a href="#" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA ═══════════════════════════════ -->
+  <section class="cta-section" id="contact">
+    <div class="cta-section__bg">
+      <div class="cta-orb cta-orb--1"></div>
+      <div class="cta-orb cta-orb--2"></div>
+    </div>
+    <div class="noise-overlay"></div>
+    <div class="cta-section__inner reveal-up">
+      <div class="cta-section__badge">✦ Let's Build Something</div>
+      <h2 class="cta-section__title">
+        Your next chapter<br/>starts with a conversation.
+      </h2>
+      <p class="cta-section__sub">
+        We take on a limited number of projects each quarter to ensure every client gets our full attention. Let's see if we're a fit.
+      </p>
+      <div class="cta-section__actions">
+        <a href="mailto:hello@vrtxstudio.com" class="btn btn--primary btn--large">Start a Project</a>
+        <a href="mailto:hello@vrtxstudio.com" class="btn btn--ghost btn--large">Schedule a Call</a>
+      </div>
+      <p class="cta-section__note">Usually responding within 24 hours · Based globally, working everywhere</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="nav__logo-mark">V</span>RTX
+        </div>
+        <p>Award-winning digital experience agency. We design the future of how brands connect with people.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Dribbble">⊕</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <strong>Work</strong>
+        <a href="#">Portfolio</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Awwwards</a>
+        <a href="#">Client Results</a>
+      </div>
+
+      <div class="footer__col">
+        <strong>Services</strong>
+        <a href="#">Web Design</a>
+        <a href="#">UI/UX Design</a>
+        <a href="#">Branding</a>
+        <a href="#">Development</a>
+        <a href="#">CRO</a>
+      </div>
+
+      <div class="footer__col">
+        <strong>Company</strong>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2024 VRTX Studio. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+    <div class="footer__big-type">VRTX</div>
+  </footer>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
