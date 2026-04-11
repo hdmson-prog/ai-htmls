@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRTX Studio | Portfolio Archive</title>
+  <meta name="description" content="Browse the VRTX Studio portfolio archive with filters, pagination, and curated case studies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="archive-page">
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-mark">V</span>RTX</a>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav__cta">Start a Project</a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="page-banner" aria-label="Portfolio archive banner">
+    <img
+      class="page-banner__image"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 400' width='1920' height='400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2307070c'/%3E%3Cstop offset='45%25' stop-color='%23110f1f'/%3E%3Cstop offset='100%25' stop-color='%23070e14'/%3E%3C/linearGradient%3E%3CradialGradient id='g2' cx='30%25' cy='25%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%236c47ff' stop-opacity='.65'/%3E%3Cstop offset='50%25' stop-color='%236c47ff' stop-opacity='.22'/%3E%3Cstop offset='100%25' stop-color='%236c47ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='g3' cx='78%25' cy='70%25' r='55%25'%3E%3Cstop offset='0%25' stop-color='%2300d4aa' stop-opacity='.38'/%3E%3Cstop offset='60%25' stop-color='%2300d4aa' stop-opacity='.12'/%3E%3Cstop offset='100%25' stop-color='%2300d4aa' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1920' height='400' fill='url(%23g1)'/%3E%3Crect width='1920' height='400' fill='url(%23g2)'/%3E%3Crect width='1920' height='400' fill='url(%23g3)'/%3E%3Cg opacity='.28'%3E%3Cpath d='M0 304h1920' stroke='%23ffffff' stroke-opacity='.15' stroke-width='1'/%3E%3Cpath d='M0 240h1920' stroke='%23ffffff' stroke-opacity='.08' stroke-width='1'/%3E%3Cpath d='M0 176h1920' stroke='%23ffffff' stroke-opacity='.05' stroke-width='1'/%3E%3C/g%3E%3Cg opacity='.42'%3E%3Ccircle cx='236' cy='84' r='76' fill='%236c47ff' fill-opacity='.18'/%3E%3Ccircle cx='1680' cy='292' r='110' fill='%2300d4aa' fill-opacity='.12'/%3E%3Ccircle cx='1462' cy='92' r='58' fill='%23a78bfa' fill-opacity='.18'/%3E%3C/g%3E%3C/svg%3E"
+      alt="Abstract portfolio archive banner"
+      width="1920"
+      height="400"
+    />
+  </section>
+
+  <nav class="breadcrumbs reveal-up" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="index.html#work">Work</a>
+    <span>/</span>
+    <span aria-current="page">Portfolio Archive</span>
+  </nav>
+
+  <section class="archive-hero" id="overview">
+    <div class="archive-hero__content reveal">
+      <span class="section-tag">Portfolio Archive</span>
+      <h1 class="archive-hero__title">
+        Selected work,<br />
+        <em>organized</em> by impact.
+      </h1>
+      <p class="archive-hero__sub">
+        Browse the full archive of launches, identities, and product systems. Use the filters to narrow by discipline, search by client or project name, and move through the collection with pagination.
+      </p>
+      <div class="archive-hero__meta">
+        <span class="archive-meta-pill"><strong>127</strong> projects archived</span>
+        <span class="archive-meta-pill"><strong>24</strong> featured case studies</span>
+        <span class="archive-meta-pill"><strong>8</strong> years of work</span>
+      </div>
+      <div class="archive-hero__cta">
+        <a href="portfolio-single.html" class="btn btn--primary">Open Featured Case Study</a>
+        <a href="#collection" class="btn btn--ghost">Browse Archive</a>
+      </div>
+    </div>
+
+    <div class="archive-hero__panel reveal-right">
+      <div class="archive-panel-card">
+        <strong>96%</strong>
+        <span>of projects were launched with a direct performance or conversion goal.</span>
+      </div>
+      <div class="archive-panel-card">
+        <strong>7</strong>
+        <span>primary disciplines span the archive, from brand systems to commerce and product UX.</span>
+      </div>
+      <div class="archive-panel-card">
+        <strong>1</strong>
+        <span>steady principle: every case study should look premium and sell the outcome immediately.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-archive reveal-up" id="collection">
+    <div class="archive-toolbar">
+      <div class="archive-toolbar__inner">
+        <div class="archive-toolbar__filters" aria-label="Portfolio filters">
+          <button type="button" class="archive-filter__chip is-active" data-archive-filter="all">All</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="web-design">Web Design</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="branding">Branding</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="ui-ux">UI/UX</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="development">Development</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="ecommerce">Ecommerce</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="strategy">Strategy</button>
+          <button type="button" class="archive-filter__chip" data-archive-filter="motion">Motion</button>
+        </div>
+
+        <div class="archive-toolbar__controls">
+          <label class="archive-field">
+            <span>Sort</span>
+            <select class="archive-sort" aria-label="Sort portfolio">
+              <option value="featured">Featured first</option>
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+            </select>
+          </label>
+
+          <label class="archive-field">
+            <span>Search</span>
+            <input class="archive-search" type="search" placeholder="Search projects, clients, or outcomes" aria-label="Search portfolio" />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-results">
+      <div class="archive-results__meta">Archive matches <strong data-archive-results>12</strong> projects</div>
+      <div class="archive-results__range" data-archive-range>Showing 1 to 6 of 12</div>
+    </div>
+
+    <div class="portfolio-grid">
+      <article class="portfolio-card reveal-up" style="--card-accent:#6c47ff" data-featured="1" data-year="2025" data-categories="web-design development ecommerce" data-search="Nocturne Commerce Luma House ecommerce checkout conversion">
+        <a href="#" class="portfolio-card__media" aria-label="Open Nocturne Commerce case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Ecommerce</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2025</span><span>Web Design</span><span>Development</span></div>
+            <h3 class="portfolio-card__title">Nocturne Commerce</h3>
+            <p class="portfolio-card__excerpt">A calmer storefront with stronger merchandising, cleaner checkout, and a more confident product narrative.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>+34%</strong><span>Revenue lift</span></div>
+            <div class="portfolio-card__client">Luma House</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#00d4aa" data-featured="2" data-year="2024" data-categories="branding strategy" data-search="Meridian Identity System Meridian Labs brand strategy positioning">
+        <a href="#" class="portfolio-card__media" aria-label="Open Meridian Identity System case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Brand System</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2024</span><span>Branding</span><span>Strategy</span></div>
+            <h3 class="portfolio-card__title">Meridian Identity System</h3>
+            <p class="portfolio-card__excerpt">A visual and verbal system designed to make a technical business feel sharper, clearer, and easier to trust.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>5x</strong><span>System adoption</span></div>
+            <div class="portfolio-card__client">Meridian Labs</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#3b82f6" data-featured="3" data-year="2025" data-categories="ui-ux development" data-search="Atlas OS Dashboard finance analytics data ux">
+        <a href="#" class="portfolio-card__media" aria-label="Open Atlas OS Dashboard case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Product UI</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2025</span><span>UI/UX</span><span>Development</span></div>
+            <h3 class="portfolio-card__title">Atlas OS Dashboard</h3>
+            <p class="portfolio-card__excerpt">A dense analytics interface simplified into a fast, readable operating layer for internal teams.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>-28%</strong><span>Task time</span></div>
+            <div class="portfolio-card__client">Atlas Finance</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#ff4757" data-featured="4" data-year="2024" data-categories="web-design motion strategy" data-search="Verdant Launch Site renewable energy motion campaign">
+        <a href="#" class="portfolio-card__media" aria-label="Open Verdant Launch Site case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Launch</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2024</span><span>Web Design</span><span>Motion</span></div>
+            <h3 class="portfolio-card__title">Verdant Launch Site</h3>
+            <p class="portfolio-card__excerpt">A cinematic launch page that translated an energy story into something emotional, modern, and legible.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>+41%</strong><span>Demo requests</span></div>
+            <div class="portfolio-card__client">Verdant Energy</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#a78bfa" data-featured="5" data-year="2023" data-categories="ui-ux development strategy" data-search="Pulse Health App patient onboarding healthcare product">
+        <a href="#" class="portfolio-card__media" aria-label="Open Pulse Health App case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Health Tech</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2023</span><span>UI/UX</span><span>Strategy</span></div>
+            <h3 class="portfolio-card__title">Pulse Health App</h3>
+            <p class="portfolio-card__excerpt">A patient onboarding flow that reduced friction, improved completion, and made the first session feel lighter.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>97%</strong><span>Completion rate</span></div>
+            <div class="portfolio-card__client">Pulse Health</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#00d4aa" data-featured="6" data-year="2024" data-categories="web-design development strategy" data-search="Northstar B2B Engine sales pipeline enterprise website">
+        <a href="#" class="portfolio-card__media" aria-label="Open Northstar B2B Engine case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">B2B</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2024</span><span>Web Design</span><span>Strategy</span></div>
+            <h3 class="portfolio-card__title">Northstar B2B Engine</h3>
+            <p class="portfolio-card__excerpt">A sharper value proposition and a stronger content system for a long-cycle sales motion.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>3x</strong><span>Pipeline quality</span></div>
+            <div class="portfolio-card__client">Northstar Systems</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#f59e0b" data-featured="7" data-year="2025" data-categories="branding web-design" data-search="Atelier Portfolio studio identity gallery launch">
+        <a href="#" class="portfolio-card__media" aria-label="Open Atelier Portfolio case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Studio</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2025</span><span>Branding</span><span>Web Design</span></div>
+            <h3 class="portfolio-card__title">Atelier Portfolio</h3>
+            <p class="portfolio-card__excerpt">A refined identity and portfolio experience for a boutique studio that needed to feel more established.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>+18%</strong><span>Bookings</span></div>
+            <div class="portfolio-card__client">Atelier Studio</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#22c55e" data-featured="8" data-year="2023" data-categories="ecommerce development motion" data-search="Echo Retail Engine retail ecommerce motion merchandising">
+        <a href="#" class="portfolio-card__media" aria-label="Open Echo Retail Engine case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Retail</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2023</span><span>Ecommerce</span><span>Motion</span></div>
+            <h3 class="portfolio-card__title">Echo Retail Engine</h3>
+            <p class="portfolio-card__excerpt">A commerce layer with better product storytelling and motion cues for a high-volume retail catalog.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>+29%</strong><span>AOV</span></div>
+            <div class="portfolio-card__client">Echo Goods</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#60a5fa" data-featured="9" data-year="2024" data-categories="ui-ux strategy" data-search="Helix SaaS Onboarding cloud software retention ux">
+        <a href="#" class="portfolio-card__media" aria-label="Open Helix SaaS Onboarding case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Onboarding</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2024</span><span>UI/UX</span><span>Strategy</span></div>
+            <h3 class="portfolio-card__title">Helix SaaS Onboarding</h3>
+            <p class="portfolio-card__excerpt">A guided first-run flow that reduced confusion and helped users get to value faster.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>-22%</strong><span>Churn</span></div>
+            <div class="portfolio-card__client">Helix Cloud</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#e879f9" data-featured="10" data-year="2025" data-categories="web-design motion strategy" data-search="Sable Campaign Hub marketing campaign motion launch">
+        <a href="#" class="portfolio-card__media" aria-label="Open Sable Campaign Hub case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Campaign</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2025</span><span>Web Design</span><span>Motion</span></div>
+            <h3 class="portfolio-card__title">Sable Campaign Hub</h3>
+            <p class="portfolio-card__excerpt">A campaign system built to translate a fast-moving launch calendar into a polished digital presence.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>2.4x</strong><span>CTR</span></div>
+            <div class="portfolio-card__client">Sable Group</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#fb7185" data-featured="11" data-year="2023" data-categories="branding ui-ux" data-search="Aria Design System brand interface design system">
+        <a href="#" class="portfolio-card__media" aria-label="Open Aria Design System case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Design System</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2023</span><span>Branding</span><span>UI/UX</span></div>
+            <h3 class="portfolio-card__title">Aria Design System</h3>
+            <p class="portfolio-card__excerpt">A component language and brand foundation that aligned product and marketing for the same story.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>120</strong><span>Components shipped</span></div>
+            <div class="portfolio-card__client">Aria Labs</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="portfolio-card reveal-up" style="--card-accent:#38bdf8" data-featured="12" data-year="2024" data-categories="web-design development strategy" data-search="Forge Manufacturing Portal operational system internal portal">
+        <a href="#" class="portfolio-card__media" aria-label="Open Forge Manufacturing Portal case study">
+          <div class="portfolio-card__canvas">
+            <span class="portfolio-card__chip">Operations</span>
+          </div>
+          <div class="portfolio-card__overlay"><span>Open case study</span></div>
+        </a>
+        <div class="portfolio-card__body">
+          <div>
+            <div class="portfolio-card__meta"><span>2024</span><span>Web Design</span><span>Development</span></div>
+            <h3 class="portfolio-card__title">Forge Manufacturing Portal</h3>
+            <p class="portfolio-card__excerpt">An internal portal that made scheduling, handoffs, and status tracking much easier for ops teams.</p>
+          </div>
+          <div class="portfolio-card__footer">
+            <div class="portfolio-card__result"><strong>+19%</strong><span>Efficiency gain</span></div>
+            <div class="portfolio-card__client">Forge Works</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="archive-empty">
+      <strong>No matching projects</strong>
+      <p>Try widening the category filter, changing the sort order, or clearing the search term.</p>
+      <button type="button" class="btn btn--outline" data-archive-reset>Show all work</button>
+    </div>
+
+    <div class="archive-pagination" aria-label="Portfolio pagination">
+      <button type="button" class="archive-pagination__nav" data-page-control="prev">Prev</button>
+      <div class="archive-pagination__pages"></div>
+      <button type="button" class="archive-pagination__nav" data-page-control="next">Next</button>
+    </div>
+  </section>
+
+  <section class="archive-contact" id="contact">
+    <div class="archive-contact__panel reveal-up">
+      <div>
+        <span class="section-tag">Next Step</span>
+        <h2 class="archive-contact__title">Need a portfolio that sells the work before the call starts?</h2>
+        <p class="archive-contact__sub">
+          We can shape the archive, the case studies, or the full site experience so the first impression feels more premium and the outcome is easier to understand.
+        </p>
+      </div>
+      <div class="archive-contact__actions">
+        <a href="mailto:hello@vrtxstudio.com" class="btn btn--primary btn--large">Start a Project</a>
+        <a href="index.html" class="btn btn--ghost btn--large">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <a href="index.html"><span class="nav__logo-mark">V</span>RTX</a>
+        </div>
+        <p>Award-winning digital experience agency. We design the future of how brands connect with people.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter">T</a>
+          <a href="#" aria-label="Instagram">I</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Dribbble">D</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <strong>Work</strong>
+        <a href="portfolio-archive.html">Portfolio</a>
+        <a href="portfolio-archive.html">Case Studies</a>
+        <a href="#">Awwwards</a>
+        <a href="#">Client Results</a>
+      </div>
+
+      <div class="footer__col">
+        <strong>Services</strong>
+        <a href="#">Web Design</a>
+        <a href="#">UI/UX Design</a>
+        <a href="#">Branding</a>
+        <a href="#">Development</a>
+        <a href="#">CRO</a>
+      </div>
+
+      <div class="footer__col">
+        <strong>Company</strong>
+        <a href="about-us.html">About</a>
+        <a href="#">Careers</a>
+        <a href="news-list.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2024 VRTX Studio. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+    <div class="footer__big-type">VRTX</div>
+  </footer>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Archive | LUMIERE Studio</title>
+    <meta
+      name="description"
+      content="Explore our complete portfolio archive of award-winning photography across all categories including fashion, portraits, events, commercial and weddings."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./public/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="site-nav">
+        <a class="brand" href="./index.html" aria-label="LUMIERE Studio home">LUMIERE</a>
+        <ul class="desktop-nav" aria-label="Primary">
+          <li><a href="./index.html#work">Work</a></li>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./index.html#services">Services</a></li>
+          <li><a href="./index.html#process">Process</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+        <a class="button button-solid desktop-cta" href="./index.html#contact">Book a Session</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#services">Services</a>
+        <a href="./index.html#process">Process</a>
+        <a href="./index.html#contact">Contact</a>
+        <a class="button button-solid" href="./index.html#contact">Book a Session</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Page Banner -->
+      <section class="archive-banner">
+        <div class="archive-banner-bg" data-archive-banner-bg></div>
+        <div class="archive-banner-overlay"></div>
+        <div class="section-shell">
+          <div class="archive-banner-content">
+            <p class="eyebrow">Our Collections</p>
+            <h1>Portfolio Archive</h1>
+            <p class="archive-subtitle">
+              Discover our extensive collection of award-winning photography spanning fashion, portraits, events, commercial work, and celebrations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Archive Content -->
+      <section class="section section-archive">
+        <div class="section-shell">
+          <div class="archive-layout">
+            <!-- Sidebar -->
+            <aside class="archive-sidebar">
+              <div class="sidebar-sticky">
+                <div class="sidebar-section">
+                  <h3 class="sidebar-title">Categories</h3>
+                  <div class="filter-list" role="tablist" aria-label="Portfolio categories">
+                    <button class="filter-item is-active" type="button" data-category="All" aria-pressed="true">
+                      All Projects
+                      <span class="filter-count">(45)</span>
+                    </button>
+                    <button class="filter-item" type="button" data-category="Fashion" aria-pressed="false">
+                      Fashion
+                      <span class="filter-count">(9)</span>
+                    </button>
+                    <button class="filter-item" type="button" data-category="Portrait" aria-pressed="false">
+                      Portrait
+                      <span class="filter-count">(9)</span>
+                    </button>
+                    <button class="filter-item" type="button" data-category="Events" aria-pressed="false">
+                      Events
+                      <span class="filter-count">(9)</span>
+                    </button>
+                    <button class="filter-item" type="button" data-category="Commercial" aria-pressed="false">
+                      Commercial
+                      <span class="filter-count">(9)</span>
+                    </button>
+                    <button class="filter-item" type="button" data-category="Weddings" aria-pressed="false">
+                      Weddings
+                      <span class="filter-count">(9)</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="sidebar-section">
+                  <h3 class="sidebar-title">Sort By</h3>
+                  <select class="sort-select" data-sort-select>
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                  </select>
+                </div>
+
+                <div class="sidebar-section">
+                  <button class="button button-outline" style="width: 100%;" data-reset-filters>
+                    Reset Filters
+                  </button>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="archive-main">
+              <!-- Portfolio Grid -->
+              <div class="portfolio-archive-grid" data-portfolio-grid>
+                <!-- Items will be populated by JavaScript -->
+              </div>
+
+              <!-- Pagination -->
+              <div class="pagination-container" data-pagination-container>
+                <div class="pagination-info">
+                  <span data-items-info>Showing 1-15 of 45</span>
+                </div>
+                <nav class="pagination" aria-label="Portfolio pages" data-pagination>
+                  <button class="pagination-btn pagination-prev" type="button" data-pagination-prev aria-label="Previous page" disabled>
+                    <span aria-hidden="true">←</span> Previous
+                  </button>
+
+                  <div class="pagination-dots" data-pagination-dots>
+                    <!-- Dots will be populated by JavaScript -->
+                  </div>
+
+                  <button class="pagination-btn pagination-next" type="button" data-pagination-next aria-label="Next page">
+                    Next <span aria-hidden="true">→</span>
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="section section-cta-archive">
+        <div class="section-shell">
+          <div class="cta-box">
+            <h2>Ready to Create Something Amazing?</h2>
+            <p>Let's collaborate to bring your vision to life with stunning photography that tells your story.</p>
+            <a class="button button-solid" href="./index.html#contact">
+              Book a Session
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand footer-brand" href="./index.html">LUMIERE</a>
+          <p>Award-winning photography studio crafting visual narratives for discerning clients worldwide since 2009.</p>
+          <form class="newsletter" data-newsletter-form>
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+            <button class="button button-solid" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html#services">Portrait Photography</a></li>
+            <li><a href="./index.html#services">Fashion & Editorial</a></li>
+            <li><a href="./index.html#services">Wedding Photography</a></li>
+            <li><a href="./index.html#services">Commercial & Brand</a></li>
+            <li><a href="./index.html#services">Event Coverage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html#about">About Us</a></li>
+            <li><a href="./index.html#process">Our Process</a></li>
+            <li><a href="./portfolio-archive.html">Portfolio Archive</a></li>
+            <li><a href="./index.html#work">Case Studies</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+            <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="section-shell footer-bottom-inner">
+          <p>&copy; <span data-year></span> Lumiere Studio. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">
+        <div class="section-shell">LUMIERE</div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./portfolio-archive.js"></script>
+  </body>
+</html>

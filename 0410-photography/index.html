@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUMIERE Studio | Premium Photography</title>
+    <meta
+      name="description"
+      content="Award-winning photography studio specializing in luxury portraits, fashion, events, and commercial photography."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./public/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="site-nav">
+        <a class="brand" href="#top" aria-label="LUMIERE Studio home">LUMIERE</a>
+        <ul class="desktop-nav" aria-label="Primary">
+          <li><a href="#work">Work</a></li>
+          <li><a href="portfolio-archive.html">Portfolio</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="news-list.html">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="button button-solid desktop-cta" href="#contact">Book a Session</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="#work">Work</a>
+        <a href="portfolio-archive.html">Portfolio</a>
+        <a href="about-us.html">About</a>
+        <a href="news-list.html">News</a>
+        <a href="#contact">Contact</a>
+        <a class="button button-solid" href="#contact">Book a Session</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" data-hero-bg></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-mark"></div>
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Premium Photography Studio</p>
+            <h1>
+              <span>Capturing</span>
+              <span class="accent">Timeless</span>
+              <span>Moments</span>
+            </h1>
+            <p class="hero-text">
+              Award-winning photography studio crafting visual narratives for discerning clients worldwide.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-solid" href="#work">
+                Explore Portfolio
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="button button-outline" href="#contact">Book a Session</a>
+            </div>
+          </div>
+          <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section section-tight">
+        <div class="section-shell">
+          <div class="section-head section-head-split">
+            <div>
+              <p class="eyebrow">Portfolio</p>
+              <h2>Featured Work</h2>
+            </div>
+            <div class="filter-group" role="tablist" aria-label="Portfolio categories">
+              <button class="filter is-active" type="button" data-filter="All" aria-pressed="true">All</button>
+              <button class="filter" type="button" data-filter="Fashion">Fashion</button>
+              <button class="filter" type="button" data-filter="Portrait">Portrait</button>
+              <button class="filter" type="button" data-filter="Events">Events</button>
+              <button class="filter" type="button" data-filter="Commercial">Commercial</button>
+              <button class="filter" type="button" data-filter="Weddings">Weddings</button>
+            </div>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-item portrait" data-category="Fashion">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1470&auto=format&fit=crop" alt="Ethereal Beauty fashion portrait" />
+              <div class="portfolio-overlay">
+                <span>Fashion</span>
+                <h3>Ethereal Beauty</h3>
+                <p>View Project</p>
+              </div>
+            </article>
+            <article class="portfolio-item landscape" data-category="Portrait">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1364&auto=format&fit=crop" alt="Urban Elegance portrait" />
+              <div class="portfolio-overlay">
+                <span>Portrait</span>
+                <h3>Urban Elegance</h3>
+                <p>View Project</p>
+              </div>
+            </article>
+            <article class="portfolio-item portrait" data-category="Events">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1470&auto=format&fit=crop" alt="Golden Hour event photography" />
+              <div class="portfolio-overlay">
+                <span>Events</span>
+                <h3>Golden Hour</h3>
+                <p>View Project</p>
+              </div>
+            </article>
+            <article class="portfolio-item landscape" data-category="Commercial">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop" alt="Brand Vision commercial photography" />
+              <div class="portfolio-overlay">
+                <span>Commercial</span>
+                <h3>Brand Vision</h3>
+                <p>View Project</p>
+              </div>
+            </article>
+            <article class="portfolio-item portrait" data-category="Weddings">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1469&auto=format&fit=crop" alt="Timeless Romance wedding photography" />
+              <div class="portfolio-overlay">
+                <span>Weddings</span>
+                <h3>Timeless Romance</h3>
+                <p>View Project</p>
+              </div>
+            </article>
+            <article class="portfolio-item landscape" data-category="Fashion">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1376&auto=format&fit=crop" alt="Modern Luxe fashion editorial" />
+              <div class="portfolio-overlay">
+                <span>Fashion</span>
+                <h3>Modern Luxe</h3>
+                <p>View Project</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="center-actions">
+            <a class="button button-outline" href="#contact">View All Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-muted">
+        <div class="section-shell">
+          <div class="split-layout">
+            <div class="media-stack">
+              <div class="media-frame main-frame">
+                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=1470&auto=format&fit=crop" alt="Studio atmosphere" />
+              </div>
+              <div class="media-frame inset-frame">
+                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1470&auto=format&fit=crop" alt="Behind the scenes" />
+              </div>
+              <div class="media-accent"></div>
+            </div>
+            <div class="content-block">
+              <p class="eyebrow">About the Studio</p>
+              <h2>
+                Where Vision Meets
+                <span class="accent">Artistry</span>
+              </h2>
+              <div class="body-copy">
+                <p>
+                  Founded in 2009, Lumiere Studio has established itself as a premier destination for discerning clients seeking exceptional visual storytelling. Our approach combines technical mastery with artistic intuition, creating images that transcend the ordinary.
+                </p>
+                <p>
+                  Every frame we capture is a testament to our commitment to excellence. We believe that great photography is not just about documenting moments. It is about revealing the extraordinary within the everyday, the emotion within the expression.
+                </p>
+              </div>
+              <div class="stats-grid">
+                <div><strong>15+</strong><span>Years Experience</span></div>
+                <div><strong>500+</strong><span>Projects Delivered</span></div>
+                <div><strong>50+</strong><span>Awards Won</span></div>
+                <div><strong>100%</strong><span>Client Satisfaction</span></div>
+              </div>
+              <div class="signature">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop" alt="Creative Director" />
+                <div>
+                  <strong>Alexandre Moreau</strong>
+                  <span>Founder & Creative Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-shell">
+          <div class="section-head section-head-center">
+            <p class="eyebrow">Our Services</p>
+            <h2>
+              Crafted Visual
+              <span class="accent">Excellence</span>
+            </h2>
+            <p class="section-lead">
+              From intimate portraits to grand commercial campaigns, we bring artistic vision and technical precision to every project we undertake.
+            </p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card"><div class="service-icon">◌</div><h3>Portrait Photography</h3><p>Intimate, authentic portraits that capture the essence of your personality with artistic sophistication.</p><span>Learn More</span></article>
+            <article class="service-card"><div class="service-icon">✦</div><h3>Fashion & Editorial</h3><p>High-impact fashion imagery for campaigns, lookbooks, and editorial publications worldwide.</p><span>Learn More</span></article>
+            <article class="service-card"><div class="service-icon">◷</div><h3>Event Coverage</h3><p>Comprehensive documentation of galas, corporate events, and milestone celebrations.</p><span>Learn More</span></article>
+            <article class="service-card"><div class="service-icon">▣</div><h3>Commercial & Brand</h3><p>Strategic visual content that elevates brands and drives meaningful engagement.</p><span>Learn More</span></article>
+            <article class="service-card"><div class="service-icon">◉</div><h3>Wedding Photography</h3><p>Timeless documentation of your most precious moments with cinematic artistry.</p><span>Learn More</span></article>
+            <article class="service-card"><div class="service-icon">⬡</div><h3>Product Photography</h3><p>Clean, compelling product imagery that showcases your offerings at their finest.</p><span>Learn More</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="section-shell">
+          <div class="section-head section-head-split">
+            <div>
+              <p class="eyebrow">Case Studies</p>
+              <h2>
+                Stories of
+                <span class="accent">Excellence</span>
+              </h2>
+            </div>
+            <a class="text-link" href="#contact">View All Case Studies <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="case-study-list">
+            <article class="case-study">
+              <div class="case-study-media"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1376&auto=format&fit=crop" alt="Maison Elegance campaign" /></div>
+              <div class="case-study-copy">
+                <p class="eyebrow">Luxury Fashion Campaign</p>
+                <h3>Maison Elegance</h3>
+                <p class="section-lead small">A comprehensive visual identity and campaign for Paris-based haute couture house, capturing the essence of timeless sophistication.</p>
+                <div class="detail-block">
+                  <div><span>The Challenge</span><p>Create a cohesive visual narrative that bridges heritage and modernity.</p></div>
+                  <div><span>The Result</span><p>40% increase in brand engagement and featured in Vogue Paris.</p></div>
+                </div>
+                <div class="stats-inline">
+                  <div><strong>40%</strong><span>Engagement Increase</span></div>
+                  <div><strong>12</strong><span>Magazine Features</span></div>
+                  <div><strong>2.5M</strong><span>Social Impressions</span></div>
+                </div>
+                <a class="button button-solid" href="#contact">View Case Study</a>
+              </div>
+            </article>
+            <article class="case-study reverse">
+              <div class="case-study-media"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1470&auto=format&fit=crop" alt="The Windsor Celebration wedding project" /></div>
+              <div class="case-study-copy">
+                <p class="eyebrow">Luxury Wedding Documentation</p>
+                <h3>The Windsor Celebration</h3>
+                <p class="section-lead small">An intimate three-day celebration at a historic English estate, documented with cinematic artistry and attention to every detail.</p>
+                <div class="detail-block">
+                  <div><span>The Challenge</span><p>Capture the grandeur of the venue while maintaining intimate, authentic moments.</p></div>
+                  <div><span>The Result</span><p>Featured in Martha Stewart Weddings and Brides UK.</p></div>
+                </div>
+                <div class="stats-inline">
+                  <div><strong>500+</strong><span>Images Delivered</span></div>
+                  <div><strong>3</strong><span>Days Documented</span></div>
+                  <div><strong>5</strong><span>Publication Features</span></div>
+                </div>
+                <a class="button button-solid" href="#contact">View Case Study</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="section-shell">
+          <div class="section-head section-head-center">
+            <p class="eyebrow">Our Process</p>
+            <h2>
+              From Vision to
+              <span class="accent">Reality</span>
+            </h2>
+            <p class="section-lead">
+              A refined workflow designed to transform your creative vision into stunning visual narratives, with attention to every detail.
+            </p>
+          </div>
+          <div class="process-layout">
+            <div class="process-nav" role="tablist" aria-label="Photography process">
+              <button class="process-step is-active" type="button" data-step="0"><strong>01</strong><span>Discovery</span></button>
+              <button class="process-step" type="button" data-step="1"><strong>02</strong><span>Planning</span></button>
+              <button class="process-step" type="button" data-step="2"><strong>03</strong><span>Production</span></button>
+              <button class="process-step" type="button" data-step="3"><strong>04</strong><span>Post-Production</span></button>
+              <button class="process-step" type="button" data-step="4"><strong>05</strong><span>Delivery</span></button>
+            </div>
+            <div class="process-panel">
+              <div class="process-content is-active" data-step-panel="0">
+                <span class="process-number">01</span>
+                <h3>Discovery</h3>
+                <p>We begin with an in-depth consultation to understand your vision, brand essence, and objectives. This collaborative dialogue ensures we capture exactly what makes your story unique.</p>
+                <div class="detail-grid"><div>Initial consultation</div><div>Creative brief development</div><div>Mood board creation</div><div>Location scouting</div></div>
+              </div>
+              <div class="process-content" data-step-panel="1">
+                <span class="process-number">02</span>
+                <h3>Planning</h3>
+                <p>Our team crafts a comprehensive production plan, coordinating every detail from styling to scheduling. Meticulous preparation is the foundation of exceptional results.</p>
+                <div class="detail-grid"><div>Shot list creation</div><div>Team coordination</div><div>Equipment preparation</div><div>Timeline development</div></div>
+              </div>
+              <div class="process-content" data-step-panel="2">
+                <span class="process-number">03</span>
+                <h3>Production</h3>
+                <p>The shoot day brings our vision to life. Our experienced team creates a comfortable, creative environment where magic happens naturally.</p>
+                <div class="detail-grid"><div>Professional direction</div><div>Real-time adjustments</div><div>Multiple setups</div><div>Attention to detail</div></div>
+              </div>
+              <div class="process-content" data-step-panel="3">
+                <span class="process-number">04</span>
+                <h3>Post-Production</h3>
+                <p>Every image undergoes meticulous refinement, ensuring color perfection, artistic enhancement, and delivery of gallery-worthy results.</p>
+                <div class="detail-grid"><div>Color grading</div><div>Retouching</div><div>Format optimization</div><div>Gallery curation</div></div>
+              </div>
+              <div class="process-content" data-step-panel="4">
+                <span class="process-number">05</span>
+                <h3>Delivery</h3>
+                <p>Receive your final collection through our secure, elegant delivery platform. High-resolution files ready for any application, from print to digital.</p>
+                <div class="detail-grid"><div>Secure gallery access</div><div>Multiple format delivery</div><div>Print-ready files</div><div>Archive storage</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="process-footer">
+            <div class="progress-track" aria-hidden="true"><div class="progress-bar" data-progress-bar></div></div>
+            <div class="process-controls">
+              <span data-step-label>Step 1 of 5</span>
+              <div class="process-actions">
+                <button class="icon-button" type="button" data-step-prev aria-label="Previous step">←</button>
+                <button class="icon-button" type="button" data-step-next aria-label="Next step">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="section-shell">
+          <div class="section-head section-head-center">
+            <p class="eyebrow">Testimonials</p>
+            <h2>
+              What Our Clients
+              <span class="accent">Say</span>
+            </h2>
+          </div>
+          <div class="testimonial-shell">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <div class="testimonial-stage">
+              <article class="testimonial is-active" data-testimonial="0"><p>Lumiere captured our brand essence in ways we never imagined possible. The imagery they created has become the cornerstone of our global campaign.</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop" alt="Isabella Chen" /><div><strong>Isabella Chen</strong><span>Creative Director, Maison Elegance</span></div></div></article>
+              <article class="testimonial" data-testimonial="1"><p>Working with Alexandre and his team was an absolute dream. They understood our vision instantly and delivered beyond our highest expectations.</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop" alt="James Wellington" /><div><strong>James Wellington</strong><span>CEO, Sterling & Co.</span></div></div></article>
+              <article class="testimonial" data-testimonial="2"><p>The attention to detail and artistic vision that Lumiere brings to every project is unparalleled. They do not just take photographs; they create art.</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop" alt="Sophie Laurent" /><div><strong>Sophie Laurent</strong><span>Brand Manager, Atelier Noir</span></div></div></article>
+            </div>
+            <div class="dots" role="tablist" aria-label="Testimonials">
+              <button class="dot is-active" type="button" data-testimonial-dot="0" aria-label="Go to testimonial 1"></button>
+              <button class="dot" type="button" data-testimonial-dot="1" aria-label="Go to testimonial 2"></button>
+              <button class="dot" type="button" data-testimonial-dot="2" aria-label="Go to testimonial 3"></button>
+            </div>
+          </div>
+          <div class="client-strip">
+            <p>Featured In</p>
+            <div class="client-logos" aria-label="Featured publications">
+              <span>VOGUE</span>
+              <span>HARPER'S</span>
+              <span>ELLE</span>
+              <span>GQ</span>
+              <span>VANITY FAIR</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-bg"></div>
+        <div class="section-shell contact-shell">
+          <div class="split-layout contact-layout">
+            <div class="content-block contact-copy">
+              <p class="eyebrow">Get in Touch</p>
+              <h2>
+                Ready to Create
+                <span class="accent">Something Beautiful?</span>
+              </h2>
+              <p class="section-lead small">Let's discuss your vision and craft imagery that exceeds your expectations. Our team is ready to bring your story to life with artistic excellence.</p>
+              <div class="contact-list">
+                <div><span>Email</span><a href="mailto:hello@lumiere.studio">hello@lumiere.studio</a></div>
+                <div><span>Phone</span><a href="tel:+1234567890">+1 (234) 567-890</a></div>
+                <div><span>Studio</span><p>123 Creative Avenue, New York, NY</p></div>
+              </div>
+              <a class="button button-solid" href="mailto:hello@lumiere.studio">Schedule a Session</a>
+            </div>
+            <div class="contact-form-wrap">
+              <h3>Send Us a Message</h3>
+              <p>Share your vision and we'll get back to you within 24 hours.</p>
+              <form class="contact-form" data-contact-form>
+                <div class="row">
+                  <label><span>First Name</span><input type="text" name="firstName" placeholder="Your first name" required /></label>
+                  <label><span>Last Name</span><input type="text" name="lastName" placeholder="Your last name" required /></label>
+                </div>
+                <label><span>Email Address</span><input type="email" name="email" placeholder="your@email.com" required /></label>
+                <label>
+                  <span>Service Interest</span>
+                  <select name="service" required>
+                    <option value="">Select a service</option>
+                    <option>Portrait Photography</option>
+                    <option>Fashion & Editorial</option>
+                    <option>Wedding Photography</option>
+                    <option>Commercial & Brand</option>
+                    <option>Event Coverage</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label><span>Your Message</span><textarea name="message" rows="4" placeholder="Tell us about your project..." required></textarea></label>
+                <button class="button button-solid form-submit" type="submit" data-contact-submit>Send Message</button>
+                <p class="form-status" data-form-status aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#top">LUMIERE</a>
+          <p>Award-winning photography studio crafting visual narratives for discerning clients worldwide since 2009.</p>
+          <form class="newsletter" data-newsletter-form>
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+            <button class="button button-solid" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Portrait Photography</a></li>
+            <li><a href="#services">Fashion & Editorial</a></li>
+            <li><a href="#services">Wedding Photography</a></li>
+            <li><a href="#services">Commercial & Brand</a></li>
+            <li><a href="#services">Event Coverage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul class="footer-links">
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="portfolio-archive.html">Portfolio</a></li>
+            <li><a href="news-list.html">News</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+            <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="section-shell footer-bottom-inner">
+          <p>&copy; <span data-year></span> Lumiere Studio. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">
+        <div class="section-shell">LUMIERE</div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

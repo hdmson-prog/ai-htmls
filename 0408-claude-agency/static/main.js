@@ -7,74 +7,81 @@
 // ── Custom Cursor ──────────────────────────────────
 const cursor = document.getElementById('cursor');
 const cursorFollower = document.getElementById('cursorFollower');
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
 
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top  = mouseY + 'px';
-});
+if (cursor && cursorFollower) {
+  let mouseX = 0, mouseY = 0;
+  let followerX = 0, followerY = 0;
 
-function animateFollower() {
-  followerX += (mouseX - followerX) * 0.12;
-  followerY += (mouseY - followerY) * 0.12;
-  cursorFollower.style.left = followerX + 'px';
-  cursorFollower.style.top  = followerY + 'px';
-  requestAnimationFrame(animateFollower);
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top  = mouseY + 'px';
+  });
+
+  function animateFollower() {
+    followerX += (mouseX - followerX) * 0.12;
+    followerY += (mouseY - followerY) * 0.12;
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top  = followerY + 'px';
+    requestAnimationFrame(animateFollower);
+  }
+  animateFollower();
+
+  const hoverTargets = 'a, button, .work-card__media, .service-card, .client-logo, .testi-btn, .testi-dot, .portfolio-card__media, .archive-filter__chip, .archive-pagination__page, .archive-pagination__nav';
+  document.querySelectorAll(hoverTargets).forEach(el => {
+    el.addEventListener('mouseenter', () => cursorFollower.classList.add('grow'));
+    el.addEventListener('mouseleave', () => cursorFollower.classList.remove('grow'));
+  });
 }
-animateFollower();
-
-const hoverTargets = 'a, button, .work-card__media, .service-card, .client-logo, .testi-btn, .testi-dot';
-document.querySelectorAll(hoverTargets).forEach(el => {
-  el.addEventListener('mouseenter', () => cursorFollower.classList.add('grow'));
-  el.addEventListener('mouseleave', () => cursorFollower.classList.remove('grow'));
-});
 
 // ── Nav Scroll Effect ──────────────────────────────
 const nav = document.getElementById('nav');
 let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  if (scrollY > 80) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-  lastScroll = scrollY;
-}, { passive: true });
+if (nav) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    lastScroll = scrollY;
+  }, { passive: true });
+}
 
 // ── Mobile Menu ────────────────────────────────────
 const navBurger = document.getElementById('navBurger');
 const mobileMenu = document.getElementById('mobileMenu');
 let menuOpen = false;
 
-navBurger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  mobileMenu.classList.toggle('open', menuOpen);
-  document.body.style.overflow = menuOpen ? 'hidden' : '';
-  const spans = navBurger.querySelectorAll('span');
-  if (menuOpen) {
-    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-    spans[1].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-  } else {
-    spans[0].style.transform = '';
-    spans[1].style.transform = '';
-  }
-});
-
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    menuOpen = false;
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
+if (navBurger && mobileMenu) {
+  navBurger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
     const spans = navBurger.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.transform = '';
+    if (menuOpen) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.transform = '';
+    }
   });
-});
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+      const spans = navBurger.querySelectorAll('span');
+      spans[0].style.transform = '';
+      spans[1].style.transform = '';
+    });
+  });
+}
 
 // ── Intersection Observer — Reveal Animations ──────
 const revealEls = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right');
@@ -195,7 +202,7 @@ if (heroContent) {
 }
 
 // ── Work Card Tilt Effect ──────────────────────────
-document.querySelectorAll('.work-card__media').forEach(card => {
+document.querySelectorAll('.work-card__media, .portfolio-card__media').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width  - 0.5;
@@ -230,6 +237,185 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// ── Portfolio Archive Filter + Pagination ────────────────────────
+const archiveRoot = document.querySelector('.portfolio-archive');
+
+if (archiveRoot) {
+  const filterButtons = Array.from(archiveRoot.querySelectorAll('[data-archive-filter]'));
+  const sortSelect = archiveRoot.querySelector('.archive-sort');
+  const searchInput = archiveRoot.querySelector('.archive-search');
+  const cards = Array.from(archiveRoot.querySelectorAll('.portfolio-card'));
+  const resultsCount = archiveRoot.querySelector('[data-archive-results]');
+  const rangeLabel = archiveRoot.querySelector('[data-archive-range]');
+  const emptyState = archiveRoot.querySelector('.archive-empty');
+  const prevButton = archiveRoot.querySelector('[data-page-control="prev"]');
+  const nextButton = archiveRoot.querySelector('[data-page-control="next"]');
+  const pagesWrap = archiveRoot.querySelector('.archive-pagination__pages');
+  const resetButtons = Array.from(archiveRoot.querySelectorAll('[data-archive-reset]'));
+
+  let activeFilter = 'all';
+  let activeSort = sortSelect?.value || 'featured';
+  let searchTerm = '';
+  let currentPage = 1;
+
+  const getPageSize = () => window.matchMedia('(max-width: 700px)').matches ? 4 : 6;
+
+  function normalize(text) {
+    return text.trim().toLowerCase();
+  }
+
+  function sortCards(items) {
+    return [...items].sort((a, b) => {
+      const yearA = parseInt(a.dataset.year || '0', 10);
+      const yearB = parseInt(b.dataset.year || '0', 10);
+      const featureA = parseInt(a.dataset.featured || '0', 10);
+      const featureB = parseInt(b.dataset.featured || '0', 10);
+
+      if (activeSort === 'oldest') {
+        return yearA - yearB || featureA - featureB;
+      }
+
+      if (activeSort === 'featured') {
+        return featureA - featureB || yearB - yearA;
+      }
+
+      return yearB - yearA || featureA - featureB;
+    });
+  }
+
+  function getFilteredCards() {
+    const filtered = cards.filter(card => {
+      const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean);
+      const text = normalize(card.dataset.search || card.textContent || '');
+      const matchesFilter = activeFilter === 'all' || categories.includes(activeFilter);
+      const matchesSearch = !searchTerm || text.includes(searchTerm);
+      return matchesFilter && matchesSearch;
+    });
+
+    return sortCards(filtered);
+  }
+
+  function renderPagination(totalPages) {
+    if (!pagesWrap) return;
+    pagesWrap.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i += 1) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'archive-pagination__page' + (i === currentPage ? ' is-active' : '');
+      button.dataset.page = String(i);
+      button.setAttribute('aria-label', `Go to page ${i}`);
+      button.textContent = String(i).padStart(2, '0');
+      button.addEventListener('click', () => {
+        currentPage = i;
+        render();
+      });
+      pagesWrap.appendChild(button);
+    }
+  }
+
+  function render() {
+    const filtered = getFilteredCards();
+    const pageSize = getPageSize();
+    const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+    currentPage = Math.min(currentPage, totalPages);
+
+    const start = (currentPage - 1) * pageSize;
+    const visible = filtered.slice(start, start + pageSize);
+
+    cards.forEach(card => {
+      card.hidden = !visible.includes(card);
+    });
+
+    if (resultsCount) {
+      resultsCount.textContent = `${filtered.length}`;
+    }
+
+    if (rangeLabel) {
+      if (filtered.length === 0) {
+        rangeLabel.textContent = 'No projects match the current filters.';
+      } else {
+        const end = Math.min(start + pageSize, filtered.length);
+        rangeLabel.textContent = `Showing ${start + 1} to ${end} of ${filtered.length}`;
+      }
+    }
+
+    if (emptyState) {
+      emptyState.classList.toggle('show', filtered.length === 0);
+    }
+
+    if (prevButton) {
+      prevButton.disabled = currentPage === 1 || filtered.length === 0;
+    }
+
+    if (nextButton) {
+      nextButton.disabled = currentPage === totalPages || filtered.length === 0;
+    }
+
+    renderPagination(totalPages);
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      activeFilter = button.dataset.archiveFilter || 'all';
+      currentPage = 1;
+      filterButtons.forEach(item => item.classList.toggle('is-active', item === button));
+      render();
+    });
+  });
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      activeSort = sortSelect.value;
+      currentPage = 1;
+      render();
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      searchTerm = normalize(searchInput.value);
+      currentPage = 1;
+      render();
+    });
+  }
+
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage -= 1;
+        render();
+      }
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      currentPage += 1;
+      render();
+    });
+  }
+
+  resetButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      activeFilter = 'all';
+      activeSort = 'featured';
+      searchTerm = '';
+      currentPage = 1;
+      if (sortSelect) sortSelect.value = 'featured';
+      if (searchInput) searchInput.value = '';
+      filterButtons.forEach(item => item.classList.toggle('is-active', item.dataset.archiveFilter === 'all'));
+      render();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    render();
+  }, { passive: true });
+
+  render();
+}
 
 // ── Ticker Pause on Hover ──────────────────────────
 const tickerTrack = document.querySelector('.ticker-track');

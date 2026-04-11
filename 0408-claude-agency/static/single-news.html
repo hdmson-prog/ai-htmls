@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRTX Studio | Why Your Design System Is Failing</title>
+  <meta name="description" content="A featured VRTX Studio article on keeping design systems alive, premium, and commercially useful." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="single-news-page">
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-mark">V</span>RTX</a>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#article">Article</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#related">Related</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="contact-us.html" class="nav__cta">Start a Project</a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#article">Article</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#related">Related</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact-us.html">Start a Project</a></li>
+    </ul>
+  </div>
+
+  <section class="page-banner" aria-label="News article banner">
+    <img class="page-banner__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 440'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23040304'/%3E%3Cstop offset='52%25' stop-color='%230f0d10'/%3E%3Cstop offset='100%25' stop-color='%2306090f'/%3E%3C/linearGradient%3E%3CradialGradient id='a' cx='18%25' cy='20%25' r='55%25'%3E%3Cstop offset='0%25' stop-color='%23c9a86a' stop-opacity='.52'/%3E%3Cstop offset='55%25' stop-color='%23c9a86a' stop-opacity='.14'/%3E%3Cstop offset='100%25' stop-color='%23c9a86a' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='82%25' cy='74%25' r='48%25'%3E%3Cstop offset='0%25' stop-color='%239ad9c9' stop-opacity='.22'/%3E%3Cstop offset='60%25' stop-color='%239ad9c9' stop-opacity='.08'/%3E%3Cstop offset='100%25' stop-color='%239ad9c9' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1920' height='440' fill='url(%23bg)'/%3E%3Crect width='1920' height='440' fill='url(%23a)'/%3E%3Crect width='1920' height='440' fill='url(%23b)'/%3E%3Cg opacity='.18'%3E%3Cpath d='M0 84h1920M0 168h1920M0 252h1920M0 336h1920' stroke='%23ffffff' stroke-opacity='.13'/%3E%3C/g%3E%3Cg opacity='.34'%3E%3Ccircle cx='282' cy='118' r='96' fill='%23c9a86a' fill-opacity='.12'/%3E%3Ccircle cx='1504' cy='278' r='128' fill='%239ad9c9' fill-opacity='.08'/%3E%3Ccircle cx='1110' cy='106' r='64' fill='%23ead7b0' fill-opacity='.1'/%3E%3C/g%3E%3C/svg%3E" alt="Abstract article banner" width="1920" height="440" />
+  </section>
+
+  <nav class="breadcrumbs reveal-up" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <a href="news-list.html">News</a>
+    <span>/</span>
+    <span aria-current="page">Why your design system is failing</span>
+  </nav>
+
+  <section class="news-single" id="article">
+    <div class="news-single__hero reveal">
+      <span class="section-tag">Design Systems</span>
+      <h1 class="news-single__title">Why your design system is failing and how to fix it before the next sprint</h1>
+      <p class="news-single__sub">Design systems usually fail for one of two reasons: they are too rigid to stay useful, or too loose to stay trusted. The premium versions do neither. They hold standards without freezing the product.</p>
+      <div class="news-single__meta">
+        <span class="news-single__meta-pill"><strong>Mar 28, 2025</strong> Published</span>
+        <span class="news-single__meta-pill"><strong>8 min read</strong></span>
+        <span class="news-single__meta-pill"><strong>By VRTX Studio</strong></span>
+      </div>
+    </div>
+
+    <div class="news-single__layout">
+      <article class="news-single__article reveal-up">
+        <p class="news-single__lead">Most teams do not have a design system problem. They have a maintenance problem. Components are launched with enthusiasm, then abandoned once the next sprint starts and the next feature takes priority.</p>
+
+        <div class="news-single__figure">
+          <div class="news-single__caption">Editorial visualization: the gap between a living system and a static library.</div>
+        </div>
+
+        <h2>1. A system without ownership becomes a library of leftovers</h2>
+        <p>The first failure mode is structural. When nobody owns the system, every team uses it differently. Tokens drift, spacing rules loosen, and the design language starts to fracture across the product. A premium interface cannot survive that kind of inconsistency.</p>
+        <p>At VRTX, we prefer a system with clear guardrails, a small number of people able to edit it, and a documented process for making exceptions. That is what keeps the work feeling composed rather than chaotic.</p>
+
+        <h2>2. Too much flexibility usually means too little quality</h2>
+        <p>Teams often defend inconsistency as speed. In practice, it usually creates more overhead. Designers spend time re-deciding the same patterns, engineers interpret things differently, and product managers end up arbitrating style choices that should already be settled.</p>
+        <ul>
+          <li>Define a narrow set of approved component states.</li>
+          <li>Lock the spacing scale before the layout expands.</li>
+          <li>Document why a pattern exists, not just what it looks like.</li>
+        </ul>
+
+        <div class="news-single__figure news-single__figure--alt">
+          <div class="news-single__caption">Premium systems feel calm because the rules are visible.</div>
+        </div>
+
+        <h2>3. Make the system earn its place in the product</h2>
+        <p>The best systems are not just references for designers. They are operational assets for the whole team. They improve speed, reduce ambiguity, and preserve the brand across launches, campaigns, and product updates.</p>
+        <p>If a component does not help the team ship better work, it should be simplified, renamed, or removed. Elegance is often just disciplined editing.</p>
+
+        <h3>What to do next</h3>
+        <p>Audit the components that cause the most rework. Identify which patterns are actually used, which ones are duplicated, and where the system is forcing teams to improvise. Then tighten the rules where quality matters most: hierarchy, spacing, type scale, and interaction states.</p>
+        <p>The goal is not to create a perfect system. The goal is to create one that remains useful long after the kickoff presentation is over.</p>
+      </article>
+
+      <aside class="news-single__aside" id="insights">
+        <div class="news-rail">
+          <span class="news-rail__eyebrow">Key Takeaways</span>
+          <h3 class="news-rail__title">The short version: fewer exceptions, stronger ownership, better output.</h3>
+          <p class="news-rail__text">A design system should make premium work easier to ship, not easier to dilute.</p>
+          <div class="news-rail__list">
+            <div class="news-rail__item">
+              <strong>Own the library</strong>
+              <span>Assign a small group responsible for changes, audits, and component quality.</span>
+            </div>
+            <div class="news-rail__item">
+              <strong>Edit harder</strong>
+              <span>The cleaner the rules, the more luxurious the output tends to feel.</span>
+            </div>
+            <div class="news-rail__item">
+              <strong>Measure adoption</strong>
+              <span>If the system does not save time or reduce inconsistency, it needs revision.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-rail">
+          <span class="news-rail__eyebrow">Article Info</span>
+          <h3 class="news-rail__title">Published by VRTX Studio</h3>
+          <p class="news-rail__text">Strategy notes, execution details, and lessons from premium digital builds.</p>
+          <div class="news-rail__list">
+            <div class="news-rail__item">
+              <strong>Category</strong>
+              <span>Design Systems</span>
+            </div>
+            <div class="news-rail__item">
+              <strong>Reading time</strong>
+              <span>8 minutes</span>
+            </div>
+            <div class="news-rail__item">
+              <strong>Next article</strong>
+              <span>Core Web Vitals in 2025</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="news-related" id="related">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Related Stories</span>
+      <h2 class="section-title">More editorial notes from the journal.</h2>
+    </div>
+    <div class="news-related__grid">
+      <article class="news-item news-item--small reveal-up">
+        <div class="news-item__img news-item__img--small">
+          <div class="news-img-placeholder nip--2">
+            <div class="nip-inner">
+              <div class="nip-code-lines">
+                <div></div><div></div><div></div><div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-item__body">
+          <div class="news-item__meta">
+            <span class="news-tag">Performance</span>
+            <span class="news-date">Mar 14, 2025</span>
+          </div>
+          <h3 class="news-item__title">Core Web Vitals in 2025: the metrics that actually matter for conversion</h3>
+          <p class="news-item__excerpt">A practical breakdown of what to prioritize now.</p>
+          <a href="news-list.html" class="news-item__link">Open Journal <span class="news-arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="news-item news-item--small reveal-up" style="--delay:.1s">
+        <div class="news-item__img news-item__img--small">
+          <div class="news-img-placeholder nip--3">
+            <div class="nip-inner">
+              <div class="nip-bars">
+                <div style="height:40%"></div><div style="height:70%"></div><div style="height:55%"></div><div style="height:90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-item__body">
+          <div class="news-item__meta">
+            <span class="news-tag">CRO</span>
+            <span class="news-date">Feb 27, 2025</span>
+          </div>
+          <h3 class="news-item__title">The fold is dead. Here is where users actually drop off on your homepage</h3>
+          <p class="news-item__excerpt">Where attention really disappears on premium homepages.</p>
+          <a href="news-list.html" class="news-item__link">Open Journal <span class="news-arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="news-item news-item--small reveal-up" style="--delay:.2s">
+        <div class="news-item__img news-item__img--small">
+          <div class="news-img-placeholder nip--4">
+            <div class="nip-inner">
+              <div class="nip-brand-mark"></div>
+            </div>
+          </div>
+        </div>
+        <div class="news-item__body">
+          <div class="news-item__meta">
+            <span class="news-tag">Branding</span>
+            <span class="news-date">Feb 10, 2025</span>
+          </div>
+          <h3 class="news-item__title">From wordmark to world: building brand systems that scale across every surface</h3>
+          <p class="news-item__excerpt">A practical framework for identity work that stays coherent.</p>
+          <a href="news-list.html" class="news-item__link">Open Journal <span class="news-arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="archive-contact" id="contact">
+    <div class="archive-contact__panel reveal-up">
+      <div>
+        <span class="section-tag">Next Step</span>
+        <h2 class="archive-contact__title">Need an editorial system that makes your ideas look premium?</h2>
+        <p class="archive-contact__sub">We can help shape the content architecture, visual tone, and article components so the journal feels as refined as the brand itself.</p>
+      </div>
+      <div class="archive-contact__actions">
+        <a href="contact-us.html" class="btn btn--primary btn--large">Start a Project</a>
+        <a href="news-list.html" class="btn btn--ghost btn--large">Back to News</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <a href="index.html"><span class="nav__logo-mark">V</span>RTX</a>
+        </div>
+        <p>Award-winning digital experience agency. We design the future of how brands connect with people.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter">T</a>
+          <a href="#" aria-label="Instagram">I</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Dribbble">D</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <strong>Work</strong>
+        <a href="portfolio-archive.html">Portfolio</a>
+        <a href="portfolio-archive.html">Case Studies</a>
+        <a href="news-list.html">News</a>
+        <a href="#">Client Results</a>
+      </div>
+      <div class="footer__col">
+        <strong>Services</strong>
+        <a href="#article">Design Systems</a>
+        <a href="#article">Performance</a>
+        <a href="#article">Strategy</a>
+        <a href="#article">Development</a>
+        <a href="#article">CRO</a>
+      </div>
+      <div class="footer__col">
+        <strong>Company</strong>
+        <a href="about-us.html">About</a>
+        <a href="#">Careers</a>
+        <a href="news-list.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2024 VRTX Studio. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+    <div class="footer__big-type">VRTX</div>
+  </footer>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | LUMIERE Studio</title>
+    <meta
+      name="description"
+      content="Get in touch with LUMIERE Studio. Schedule a session, inquire about services, or discuss your photography project with our award-winning team."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./public/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="site-nav">
+        <a class="brand" href="./index.html" aria-label="LUMIERE Studio home">LUMIERE</a>
+        <ul class="desktop-nav" aria-label="Primary">
+          <li><a href="./index.html#work">Work</a></li>
+          <li><a href="./about-us.html">About</a></li>
+          <li><a href="./index.html#services">Services</a></li>
+          <li><a href="./index.html#process">Process</a></li>
+          <li><a href="./contact-us.html">Contact</a></li>
+        </ul>
+        <a class="button button-solid desktop-cta" href="./contact-us.html">Book a Session</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <a href="./index.html#work">Work</a>
+        <a href="./about-us.html">About</a>
+        <a href="./index.html#services">Services</a>
+        <a href="./index.html#process">Process</a>
+        <a href="./contact-us.html">Contact</a>
+        <a class="button button-solid" href="./contact-us.html">Book a Session</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Page Banner -->
+      <section class="page-banner">
+        <div class="page-banner-bg" data-page-banner-bg></div>
+        <div class="page-banner-overlay"></div>
+        <div class="section-shell">
+          <div class="page-banner-content">
+            <p class="eyebrow">Let's Connect</p>
+            <h1>Get in Touch</h1>
+            <p class="banner-subtitle">
+              Ready to bring your vision to life? Reach out to our team and let's create something extraordinary together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Options -->
+      <section class="section">
+        <div class="section-shell">
+          <div class="contact-options">
+            <div class="contact-option">
+              <div class="option-icon">📧</div>
+              <h3>Email</h3>
+              <p class="option-label">For general inquiries and project discussions</p>
+              <a href="mailto:hello@lumiere.studio" class="option-link">hello@lumiere.studio</a>
+            </div>
+
+            <div class="contact-option">
+              <div class="option-icon">📱</div>
+              <h3>Phone</h3>
+              <p class="option-label">Direct line to schedule sessions</p>
+              <a href="tel:+1234567890" class="option-link">+1 (234) 567-890</a>
+            </div>
+
+            <div class="contact-option">
+              <div class="option-icon">📍</div>
+              <h3>Studio Location</h3>
+              <p class="option-label">Visit us in person</p>
+              <p class="option-link">123 Creative Avenue<br />New York, NY 10001</p>
+            </div>
+
+            <div class="contact-option">
+              <div class="option-icon">🕐</div>
+              <h3>Hours</h3>
+              <p class="option-label">Monday to Friday</p>
+              <p class="option-link">9:00 AM - 6:00 PM EST<br />By appointment on weekends</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="section section-muted contact-form-section">
+        <div class="section-shell">
+          <div class="contact-form-container">
+            <div class="form-header">
+              <p class="eyebrow">Send Us a Message</p>
+              <h2>Let's Discuss Your Project</h2>
+              <p>Fill out the form below and we'll get back to you within 24 hours with personalized recommendations for your photography needs.</p>
+            </div>
+
+            <form class="contact-form" data-contact-form>
+              <div class="form-row">
+                <label class="form-group">
+                  <span>First Name</span>
+                  <input type="text" name="firstName" placeholder="Your first name" required />
+                </label>
+                <label class="form-group">
+                  <span>Last Name</span>
+                  <input type="text" name="lastName" placeholder="Your last name" required />
+                </label>
+              </div>
+
+              <label class="form-group">
+                <span>Email Address</span>
+                <input type="email" name="email" placeholder="your@email.com" required />
+              </label>
+
+              <label class="form-group">
+                <span>Phone Number</span>
+                <input type="tel" name="phone" placeholder="+1 (234) 567-890" />
+              </label>
+
+              <label class="form-group">
+                <span>Service Interest</span>
+                <select name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="Portrait Photography">Portrait Photography</option>
+                  <option value="Fashion & Editorial">Fashion & Editorial</option>
+                  <option value="Wedding Photography">Wedding Photography</option>
+                  <option value="Commercial & Brand">Commercial & Brand</option>
+                  <option value="Event Coverage">Event Coverage</option>
+                  <option value="Product Photography">Product Photography</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+
+              <label class="form-group">
+                <span>Budget Range</span>
+                <select name="budget">
+                  <option value="">Select budget range</option>
+                  <option value="Under $2,500">Under $2,500</option>
+                  <option value="$2,500 - $5,000">$2,500 - $5,000</option>
+                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                  <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                  <option value="$25,000+">$25,000+</option>
+                </select>
+              </label>
+
+              <label class="form-group">
+                <span>Project Timeline</span>
+                <select name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="ASAP">ASAP (2-4 weeks)</option>
+                  <option value="1-2 months">1-2 months</option>
+                  <option value="2-3 months">2-3 months</option>
+                  <option value="3+ months">3+ months (Flexible)</option>
+                </select>
+              </label>
+
+              <label class="form-group full-width">
+                <span>Project Details</span>
+                <textarea name="message" rows="6" placeholder="Tell us about your vision, project details, and what you're hoping to achieve..." required></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="button button-solid" type="submit" data-contact-submit>Send Message</button>
+                <p class="form-status" data-form-status aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section">
+        <div class="section-shell">
+          <div class="section-head section-head-center">
+            <p class="eyebrow">Frequently Asked</p>
+            <h2>
+              Common
+              <span class="accent">Questions</span>
+            </h2>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item">
+              <summary>What is your average turnaround time for photos?</summary>
+              <p>Our standard turnaround is 2-3 weeks for initial edits. Rush delivery (5-7 business days) is available for an additional fee. We discuss timeline preferences during the initial consultation.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you offer package deals?</summary>
+              <p>Yes, we offer customized packages tailored to your specific needs. Whether you need a single session or a comprehensive campaign, we can create a package that fits your vision and budget. Contact us for personalized pricing.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What happens if I'm not satisfied with the initial results?</summary>
+              <p>We stand behind our work. If you have concerns about the initial edits, we'll work with you to make adjustments. Your satisfaction is our priority, and we won't consider a project complete until you're thrilled with the results.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I use the photos for commercial purposes?</summary>
+              <p>Usage rights are included in your service agreement and depend on the project type. Editorial and campaign photos come with commercial use rights. We'll clearly outline what's included in your contract before we begin.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you offer retouching services?</summary>
+              <p>Absolutely. Retouching is included in all our packages. For extensive retouching beyond what's standard, we offer additional retouching services for an additional fee. We can discuss your specific needs during consultation.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How far in advance should I book?</summary>
+              <p>We recommend booking 4-8 weeks in advance for standard availability. Peak seasons (spring and fall) may require longer lead times. Emergency bookings are considered on a case-by-case basis depending on our schedule.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What's your cancellation policy?</summary>
+              <p>Bookings cancelled 30+ days in advance receive a full refund. 15-30 days receives 50% refund. Less than 15 days is non-refundable but can be rescheduled. We understand life happens—just give us as much notice as possible.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you provide location scouting?</summary>
+              <p>For larger projects, yes. We can recommend stunning locations that align with your vision or scout custom locations. Location scouting fees are discussed as part of your project planning.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media Section -->
+      <section class="section section-muted">
+        <div class="section-shell">
+          <div class="section-head section-head-center">
+            <p class="eyebrow">Follow Our Journey</p>
+            <h2>
+              Connect on
+              <span class="accent">Social Media</span>
+            </h2>
+            <p class="section-lead">
+              Stay inspired with behind-the-scenes content, project previews, and creative insights from our team.
+            </p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://instagram.com" class="social-button" aria-label="Follow on Instagram">
+              <span>Instagram</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="https://pinterest.com" class="social-button" aria-label="Follow on Pinterest">
+              <span>Pinterest</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="https://linkedin.com" class="social-button" aria-label="Follow on LinkedIn">
+              <span>LinkedIn</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="https://behance.net" class="social-button" aria-label="Follow on Behance">
+              <span>Behance</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section section-cta-contact">
+        <div class="section-shell">
+          <div class="cta-box">
+            <h2>Let's Create Something Beautiful Together</h2>
+            <p>Whether you have a clear vision or are just beginning to explore possibilities, we're here to guide you through the creative process.</p>
+            <a class="button button-solid" href="./portfolio-archive.html">
+              View Our Portfolio
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand footer-brand" href="./index.html">LUMIERE</a>
+          <p>Award-winning photography studio crafting visual narratives for discerning clients worldwide since 2009.</p>
+          <form class="newsletter" data-newsletter-form>
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+            <button class="button button-solid" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html#services">Portrait Photography</a></li>
+            <li><a href="./index.html#services">Fashion & Editorial</a></li>
+            <li><a href="./index.html#services">Wedding Photography</a></li>
+            <li><a href="./index.html#services">Commercial & Brand</a></li>
+            <li><a href="./index.html#services">Event Coverage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul class="footer-links">
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="./index.html#process">Our Process</a></li>
+            <li><a href="./portfolio-archive.html">Portfolio Archive</a></li>
+            <li><a href="./index.html#work">Case Studies</a></li>
+            <li><a href="./contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+            <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="section-shell footer-bottom-inner">
+          <p>&copy; <span data-year></span> Lumiere Studio. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">
+        <div class="section-shell">LUMIERE</div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

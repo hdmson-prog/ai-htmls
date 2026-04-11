@@ -146,6 +146,12 @@
   </section>
 
   <!-- ═══════════════════════════════ WORK ════════════════════════════════ -->
+  <!--
+    PHP LOOP NOTE:
+    This section is designed to be driven by the $projects array in work-section.php.
+    The static cards below are the exact HTML a foreach loop would produce.
+    Replace this section with <?php include 'work-section.php'; ?> in production.
+  -->
   <section class="work" id="work">
     <div class="section-header reveal-up">
       <span class="section-tag">Featured Work</span>
@@ -154,25 +160,21 @@
 
     <div class="work__grid">
 
-      <article class="work-card work-card--large reveal-up">
-        <div class="work-card__media">
-          <div class="work-card__placeholder" style="--g1:#1a0533;--g2:#6c47ff;--g3:#0d0d1a">
-            <div class="work-card__mock-layout">
-              <div class="wm-sidebar"></div>
-              <div class="wm-content">
-                <div class="wm-header"></div>
-                <div class="wm-body">
-                  <div class="wm-card c1"></div>
-                  <div class="wm-card c2"></div>
-                  <div class="wm-card c3"></div>
-                </div>
-              </div>
+      <!-- Card structure is IDENTICAL for every project. Only the data attributes change. -->
+
+      <article class="work-card work-card--span-8 reveal-up" style="--accent-color:#6c47ff; --delay:0s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
             </div>
+            <div class="wc-deco wc-deco--badge">Web Design</div>
           </div>
           <div class="work-card__hover-overlay">
             <span class="work-card__view">View Project ↗</span>
           </div>
-        </div>
+        </a>
         <div class="work-card__info">
           <div>
             <h3 class="work-card__title">NovaCrypt Platform</h3>
@@ -182,25 +184,19 @@
         </div>
       </article>
 
-      <article class="work-card reveal-up" style="--delay:.1s">
-        <div class="work-card__media">
-          <div class="work-card__placeholder" style="--g1:#0a1a0a;--g2:#00d4aa;--g3:#051515">
-            <div class="work-card__mock-layout layout--center">
-              <div class="wm-logo-mock"></div>
-              <div class="wm-type-stack">
-                <div class="wm-t1"></div>
-                <div class="wm-t2"></div>
-              </div>
-              <div class="wm-pill-row">
-                <div class="wm-pill" style="background:#00d4aa22"></div>
-                <div class="wm-pill" style="background:#00d4aa44"></div>
-              </div>
+      <article class="work-card work-card--span-4 reveal-up" style="--accent-color:#00d4aa; --delay:0.1s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
             </div>
+            <div class="wc-deco wc-deco--badge">Branding</div>
           </div>
           <div class="work-card__hover-overlay">
             <span class="work-card__view">View Project ↗</span>
           </div>
-        </div>
+        </a>
         <div class="work-card__info">
           <div>
             <h3 class="work-card__title">Verdant Identity</h3>
@@ -210,23 +206,19 @@
         </div>
       </article>
 
-      <article class="work-card reveal-up" style="--delay:.2s">
-        <div class="work-card__media">
-          <div class="work-card__placeholder" style="--g1:#1a0a0a;--g2:#ff4757;--g3:#0d0505">
-            <div class="work-card__mock-layout layout--split">
-              <div class="wm-split-img"></div>
-              <div class="wm-split-text">
-                <div class="wm-st1"></div>
-                <div class="wm-st2"></div>
-                <div class="wm-st3"></div>
-                <div class="wm-cta-btn"></div>
-              </div>
+      <article class="work-card work-card--span-4 reveal-up" style="--accent-color:#ff4757; --delay:0.2s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
             </div>
+            <div class="wc-deco wc-deco--badge">Web Design</div>
           </div>
           <div class="work-card__hover-overlay">
             <span class="work-card__view">View Project ↗</span>
           </div>
-        </div>
+        </a>
         <div class="work-card__info">
           <div>
             <h3 class="work-card__title">Apex Ecommerce</h3>
@@ -236,36 +228,19 @@
         </div>
       </article>
 
-      <article class="work-card work-card--wide reveal-up" style="--delay:.1s">
-        <div class="work-card__media">
-          <div class="work-card__placeholder" style="--g1:#06080f;--g2:#3b82f6;--g3:#010510">
-            <div class="work-card__mock-layout layout--dashboard">
-              <div class="wm-dash-header">
-                <div class="wm-dash-logo"></div>
-                <div class="wm-dash-nav">
-                  <div></div><div></div><div></div>
-                </div>
-              </div>
-              <div class="wm-dash-body">
-                <div class="wm-dash-chart">
-                  <div class="wm-chart-bar" style="height:60%"></div>
-                  <div class="wm-chart-bar" style="height:85%"></div>
-                  <div class="wm-chart-bar" style="height:45%"></div>
-                  <div class="wm-chart-bar" style="height:90%"></div>
-                  <div class="wm-chart-bar" style="height:70%"></div>
-                  <div class="wm-chart-bar" style="height:55%"></div>
-                </div>
-                <div class="wm-dash-stats">
-                  <div class="wm-stat-card"></div>
-                  <div class="wm-stat-card"></div>
-                </div>
-              </div>
+      <article class="work-card work-card--span-8 reveal-up" style="--accent-color:#3b82f6; --delay:0.1s">
+        <a href="#" class="work-card__media">
+          <div class="work-card__placeholder">
+            <div class="wc-deco wc-deco--orb"></div>
+            <div class="wc-deco wc-deco--lines">
+              <span></span><span></span><span></span><span></span>
             </div>
+            <div class="wc-deco wc-deco--badge">UI/UX</div>
           </div>
           <div class="work-card__hover-overlay">
             <span class="work-card__view">View Project ↗</span>
           </div>
-        </div>
+        </a>
         <div class="work-card__info">
           <div>
             <h3 class="work-card__title">DataPulse Analytics Dashboard</h3>
@@ -278,7 +253,7 @@
     </div>
 
     <div class="work__footer reveal-up">
-      <a href="#contact" class="btn btn--outline">View All Projects (24) →</a>
+      <a href="portfolio-archive.html" class="btn btn--outline">View All Projects (24) →</a>
     </div>
   </section>
 
@@ -669,6 +644,113 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════ NEWS ═══════════════════════════════ -->
+  <section class="news" id="news">
+    <div class="news__inner">
+      <div class="news__header reveal-up">
+        <div>
+          <span class="section-tag">Journal</span>
+          <h2 class="section-title">Thinking out loud.</h2>
+        </div>
+        <a href="news-list.html" class="btn btn--ghost news__all-link">All Articles →</a>
+      </div>
+
+      <div class="news__list">
+
+        <article class="news-item news-item--featured reveal-up">
+          <div class="news-item__img">
+            <div class="news-img-placeholder nip--1">
+              <div class="nip-inner">
+                <div class="nip-shape nip-shape--circle"></div>
+                <div class="nip-shape nip-shape--rect"></div>
+                <div class="nip-label">Design</div>
+              </div>
+            </div>
+            <div class="news-item__img-hover"></div>
+          </div>
+          <div class="news-item__body">
+            <div class="news-item__meta">
+              <span class="news-tag">Design Systems</span>
+              <span class="news-date">Mar 28, 2025</span>
+            </div>
+            <h3 class="news-item__title">Why your design system is failing — and how to fix it before the next sprint</h3>
+            <p class="news-item__excerpt">Most design systems die quietly. They start as living documents and end as outdated PDFs that nobody checks. Here's what separates the ones that stick.</p>
+            <a href="single-news.html" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+          </div>
+        </article>
+
+        <div class="news__sidebar">
+
+          <article class="news-item news-item--small reveal-up" style="--delay:.1s">
+            <div class="news-item__img news-item__img--small">
+              <div class="news-img-placeholder nip--2">
+                <div class="nip-inner">
+                  <div class="nip-code-lines">
+                    <div></div><div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="news-item__body">
+              <div class="news-item__meta">
+                <span class="news-tag">Performance</span>
+                <span class="news-date">Mar 14, 2025</span>
+              </div>
+              <h3 class="news-item__title">Core Web Vitals in 2025: the metrics that actually matter for conversion</h3>
+              <p class="news-item__excerpt">LCP, CLS, INP — we break down which signals Google is weighting now and what to prioritise in your next audit.</p>
+              <a href="single-news.html" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="news-item news-item--small reveal-up" style="--delay:.2s">
+            <div class="news-item__img news-item__img--small">
+              <div class="news-img-placeholder nip--3">
+                <div class="nip-inner">
+                  <div class="nip-bars">
+                    <div style="height:40%"></div>
+                    <div style="height:70%"></div>
+                    <div style="height:55%"></div>
+                    <div style="height:90%"></div>
+                    <div style="height:60%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="news-item__body">
+              <div class="news-item__meta">
+                <span class="news-tag">CRO</span>
+                <span class="news-date">Feb 27, 2025</span>
+              </div>
+              <h3 class="news-item__title">The fold is dead. Here's where users actually drop off on your homepage</h3>
+              <p class="news-item__excerpt">Heatmap data from 40 client launches reveals the real attention thresholds — and they're not where most designers assume.</p>
+              <a href="single-news.html" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="news-item news-item--small reveal-up" style="--delay:.3s">
+            <div class="news-item__img news-item__img--small">
+              <div class="news-img-placeholder nip--4">
+                <div class="nip-inner">
+                  <div class="nip-brand-mark"></div>
+                </div>
+              </div>
+            </div>
+            <div class="news-item__body">
+              <div class="news-item__meta">
+                <span class="news-tag">Branding</span>
+                <span class="news-date">Feb 10, 2025</span>
+              </div>
+              <h3 class="news-item__title">From wordmark to world: building brand systems that scale across every surface</h3>
+              <p class="news-item__excerpt">A logo is a promise. A brand system is the proof. We walk through our process for creating identities built for the long game.</p>
+              <a href="#" class="news-item__link">Read Article <span class="news-arrow">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════════════════ CTA ═══════════════════════════════ -->
   <section class="cta-section" id="contact">
     <div class="cta-section__bg">
@@ -710,8 +792,8 @@
 
       <div class="footer__col">
         <strong>Work</strong>
-        <a href="#">Portfolio</a>
-        <a href="#">Case Studies</a>
+        <a href="portfolio-archive.html">Portfolio</a>
+        <a href="portfolio-archive.html">Case Studies</a>
         <a href="#">Awwwards</a>
         <a href="#">Client Results</a>
       </div>
@@ -727,10 +809,10 @@
 
       <div class="footer__col">
         <strong>Company</strong>
-        <a href="#">About</a>
+        <a href="about-us.html">About</a>
         <a href="#">Careers</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
+        <a href="news-list.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
       </div>
     </div>
 
