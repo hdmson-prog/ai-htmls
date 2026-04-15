@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEXUS BEARINGS | Image Showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="showcase-page">
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About</a>
+    <a href="archive.html">Products</a>
+    <a href="image-showcase.html">Showcase</a>
+    <a href="contact-us.html">Contact</a>
+  </nav>
+  <a href="contact-us.html" class="btn-primary"><span>Request Quote</span></a>
+</div>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">NEXUS <span>BEARINGS</span></div>
+      <div class="logo-sub">Precision | Engineering | Excellence</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About</a>
+      <a href="archive.html">Archive</a>
+      <a href="image-showcase.html">Showcase</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+18001234567" class="header-contact">+1 800 123 4567</a>
+      <a href="contact-us.html" class="btn-primary" style="padding:12px 28px;font-size:11px;"><span>Get Quote</span></a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-banner showcase-banner">
+    <div class="container">
+      <div class="page-banner-inner">
+        <div class="reveal">
+          <div class="page-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Image Showcase</span>
+          </div>
+          <h1 class="page-banner-title">A visual archive of<br><em>precision in motion</em></h1>
+          <p class="page-banner-copy">
+            Explore manufacturing, testing, engineering, logistics, and partnership moments across the Nexus Bearings operation. Filter the collection, page through it, and open each frame in a lightbox for a closer look.
+          </p>
+        </div>
+        <div class="page-banner-meta reveal" style="transition-delay:0.08s">
+          <div class="page-meta-card">
+            <div class="page-meta-value" data-showcase-total>12</div>
+            <div class="page-meta-label">Gallery Frames</div>
+          </div>
+          <div class="page-meta-card">
+            <div class="page-meta-value">05</div>
+            <div class="page-meta-label">Filter Groups</div>
+          </div>
+          <div class="page-meta-card">
+            <div class="page-meta-value">03</div>
+            <div class="page-meta-label">Items Per Page</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase-page-section">
+    <div class="container">
+      <div class="showcase-shell">
+        <div class="showcase-toolbar reveal">
+          <div class="showcase-toolbar-copy">
+            <div class="section-label">Filter Collection</div>
+            <h2 class="section-title">Browse by <em>discipline</em></h2>
+          </div>
+          <div class="showcase-filter-bar" id="showcaseFilters" role="tablist" aria-label="Showcase filters">
+            <button class="showcase-filter active" type="button" data-filter="all">All</button>
+            <button class="showcase-filter" type="button" data-filter="manufacturing">Manufacturing</button>
+            <button class="showcase-filter" type="button" data-filter="quality">Quality</button>
+            <button class="showcase-filter" type="button" data-filter="engineering">Engineering</button>
+            <button class="showcase-filter" type="button" data-filter="logistics">Logistics</button>
+            <button class="showcase-filter" type="button" data-filter="partnership">Partnership</button>
+          </div>
+        </div>
+
+        <div class="showcase-status-row reveal" style="transition-delay:0.06s">
+          <div class="showcase-status" id="showcaseStatus">Showing all gallery frames</div>
+          <div class="showcase-page-indicator" id="showcasePageIndicator">Page 1 of 4</div>
+        </div>
+
+        <div class="showcase-grid-page" id="showcaseGrid" aria-live="polite"></div>
+
+        <div class="archive-pagination showcase-pagination reveal" id="showcasePagination" style="transition-delay:0.1s"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="showcase-lightbox" id="showcaseLightbox" aria-hidden="true">
+  <button class="showcase-lightbox-close" type="button" id="showcaseLightboxClose" aria-label="Close lightbox">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <div class="showcase-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="showcaseLightboxTitle">
+    <button class="showcase-lightbox-nav prev" type="button" id="showcasePrev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="showcase-lightbox-media" id="showcaseLightboxMedia">
+      <div class="showcase-lightbox-art" id="showcaseLightboxArt"></div>
+      <div class="showcase-lightbox-copy">
+        <div class="showcase-lightbox-meta">
+          <span id="showcaseLightboxCategory">Category</span>
+          <span id="showcaseLightboxIndex">01</span>
+        </div>
+        <h2 id="showcaseLightboxTitle">Gallery Title</h2>
+        <p id="showcaseLightboxText">Gallery description.</p>
+      </div>
+    </div>
+    <button class="showcase-lightbox-nav next" type="button" id="showcaseNext" aria-label="Next image">
+      <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo logo-mark">NEXUS <span>BEARINGS</span></div>
+        <div class="footer-brand-desc">
+          Engineering world-class wheel hub bearing solutions for the automotive industry since 1985. Trusted by leading OEMs and distributors in 60+ countries.
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Explore</div>
+        <div class="footer-links">
+          <a href="index.html">Homepage</a>
+          <a href="about-us.html">About Us</a>
+          <a href="archive.html">Products Archive</a>
+          <a href="image-showcase.html">Image Showcase</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+18001234567">+1 800 123 4567</a>
+          <a href="mailto:sales@nexusbearings.com">sales@nexusbearings.com</a>
+          <a href="news-list.html">News List</a>
+          <a href="contact-us.html">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Nexus Bearings International Ltd. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

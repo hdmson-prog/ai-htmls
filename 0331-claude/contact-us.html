@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEXUS BEARINGS | Contact Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="contact-page">
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About</a>
+    <a href="archive.html">Products</a>
+    <a href="news-list.html">News</a>
+    <a href="contact-us.html">Contact</a>
+  </nav>
+  <a href="contact-us.html" class="btn-primary"><span>Request Quote</span></a>
+</div>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">NEXUS <span>BEARINGS</span></div>
+      <div class="logo-sub">Precision | Engineering | Excellence</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About</a>
+      <a href="archive.html">Archive</a>
+      <a href="news-list.html">News</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+18001234567" class="header-contact">+1 800 123 4567</a>
+      <a href="contact-us.html" class="btn-primary" style="padding:12px 28px;font-size:11px;"><span>Get Quote</span></a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-inner">
+        <div class="reveal">
+          <div class="page-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Contact Us</span>
+          </div>
+          <h1 class="page-banner-title">Start the right<br><em>conversation</em> faster</h1>
+          <p class="page-banner-copy">
+            Reach our sales and engineering teams for quotations, fitment support, OEM discussions, or distribution inquiries. We respond with practical next steps, not generic follow-up.
+          </p>
+        </div>
+        <div class="page-banner-meta reveal" style="transition-delay:0.08s">
+          <div class="page-meta-card">
+            <div class="page-meta-value">24h</div>
+            <div class="page-meta-label">Typical Response</div>
+          </div>
+          <div class="page-meta-card">
+            <div class="page-meta-value">3</div>
+            <div class="page-meta-label">Regional Offices</div>
+          </div>
+          <div class="page-meta-card">
+            <div class="page-meta-value">OEM</div>
+            <div class="page-meta-label">Project Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-page-section">
+    <div class="container">
+      <div class="contact-page-grid">
+        <div class="contact-page-sidebar">
+          <div class="contact-intro-card reveal-left">
+            <div class="section-label">Regional Support</div>
+            <h2 class="section-title">Choose the team closest to your <em>market and timeline</em></h2>
+            <div class="gold-line"></div>
+            <p class="section-desc">
+              Whether you need urgent price checks, a sourcing discussion, or technical confirmation, we route inquiries to the right team so you spend less time relaying context.
+            </p>
+          </div>
+
+          <div class="office-stack">
+            <article class="office-card reveal-left" style="transition-delay:0.05s">
+              <div class="office-card-label">Americas HQ</div>
+              <h3>Detroit, USA</h3>
+              <p>1400 Nexus Boulevard, Suite 2200<br>Detroit, Michigan 48226</p>
+              <a href="tel:+18001234567">+1 (800) 123-NEXUS</a>
+              <a href="mailto:americas@nexusbearings.com">americas@nexusbearings.com</a>
+            </article>
+            <article class="office-card reveal-left" style="transition-delay:0.1s">
+              <div class="office-card-label">Europe HQ</div>
+              <h3>Stuttgart, Germany</h3>
+              <p>Industriestrasse 88, 70565 Stuttgart<br>Baden-Wurttemberg, Germany</p>
+              <a href="tel:+497115550200">+49 711 555 0200</a>
+              <a href="mailto:europe@nexusbearings.com">europe@nexusbearings.com</a>
+            </article>
+            <article class="office-card reveal-left" style="transition-delay:0.15s">
+              <div class="office-card-label">Asia Pacific</div>
+              <h3>Shanghai, China</h3>
+              <p>2388 Longyang Road, Pudong District<br>Shanghai 200135</p>
+              <a href="tel:+862158886600">+86 21 5888 6600</a>
+              <a href="mailto:apac@nexusbearings.com">apac@nexusbearings.com</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="contact-page-form-wrap reveal-right">
+          <div class="contact-form-heading">
+            <div class="section-label">Inquiry Form</div>
+            <h2 class="section-title">Tell us what you need, and we will <em>route it correctly</em></h2>
+            <p class="section-desc" style="max-width:none;">
+              Use this form for product sourcing, part verification, custom engineering requests, distribution programs, and technical support.
+            </p>
+          </div>
+
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input type="text" class="form-input" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name *</label>
+              <input type="text" class="form-input" placeholder="Smith" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Company / Organization *</label>
+              <input type="text" class="form-input" placeholder="ACME Automotive Ltd." required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Job Title</label>
+              <input type="text" class="form-input" placeholder="Purchasing Manager" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Business Email *</label>
+              <input type="email" class="form-input" placeholder="john@company.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-input" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Country / Region</label>
+              <select class="form-select">
+                <option value="">Select your region...</option>
+                <option>United States</option>
+                <option>Germany</option>
+                <option>China</option>
+                <option>Japan</option>
+                <option>United Kingdom</option>
+                <option>France</option>
+                <option>South Korea</option>
+                <option>India</option>
+                <option>Brazil</option>
+                <option>Australia</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Inquiry Type *</label>
+              <select class="form-select" required>
+                <option value="">Select inquiry type...</option>
+                <option>OEM Supply Partnership</option>
+                <option>Aftermarket Distribution</option>
+                <option>Technical Support</option>
+                <option>Custom Engineering Request</option>
+                <option>Pricing & Availability</option>
+                <option>Sample Request</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-checkbox-group">
+              <div class="form-checkbox-label">Product Categories of Interest</div>
+              <div class="checkbox-options">
+                <label class="checkbox-option">
+                  <input type="checkbox" /><span class="checkbox-box"></span>
+                  <span class="checkbox-text">Passenger Vehicle</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" /><span class="checkbox-box"></span>
+                  <span class="checkbox-text">Commercial Truck</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" /><span class="checkbox-box"></span>
+                  <span class="checkbox-text">Off-Road / 4WD</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" /><span class="checkbox-box"></span>
+                  <span class="checkbox-text">Electric Vehicle</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" /><span class="checkbox-box"></span>
+                  <span class="checkbox-text">Racing / Performance</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" /><span class="checkbox-box"></span>
+                  <span class="checkbox-text">Custom Engineering</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Estimated Annual Volume (units)</label>
+              <select class="form-select">
+                <option value="">Select volume range...</option>
+                <option>Under 500 units</option>
+                <option>500 - 5,000 units</option>
+                <option>5,000 - 50,000 units</option>
+                <option>50,000 - 500,000 units</option>
+                <option>500,000+ units</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Message / Additional Details</label>
+              <textarea class="form-textarea" placeholder="Share part numbers, application details, target markets, packaging needs, or anything else that helps us respond accurately."></textarea>
+            </div>
+            <div class="form-submit-row">
+              <p class="form-privacy">By submitting this form you agree to our <a href="#">Privacy Policy</a> and consent to being contacted by our team regarding your inquiry.</p>
+              <button type="submit" class="btn-primary" style="white-space:nowrap;flex-shrink:0;">
+                <span>Submit Inquiry</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+            <div class="form-success" id="formSuccess">
+              Your inquiry has been received. Our team will respond within 24 business hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo logo-mark">NEXUS <span>BEARINGS</span></div>
+        <div class="footer-brand-desc">
+          Engineering world-class wheel hub bearing solutions for the automotive industry since 1985. Trusted by leading OEMs and distributors in 60+ countries.
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Explore</div>
+        <div class="footer-links">
+          <a href="index.html">Homepage</a>
+          <a href="about-us.html">About Us</a>
+          <a href="archive.html">Products Archive</a>
+          <a href="news-list.html">News List</a>
+          <a href="image-showcase.html">Image Showcase</a>
+          <a href="product-details.html">Featured Product</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+18001234567">+1 800 123 4567</a>
+          <a href="mailto:sales@nexusbearings.com">sales@nexusbearings.com</a>
+          <a href="mailto:engineering@nexusbearings.com">engineering@nexusbearings.com</a>
+          <a href="about-us.html">Company Overview</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Nexus Bearings International Ltd. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEXUS BEARINGS | Default Page Template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="archive-page default-template-page">
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About</a>
+    <a href="archive.html">Products</a>
+    <a href="news-list.html">News</a>
+    <a href="contact-us.html">Contact</a>
+  </nav>
+  <a href="contact-us.html" class="btn-primary"><span>Request Quote</span></a>
+</div>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">NEXUS <span>BEARINGS</span></div>
+      <div class="logo-sub">Precision | Engineering | Excellence</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About</a>
+      <a href="archive.html">Archive</a>
+      <a href="news-list.html">News</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+18001234567" class="header-contact">+1 800 123 4567</a>
+      <a href="contact-us.html" class="btn-primary" style="padding:12px 28px;font-size:11px;"><span>Get Quote</span></a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-inner">
+        <div class="reveal">
+          <div class="page-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Default Page Template</span>
+          </div>
+          <h1 class="page-banner-title">Flexible <em>inner page</em><br>default template</h1>
+          <p class="page-banner-copy">
+            A ready-to-use page structure with banner, sticky sidebar, and content area for company information, service pages, support sections, or editorial layouts.
+          </p>
+        </div>
+        <div class="page-banner-meta reveal" style="transition-delay:0.08s">
+          <div class="page-meta-card">
+            <div class="page-meta-value">01</div>
+            <div class="page-meta-label">Banner Module</div>
+          </div>
+          <div class="page-meta-card">
+            <div class="page-meta-value">02</div>
+            <div class="page-meta-label">Sidebar Blocks</div>
+          </div>
+          <div class="page-meta-card">
+            <div class="page-meta-value">03</div>
+            <div class="page-meta-label">Content Sections</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="archive-section default-page-section">
+    <div class="container">
+      <div class="archive-layout">
+        <aside class="archive-sidebar">
+          <div class="sidebar-panel reveal">
+            <div class="sidebar-title">On This Page</div>
+            <div class="filter-list">
+              <a class="filter-pill" href="#overview"><span>Overview</span><span>01</span></a>
+              <a class="filter-pill" href="#highlights"><span>Highlights</span><span>02</span></a>
+              <a class="filter-pill" href="#details"><span>Details</span><span>03</span></a>
+            </div>
+          </div>
+
+          <div class="sidebar-panel reveal" style="transition-delay:0.06s">
+            <div class="sidebar-title">Resources</div>
+            <div class="support-list">
+              <a class="support-link" href="#"><span>Download PDF</span><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></a>
+              <a class="support-link" href="#"><span>Request Support</span><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></a>
+              <a class="support-link" href="contact-us.html"><span>Contact Sales</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="sidebar-highlight reveal" style="transition-delay:0.12s">
+            <div class="sidebar-highlight-label">Template Note</div>
+            <div class="sidebar-highlight-title">Swap content fast</div>
+            <div class="sidebar-highlight-copy">Use this sidebar for anchors, quick links, downloads, contact points, or section summaries.</div>
+          </div>
+        </aside>
+
+        <div class="default-page-content">
+          <section class="default-content-block reveal" id="overview">
+            <div class="section-label">Overview Block</div>
+            <h2 class="section-title">Start with a strong <em>page introduction</em></h2>
+            <div class="gold-line"></div>
+            <p class="section-desc" style="max-width:none;">
+              This main content area is designed for flexible use. You can replace this introduction with company information, service descriptions, policy text, project details, or support documentation while keeping the same visual structure used across the site.
+            </p>
+          </section>
+
+          <section class="default-content-grid" id="highlights">
+            <article class="default-content-card reveal">
+              <div class="default-card-index">01</div>
+              <h3>Intro Section</h3>
+              <p>Use for opening context, positioning statements, or a short summary that frames the rest of the page.</p>
+            </article>
+            <article class="default-content-card reveal" style="transition-delay:0.06s">
+              <div class="default-card-index">02</div>
+              <h3>Feature Section</h3>
+              <p>Use for key benefits, service highlights, technical capabilities, or any grouped content that needs scannable structure.</p>
+            </article>
+            <article class="default-content-card reveal" style="transition-delay:0.12s">
+              <div class="default-card-index">03</div>
+              <h3>Action Section</h3>
+              <p>Use for CTAs, resource links, next steps, forms, contact prompts, or conversion-focused content at the end of the page.</p>
+            </article>
+          </section>
+
+          <section class="default-content-block reveal" id="details" style="transition-delay:0.08s">
+            <div class="section-label">Detail Block</div>
+            <h2 class="section-title">Add richer <em>page content</em> below</h2>
+            <div class="gold-line"></div>
+            <div class="default-richtext">
+              <p>
+                The layout supports longer content sections too. You can add paragraphs, lists, supporting callouts, downloads, tables, or image modules here without changing the overall page shell.
+              </p>
+              <p>
+                Because this template reuses the existing banner and sidebar system, it keeps new pages aligned with the rest of the site while still giving you room to adapt the body content to different page types.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo logo-mark">NEXUS <span>BEARINGS</span></div>
+        <div class="footer-brand-desc">
+          Engineering world-class wheel hub bearing solutions for the automotive industry since 1985. Trusted by leading OEMs and distributors in 60+ countries.
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Explore</div>
+        <div class="footer-links">
+          <a href="index.html">Homepage</a>
+          <a href="about-us.html">About Us</a>
+          <a href="archive.html">Products Archive</a>
+          <a href="news-list.html">News List</a>
+          <a href="image-showcase.html">Image Showcase</a>
+          <a href="default-page.html">Default Template</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+18001234567">+1 800 123 4567</a>
+          <a href="mailto:sales@nexusbearings.com">sales@nexusbearings.com</a>
+          <a href="contact-us.html">Request a Quote</a>
+          <a href="contact-us.html">Visit Contact Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Nexus Bearings International Ltd. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
